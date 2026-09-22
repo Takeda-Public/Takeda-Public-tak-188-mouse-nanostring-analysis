@@ -1,0 +1,704 @@
+---
+title: "Read data, remove 1 QC-failed, and look at positive control and HKG normalization"
+author: "Takeda Pharmaceuticals"
+date: "`r Sys.Date()`"
+output:
+   html_document:
+     toc: true
+     toc_float: true
+     toc_depth: 2
+     code_folding: hide
+---
+
+```{r setup, include=FALSE}
+# Available on CRAN
+library(dplyr)
+library(ggplot2)
+library(magrittr)
+library(ruv)
+library(tibble)
+library(janitor)
+library(tidyr)
+library(ggpubr)
+
+# Available on Bioconductor
+library(NanoTube)
+```
+
+```{r}
+sample_metadata_filepath <- "/root/capsule/data/tak188-mouse-preclinical-nanostring-v2/"
+rcc_filepath <- "/root/capsule/data/tak188-mouse-preclinical-nanostring-v2"
+```
+
+# Read in data
+
+```{r}
+sample_info <- read.csv(file.path(sample_metadata_filepath, "20260408_metadata.csv"))
+# Add a 'replicate' column to sample_info
+sample_info %<>%
+   group_by(treatment, day) %>%
+   mutate(replicate = row_number()) %>%
+   ungroup()
+
+# List all files with .RCC extension in the specified directory
+rcc_files <- list.files(rcc_filepath, 
+                  pattern = "\\.RCC$", 
+                  full.names = TRUE)
+
+# First two lines viewing RCC as text file
+
+# FileVersion,1.7 SoftwareVersion,6.0.2
+# ID,01 Owner, Comments, Date,20260408 GeneRLF,NS_Mm_IO_360_v1.0 SystemAPF,n6_vDV1 ID,12 FovCount,280 FovCounted,280 ScannerID,2212E0093 StagePosition,1 BindingDensity,1.46 CartridgeID,day 10 CartridgeBarcode, 
+
+```
+
+# QC failed
+
+Sample "day 14_01_06" clearly must be removed per previous QC.
+
+```{r}
+rcc_files <- c(rcc_files[1:17], rcc_files[19:23])
+sample_info %<>% filter(file_name != "20260408_day 14_01_06.RCC")
+
+rcc_d10 <- rcc_files[1:12]
+rcc_d14 <- rcc_files[13:22]
+```
+
+## Positive control normalization factor
+
+The last QC has to be done after PC normalization. Run without HKG normalization to set up for evaluating pre-normalization HKG expression. 
+
+```{r}
+dat <- processNanostringData(
+                  nsFiles = rcc_files, 
+                  normalization='nSolver',
+                  output.format = "list", 
+                  includeQC = TRUE,
+                  skip.housekeeping = TRUE)
+
+dat_d10 <- processNanostringData(
+                  nsFiles = rcc_d10, 
+                  normalization='nSolver',
+                  output.format = "list", 
+                  includeQC = TRUE,
+                  skip.housekeeping = TRUE
+                  )
+
+dat_d14 <- processNanostringData(
+                  nsFiles = rcc_d14, 
+                  normalization='nSolver',
+                  output.format = "list", 
+                  includeQC = TRUE, 
+                  skip.housekeeping = TRUE
+                  )
+```
+
+```{r}
+# Positive control
+posQC <- positiveQC(dat)$tab %>%
+   clean_names() %>%
+   remove_rownames()
+
+posQC_d10 <- positiveQC(dat_d10)$tab %>%
+   clean_names() %>%
+   remove_rownames()
+
+posQC_d14 <- positiveQC(dat_d14)$tab %>%
+   clean_names() %>%
+   remove_rownames()
+```
+
+
+```{r}
+posQC %>%
+   ggplot(aes(y = sample, x = scale_factor)) +
+   geom_col() +
+   xlab("Positive control normalization factor") +
+   ylab("Sample name") +
+   geom_vline(xintercept = 0.3, color = "red", size = 1) +
+   geom_vline(xintercept = 3, color = "red", size = 1) +
+   theme_bw(base_size = 12)
+```
+
+All samples in range 
+
+```{r}
+posQC_d10 %>%
+   ggplot(aes(y = sample, x = scale_factor)) +
+   geom_col() +
+   xlab("Positive control normalization factor") +
+   ylab("Sample name") +
+   geom_vline(xintercept = 0.3, color = "red", size = 1) +
+   geom_vline(xintercept = 3, color = "red", size = 1) +
+   theme_bw(base_size = 12) +
+   ggtitle("Day 10 samples only (separately processed)")
+```
+
+All samples in range
+
+```{r}
+posQC_d14 %>%
+   ggplot(aes(y = sample, x = scale_factor)) +
+   geom_col() +
+   xlab("Positive control normalization factor") +
+   ylab("Sample name") +
+   geom_vline(xintercept = 0.3, color = "red", size = 1) +
+   geom_vline(xintercept = 3, color = "red", size = 1) +
+   theme_bw(base_size = 12) +
+   ggtitle("Day 14 samples only (separately processed)")
+```
+
+All samples in range.
+
+# Inspecting HKG expression
+## Endogenous genes
+
+```{r}
+data.frame(dat$exprs) %>% 
+   tibble::rownames_to_column("Accession") %>% 
+   left_join(data.frame(dat$dict) %>% select(Accession, Name, CodeClass), by = "Accession") %>%
+   filter(CodeClass == "Endogenous") %>%
+   pivot_longer(cols = -c(Accession, Name, CodeClass), names_to = "sample", values_to = "expr") %>%
+   ggplot(aes(y = sample, x = expr)) +
+   geom_boxplot() +
+   ggtitle("Overall expression level of endogenous genes") +
+   ylab("Sample name") +
+   xlab("Expression level (no HKG normalized)") +
+   theme_bw(base_size = 12) +
+   scale_x_log10()
+```
+
+Extreme bimodality in overall expression of genes.
+
+## Calculate which are above background
+
+Assume we are setting background for each sample as the mean of the negative controls, 
+and calculate whether genes are above this background level.
+
+```{r genedata, eval=T}
+gene_names <- data.frame(dat$dict) %>%
+   filter(CodeClass %in% c("Housekeeping", "Endogenous")) %>% pull(Accession)
+hkg_gene_names <- data.frame(dat$dict) %>%
+   filter(CodeClass == "Housekeeping") %>% pull(Accession)
+
+# Extract HKG counts
+hkg_counts <- dat$exprs[hkg_gene_names, ]
+hkg_counts_d10 <- dat_d10$exprs[hkg_gene_names, ]
+hkg_counts_d14 <- dat_d14$exprs[hkg_gene_names, ]
+
+# Extract negative control counts 
+negative_control_names <- data.frame(dat$dict) %>%
+   filter(CodeClass == "Negative") %>% pull(Accession)
+negative_control_counts <- dat$exprs[negative_control_names, ]
+negative_control_counts <- data.frame(negative_control_counts) %>% 
+   tibble::rownames_to_column(var = "Accession") %>%
+   left_join(data.frame(dat$dict), by = "Accession") %>%
+   relocate(Name) %>% select(-CodeClass)
+negative_control_counts %<>% pivot_longer(-c(Name, Accession), names_to = "sample", values_to = "count")
+negative_control_counts <- data.frame(negative_control_counts) %>% 
+   left_join(data.frame(dat$dict), by = c("Accession", "Name")) %>%
+   relocate(Name) %>% select(-CodeClass)
+negQC <- negativeQC(dat, interactive.plot = FALSE)$tab %>%
+   clean_names() %>%
+   rownames_to_column("sample") %>%
+   mutate(genes_below_bg_count = as.integer(sub(" \\(.*\\)", "", genes_below_bg_percent)),
+          genes_below_bg_percent = as.numeric(sub(".*\\((.*)%\\)", "\\1", genes_below_bg_percent)))
+
+# Extract positive control counts
+positive_control_names <- data.frame(dat$dict) %>%
+   filter(CodeClass == "Positive") %>% pull(Accession)
+positive_control_counts <- dat$exprs[positive_control_names, ]
+positive_control_counts <- data.frame(positive_control_counts) %>% 
+   tibble::rownames_to_column(var = "Accession") %>%
+   left_join(data.frame(dat$dict), by = "Accession") %>%
+   relocate(Name) %>% select(-CodeClass)
+positive_control_counts %<>% pivot_longer(-c(Name, Accession), names_to = "sample", values_to = "count")
+
+# Control dataframe
+
+controls_df <- positive_control_counts %>% 
+   filter(Name == "POS_E(0.5)") %>% 
+   select(sample, pos_E = count) %>%
+   left_join(negative_control_counts %>% 
+               group_by(sample) %>% 
+               summarize(negative_control_mean = mean(count), 
+                         negative_control_sd = sd(count)), by = "sample") %>%
+   mutate(positive_control_lod = (pos_E - negative_control_mean)/negative_control_sd) %>% 
+   left_join(positive_control_counts %>% 
+   filter(Name == "POS_A(128)") %>% 
+   select(sample, pos_A = count), by = "sample")
+
+qc_data_gene <- data.frame(dat$dict) %>%
+   filter(CodeClass %in% c("Housekeeping")) 
+
+# percent of samples above background for each gene
+qc_data_gene$pct_above_background <- apply(X = hkg_counts, MARGIN = 1, 
+      function(x) sum(x > controls_df$negative_control_mean)/nrow(controls_df) * 100)
+```
+
+
+## Identify which HKG are above background
+
+```{r, eval=T}
+qc_data_gene %>% filter(CodeClass == "Housekeeping") %>%
+   ggplot(aes(y = Name, x = pct_above_background)) +
+   geom_col() +
+   xlab("% of samples above negative-control background") +
+   ylab("Gene name") +
+   geom_vline(xintercept = 100, color = "red", size = 1) +
+   theme_bw(base_size = 12)
+```
+
+Without HKG normalization (all samples processed together), 
+HKGs are not all above background (mean of negative controls) in all samples.
+
+
+```{r}
+hkg_counts  %>%
+   data.frame() %>% 
+   rownames_to_column("Accession") %>%
+   pivot_longer(cols = -Accession, names_to = "sample", values_to = "count") %>% 
+   left_join(data.frame(dat$dict) %>% filter(CodeClass == "Housekeeping") %>% select(Accession, Name), by = c("Accession")) %>% 
+   mutate(sample = gsub("^X", "", sample),
+          sample = gsub("day.", "day ", sample, fixed=T)) %>%
+   left_join(negQC %>% select(sample, mean_neg), by = "sample") %>%
+   mutate(negQC_pass = count > mean_neg) %>%
+   ggplot(aes(x = sample, y = log10(count), color = negQC_pass)) +
+   geom_point() +
+   theme_bw(base_size = 12) +
+   coord_flip()
+```
+
+There are two groups of samples with different ranges of HKG expression. Some have about half of them below negative control mean.
+
+
+## Expression level and confounding factors
+
+Check HKG association with treatment/other metadata and see whether counts are above 100 (or 20 if need be)
+
+```{r hkglevel2, eval=T}
+hkg_counts  %>%
+   data.frame() %>% 
+   rownames_to_column("Accession") %>%
+   pivot_longer(cols = -Accession, names_to = "sample", values_to = "count") %>% 
+   left_join(data.frame(dat$dict) %>% filter(CodeClass == "Housekeeping") %>% select(Accession, Name), by = c("Accession")) %>% 
+   mutate(sample = gsub("^X", "", sample),
+          sample = gsub("day.", "day ", sample, fixed=T)) %>%
+   left_join(sample_info, by = c("sample" = "file_name")) %>%
+   ggplot(aes(x = as.character(day), y = log10(count))) +
+   geom_boxplot() +
+   facet_wrap(~Name) +
+   theme_bw(base_size = 12) +
+   stat_compare_means(method = "t.test", label = "p.signif") +
+   geom_hline(yintercept = log10(100), color = "blue", linetype = "dashed") +
+   geom_hline(yintercept = log10(20), color = "blue", linetype = "dashed") +
+   ggtitle("All samples (no HKG norm, processed together)")
+```
+
+D14 is significantly higher.  
+
+```{r hkglevel3, eval=T}
+hkg_counts_d10  %>%
+   data.frame() %>% 
+   rownames_to_column("Accession") %>%
+   pivot_longer(cols = -Accession, names_to = "sample", values_to = "count") %>% 
+   left_join(data.frame(dat$dict) %>% filter(CodeClass == "Housekeeping") %>% select(Accession, Name), by = c("Accession")) %>% 
+   mutate(sample = gsub("^X", "", sample),
+          sample = gsub("day.", "day ", sample, fixed=T)) %>%
+   left_join(sample_info, by = c("sample" = "file_name")) %>%
+   filter(day == 10) %>%
+   ggplot(aes(x = treatment, y = log10(count))) +
+   geom_boxplot() +
+   facet_wrap(~Name) +
+   theme_bw(base_size = 12) +
+   stat_compare_means(method = "t.test", label = "p.signif") +
+   geom_hline(yintercept = log10(100), color = "blue", linetype = "dashed") +
+   geom_hline(yintercept = log10(20), color = "blue", linetype = "dashed") +
+   ggtitle("Day 10 samples only (separately processed, no HKG norm)")
+```
+
+There is no significant difference (nominal t-test p-value) between the treatments in any HKG expression at D10, processed separately.
+
+```{r hkglevel4, eval=T}
+hkg_counts_d14  %>%
+   data.frame() %>% 
+   rownames_to_column("Accession") %>%
+   pivot_longer(cols = -Accession, names_to = "sample", values_to = "count") %>% 
+   left_join(data.frame(dat$dict) %>% filter(CodeClass == "Housekeeping") %>% select(Accession, Name), by = c("Accession")) %>% 
+   mutate(sample = gsub("^X", "", sample),
+          sample = gsub("day.", "day ", sample, fixed=T)) %>%
+   left_join(sample_info, by = c("sample" = "file_name")) %>%
+   filter(day == 14) %>%
+   ggplot(aes(x = treatment, y = log10(count))) +
+   geom_boxplot() +
+   facet_wrap(~Name) +
+   theme_bw(base_size = 12) +
+   stat_compare_means(method = "t.test", label = "p.signif") +
+   geom_hline(yintercept = log10(100), color = "blue", linetype = "dashed") +
+   geom_hline(yintercept = log10(20), color = "blue", linetype = "dashed") +
+   ggtitle("Day 14 samples only (separately normalized)")
+```
+
+There is no significant difference (nominal t-test p-value) between the treatments in any 
+HKG expression at D14, processed separately. 
+Two samples have much lower expression of everything (07 and 02).
+
+## Calculate variance of each HKG
+
+```{r hkgvariance, eval=T}
+# Skipping
+
+
+hkg_variance <- qc_data_gene %>%
+   filter(CodeClass == "Housekeeping") %>%
+   mutate(variance = apply(X = hkg_counts[rownames(.),], MARGIN = 1, FUN = var),
+          mean = apply(X = hkg_counts[rownames(.),], MARGIN = 1, FUN = mean))
+
+# Choose a set of housekeeping genes with similar variance
+
+# Visualize the variance of housekeeping genes
+hkg_variance %>%
+   ggplot(aes(x = reorder(Name, variance), y = variance)) +
+   geom_col() +
+   xlab("Housekeeping Gene") +
+   ylab("Variance") +
+   theme_bw(base_size = 12) +
+   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+   geom_hline(yintercept = quantile(hkg_variance$variance, 0.25), color = "blue", linetype = "dashed") +
+   geom_hline(yintercept = quantile(hkg_variance$variance, 0.75), color = "blue", linetype = "dashed")
+```
+
+## Identify HKG with low expression or expressed in fewer samples
+
+Omit some for normalization due to lower than 100 mean expression (pre normalization) 
+or expressed above mean negative control in less than ~80% of samples.
+
+```{r hkg_omit}
+omit_hkg <- c("Mrpl19", "Nrde2", "Tlk2", "Ubb", # low expression, potentially missingness
+"Ercc3", "Sf3a1", "Tlk2", "Dnajc14" # missingness
+)
+omit_hkg_names <- data.frame(dat$dict) %>%
+   filter(Name %in% omit_hkg) %>% pull(Accession)
+use_hkg_names <- setdiff(hkg_gene_names, omit_hkg_names)
+```
+
+# HKG normalization with 13 genes
+
+```{r}
+dat_hk <- processNanostringData(
+                  nsFiles = rcc_files, 
+                  normalization='nSolver',
+                  output.format = "list", 
+                  includeQC = TRUE,
+                  housekeeping = use_hkg_names)
+
+dat_d10_hk <- processNanostringData(
+                  nsFiles = rcc_d10, 
+                  normalization='nSolver',
+                  output.format = "list", 
+                  includeQC = TRUE,
+                  housekeeping = use_hkg_names)
+
+dat_d14_hk <- processNanostringData(
+                  nsFiles = rcc_d14, 
+                  normalization='nSolver',
+                  output.format = "list", 
+                  includeQC = TRUE, 
+                  housekeeping = use_hkg_names)
+```
+
+## HKG normalization factor
+
+Manufacturer recommends additional caution for samples with scale factors outside the range of 0.1-10.
+
+```{r}
+data.frame(dat_hk$hk.scalefactors) %>% 
+   tibble::rownames_to_column("sample") %>%
+   ggplot(aes(y = sample, x = dat_hk.hk.scalefactors)) +
+   geom_col() +
+   xlab("Housekeeping gene normalization factor") +
+   ylab("Sample name") +
+   geom_vline(xintercept = 0.1, color = "red", size = 1) +
+   geom_vline(xintercept = 10, color = "red", size = 1) +
+   theme_bw(base_size = 12)
+```
+
+Processed+normalized both days together: samples are either ~0 (mostly D10) or 2 (mostly D14). 
+
+```{r}
+data.frame(dat_d10_hk$hk.scalefactors) %>% 
+   tibble::rownames_to_column("sample") %>%
+   ggplot(aes(y = sample, x = dat_d10_hk$hk.scalefactors)) +
+   geom_col() +
+   xlab("Housekeeping gene normalization factor") +
+   ylab("Sample name") +
+   geom_vline(xintercept = 0.1, color = "red", size = 1) +
+   geom_vline(xintercept = 10, color = "red", size = 1) +
+   theme_bw(base_size = 12) +
+   ggtitle("Day 10 samples only")
+```
+
+Day 10 alone: 3 samples high; rest are low. 6 of the low are below desired range.
+
+```{r}
+data.frame(dat_d14_hk$hk.scalefactors) %>% 
+   tibble::rownames_to_column("sample") %>% 
+   ggplot(aes(y = sample, x = dat_d14_hk$hk.scalefactors)) +
+   geom_col() +
+   xlab("Housekeeping gene normalization factor") +
+   ylab("Sample name") +
+   geom_vline(xintercept = 0.1, color = "red", size = 1) +
+   geom_vline(xintercept = 10, color = "red", size = 1) +
+   theme_bw(base_size = 12) +
+   ggtitle("Day 14 samples only")
+```
+
+Day 14 alone: 2 samples very low, both below desired range.
+
+## Overall expression level of endogenous genes
+
+```{r}
+data.frame(dat_hk$exprs) %>% 
+   tibble::rownames_to_column("Accession") %>% 
+   left_join(data.frame(dat_hk$dict) %>% select(Accession, Name, CodeClass), by = "Accession") %>%
+   filter(CodeClass == "Endogenous") %>%
+   pivot_longer(cols = -c(Accession, Name, CodeClass), names_to = "sample", values_to = "expr") %>%
+   ggplot(aes(y = sample, x = expr)) +
+   geom_boxplot() +
+   ggtitle("Overall expression level of endogenous genes") +
+   ylab("Sample name") +
+   xlab("Expression level (HKG normalized)") +
+   theme_bw(base_size = 12) +
+   scale_x_log10()
+```
+
+On the log scale, things don't look too dramatic. PCA outliers d10 09 and d14 05 are higher overall. 
+Samples with higher norm factor are lower overall. Specifically d10 01 and d10 02.
+
+```{r}
+data.frame(dat_d10_hk$exprs) %>% 
+   tibble::rownames_to_column("Accession") %>% 
+   left_join(data.frame(dat_d10_hk$dict) %>% select(Accession, Name, CodeClass), by = "Accession") %>%
+   filter(CodeClass == "Endogenous") %>%
+   pivot_longer(cols = -c(Accession, Name, CodeClass), names_to = "sample", values_to = "expr") %>%
+   ggplot(aes(y = sample, x = expr)) +
+   geom_boxplot() +
+   ggtitle("D10: Overall expression level of endogenous genes") +
+   ylab("Sample name") +
+   xlab("Expression level (HKG normalized)") +
+   theme_bw(base_size = 12) +
+   scale_x_log10()
+```
+
+D10: Medians are similar. Ranges of 01, 02, 09, 12 are larger.
+
+```{r}
+data.frame(dat_d14_hk$exprs) %>% 
+   tibble::rownames_to_column("Accession") %>% 
+   left_join(data.frame(dat_d14_hk$dict) %>% select(Accession, Name, CodeClass), by = "Accession") %>%
+   filter(CodeClass == "Endogenous") %>%
+   pivot_longer(cols = -c(Accession, Name, CodeClass), names_to = "sample", values_to = "expr") %>%
+   ggplot(aes(y = sample, x = expr)) +
+   geom_boxplot() +
+   ggtitle("D14: Overall expression level of endogenous genes") +
+   ylab("Sample name") +
+   xlab("Expression level (HKG normalized)") +
+   theme_bw(base_size = 12) +
+   scale_x_log10()
+```
+
+D14: Median of 09 is higher. Ranges of 02 and 07 are smaller.
+
+# PC
+## All
+All samples processed together, HKG normalization 13 genes.
+Manual inspection using interactive plot:
+d10 05 is outlier in PC1 (43% var) and d14 09 is outlier in PC2 (27% var).  
+
+```{r eval=T}
+p <- nanostringPCA(dat_hk, interactive.plot = T)$pca
+nanostringPCA(dat_hk, interactive.plot = T)$plt
+```
+
+Samples clearly cluster in PC1 by HKG normalization factor, which generally splits by day.
+
+```{r eval=T}
+data.frame(p$x) %>%
+   rownames_to_column("sample") %>%
+   left_join(sample_info, by = c("sample" = "file_name")) %>% 
+   left_join(data.frame(dat_hk$hk.scalefactors) %>% 
+   tibble::rownames_to_column("sample")) %>% 
+   ggplot(aes(x = PC1, y = PC2, color = dat_hk.hk.scalefactors, shape = as.character(day))) +
+   geom_point(size = 3) +
+   theme_bw(base_size = 12) +
+   ggtitle("All samples processed together") +
+   scale_color_gradient(low = "blue", high = "red")
+```
+
+## D10 
+D10 samples alone, HKG normalization 13 genes. 
+Manual inspection using interactive plot:
+d10 05 is separated from the rest in PC1 which is 55% of the variance. 
+The three samples with low normalization factor (01, 02, 12) are at one side of PC1 but not separated. 
+PC2 has two groups not considering 05 (11% var).
+
+```{r eval=T}
+p <- nanostringPCA(dat_d10_hk, interactive.plot = T)$pca
+
+nanostringPCA(dat_d10_hk, interactive.plot = T)$plt
+```
+
+PC1 is normalization factor. Not sure what is driving PC2, it's not treatment.
+
+```{r eval=T}
+data.frame(p$x) %>%
+   rownames_to_column("sample") %>%
+   left_join(sample_info, by = c("sample" = "file_name")) %>% 
+   left_join(data.frame(dat_d10_hk$hk.scalefactors) %>% 
+   tibble::rownames_to_column("sample")) %>% 
+   ggplot(aes(x = PC1, y = PC2, color = dat_d10_hk$hk.scalefactors, shape = treatment)) +
+   geom_point(size = 3) +
+   theme_bw(base_size = 12) +
+   ggtitle("D10") +
+   scale_color_gradient(low = "blue", high = "red")
+```
+
+## D14
+D14 samples normalized. 
+Manual inspection using interactive plot:
+PC1 has 09 as an outlier with 47% of the variance. 
+02 and 07 are very separated from the rest in PC2 which is 29% of the variance. Those are the samples with low HKG norm factor.
+
+```{r eval=T}
+p <- nanostringPCA(dat_d14_hk, interactive.plot = T)$pca
+
+nanostringPCA(dat_d14_hk, interactive.plot = T)$plt
+```
+
+PC1 and PC2 are both associated with HKG normalization factor, which is not surprising given the large variance explained by PC1 and the outliers in PC1 and PC2 being the samples with low HKG normalization factor. Treatment does not appear to be associated with either of the PCs.
+```{r eval=T}
+data.frame(p$x) %>%
+   rownames_to_column("sample") %>%
+   left_join(sample_info, by = c("sample" = "file_name")) %>% 
+   left_join(data.frame(dat_d14_hk$hk.scalefactors) %>% 
+   tibble::rownames_to_column("sample")) %>% 
+   ggplot(aes(x = PC1, y = PC2, color = dat_d14_hk$hk.scalefactors, shape = treatment)) +
+   geom_point(size = 3) +
+   theme_bw(base_size = 12) +
+   ggtitle("D14") +
+   scale_color_gradient(low = "blue", high = "red")
+```
+
+# Filtering outliers and re-running normalization
+
+## D10
+
+Normalization factors might be ok. Remove 5 due to PC outlier.
+
+D10: 1, 2, 3, 4, 6 [control] 7, 8, 9, 10, 11, 12 [treatment]
+
+## D14
+
+Remaining if we take out normalization factor (2, 7) and PCA (9) outliers
+D14: 1, 3, 4, 5, [control] 8, 10, 11 [treatment]
+
+```{r}
+dat_d14_filter <- processNanostringData(
+                  nsFiles = c(rcc_d14[1], rcc_d14[3:5], rcc_d14[7], rcc_d14[9:10]),
+                  normalization='nSolver',
+                  output.format = "list", 
+                  includeQC = TRUE, 
+                  housekeeping = use_hkg_names
+               )
+hkQC_d14_filter <- data.frame(hk_scale_factor = dat_d14_filter$hk.scalefactors) %>% 
+      rownames_to_column("sample")
+```
+
+```{r}
+hkQC_d14_filter %>%
+   ggplot(aes(y = sample, x = hk_scale_factor)) +
+   geom_col() +
+   xlab("Housekeeping gene normalization factor") +
+   ylab("Sample name") +
+   geom_vline(xintercept = 0.1, color = "red", size = 1) +
+   geom_vline(xintercept = 10, color = "red", size = 1) +
+   theme_bw(base_size = 12) +
+   ggtitle("Day 14 samples only")
+```
+
+All normalization factors are in the same range.
+
+```{r eval=T}
+p <- nanostringPCA(dat_d14_filter, interactive.plot = T)$pca
+
+nanostringPCA(dat_d14_filter, interactive.plot = T)$plt
+```
+
+PC1 and PC2 are both associated with HKG normalization factor, which is not surprising given the large variance explained by PC1 and the outliers in PC1 and PC2 being the samples with low HKG normalization factor. Treatment does not appear to be associated with either of the PCs.
+```{r eval=T}
+data.frame(p$x) %>%
+   rownames_to_column("sample") %>%
+   left_join(sample_info, by = c("sample" = "file_name")) %>% 
+   left_join(data.frame(dat_d14_filter$hk.scalefactors) %>% 
+   tibble::rownames_to_column("sample")) %>% 
+   ggplot(aes(x = PC1, y = PC2, color = dat_d14_filter$hk.scalefactors, shape = treatment)) +
+   geom_point(size = 3) +
+   theme_bw(base_size = 12) +
+   ggtitle("D14 (filter out outliers)") +
+   scale_color_gradient(low = "blue", high = "red")
+```
+
+Unremarkable PCA
+
+# nCounter normalization and RLE plot
+
+```{r}
+#TODO
+# Not sure whether to remove genes due to background, use subtraction?
+# Do a different method than geomean (gsva, ssgsea) for gene sets
+# Other gene sets besides what's in the panel info file
+
+dat_d10 <- processNanostringData(
+                  nsFiles = rcc_d10, 
+                  normalization='nSolver',
+                  output.format = "list", 
+                  includeQC = TRUE, 
+                  housekeeping = use_hkg_names,
+                  bgType = "none" # Many genes relevant to the signatures are removed as the default here is 2sd in half of the samples.
+)
+ruv::ruv_rle(t(log2(dat_d10$exprs)), ylim = c(-2, 2))
+
+dat_d14 <- processNanostringData(
+                  nsFiles = rcc_d14, 
+                  normalization='nSolver',
+                  output.format = "list", 
+                  includeQC = TRUE, 
+                  housekeeping = use_hkg_names,
+                  bgType = "none" # Many genes relevant to the signatures are removed as the default here is 2sd in half of the samples.
+                  ) 
+ruv::ruv_rle(t(log2(dat_d14$exprs)), ylim = c(-2, 2))
+
+```
+
+### RUVg normalization and RLE plot
+```{r}
+datRUVg_d10 <- processNanostringData(nsFiles = rcc_d10,
+                             normalization = "RUVg",
+                             bgType = "none", 
+                             n.unwanted = 1, RUVg.drop = 0,
+                             housekeeping = use_hkg_names,
+                                               output.format = "list")
+# Few features remaining using bgPVal and t-test
+ruv::ruv_rle(t(log2(datRUVg_d10$exprs)), ylim = c(-2, 2))
+nanostringPCA(datRUVg_d10, interactive.plot = TRUE)$plt
+
+datRUVg_d14 <- processNanostringData(nsFiles = rcc_d14,
+                             normalization = "RUVg",
+                             bgType = "none", 
+                             n.unwanted = 1, RUVg.drop = 0,
+                             housekeeping = use_hkg_names,
+                                               output.format = "list")
+ruv::ruv_rle(t(log2(datRUVg_d14$exprs)), ylim = c(-2, 2))
+nanostringPCA(datRUVg_d14, interactive.plot = TRUE)$plt
+
+```

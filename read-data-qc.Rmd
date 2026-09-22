@@ -1,0 +1,311 @@
+---
+title: "Read data and perform QC and normalization workflow"
+author: "Takeda Pharmaceuticals"
+date: "`r Sys.Date()`"
+output:
+   html_document:
+     toc: true
+     toc_float: true
+     toc_depth: 2
+     code_folding: hide
+---
+
+```{r setup, include=FALSE}
+# Available on CRAN
+library(dplyr)
+library(ggplot2)
+library(magrittr)
+library(tibble)
+library(janitor)
+library(tidyr)
+
+# Available on Bioconductor
+library(NanoTube)
+```
+
+# Resources 
+https://nanostring.com/wp-content/uploads/MAN-C0019-08_nSolver_4.0_Analysis_Software_User_Manual.pdf
+
+
+```{r}
+sample_metadata_filepath <- "/root/capsule/data/tak188-mouse-preclinical-nanostring-v2/"
+rcc_filepath <- "/root/capsule/data/tak188-mouse-preclinical-nanostring-v2"
+```
+
+# Read in data
+
+```{r}
+sample_info <- read.csv(file.path(sample_metadata_filepath, "20260408_metadata.csv"))
+# Add a 'replicate' column to sample_info
+sample_info %<>%
+   group_by(treatment, day) %>%
+   mutate(replicate = row_number()) %>%
+   ungroup()
+
+# List all files with .RCC extension in the specified directory
+rcc_files <- list.files(rcc_filepath, 
+                  pattern = "\\.RCC$", 
+                  full.names = TRUE)
+
+# First two lines viewing RCC as text file
+
+# FileVersion,1.7 SoftwareVersion,6.0.2
+# ID,01 Owner, Comments, Date,20260408 GeneRLF,NS_Mm_IO_360_v1.0 SystemAPF,n6_vDV1 ID,12 FovCount,280 FovCounted,280 ScannerID,2212E0093 StagePosition,1 BindingDensity,1.46 CartridgeID,day 10 CartridgeBarcode, 
+```
+
+Run with default nSolver normalization to get the QC metrics. 
+You can change the normalization method later, but you need to run this first to get the QC metrics.
+
+```{r}
+dat <- processNanostringData(
+                  nsFiles = rcc_files, 
+                  normalization='nSolver',
+                  output.format = "list", 
+                  includeQC = TRUE)
+```
+
+
+# QC
+
+```{r}
+# Positive control
+posQC <- positiveQC(dat)$tab %>%
+   clean_names() %>%
+   remove_rownames()
+
+posQC_plt <- positiveQC(dat)$plt
+
+# Negative control
+negQC <- negativeQC(dat, interactive.plot = FALSE)$tab %>%
+   clean_names() %>%
+   rownames_to_column("sample") %>%
+   mutate(genes_below_bg_count = as.integer(sub(" \\(.*\\)", "", genes_below_bg_percent)),
+          genes_below_bg_percent = as.numeric(sub(".*\\((.*)%\\)", "\\1", genes_below_bg_percent)))
+
+negQC_plt <- negativeQC(dat)$plt
+
+# Housekeeping normalization scale factors
+hkQC <- data.frame(hk_scale_factor = dat$hk.scalefactors) %>% 
+      rownames_to_column("sample")
+```
+
+```{r}
+# Add QC from the RCC file and join with the other QC metrics and metadata
+qc_data_sample <- data.frame(dat$qc) %>% 
+   rownames_to_column(var = "sample") %>%
+   mutate() %>%
+   left_join(posQC, by = "sample") %>%
+   left_join(negQC, by = "sample") %>%
+   left_join(hkQC, by = "sample") %>%
+   clean_names() %>%
+   mutate(binding_density = as.numeric(binding_density),
+          fov_counted = as.numeric(fov_counted),
+          fov_count = as.numeric(fov_count),
+          pct_fov_counted = fov_counted / fov_count * 100)
+
+qc_data_sample$pct_features_nonzero <- apply(X = dat$exprs.raw, MARGIN = 2, function(x) sum(x > 0)/nrow(dat$exprs.raw) * 100)
+```
+
+## FOV
+
+At least 75% of FOVs should be successfully counted to obtain robust data.
+
+```{r}
+qc_data_sample %>%
+   ggplot(aes(y = sample, x = pct_fov_counted)) +
+   geom_col() +
+   xlab("% FOV counted") +
+   ylab("Sample name") +
+   geom_vline(xintercept = 75, color = "red", linewidth = 1) +
+   theme_bw(base_size = 12)
+```
+
+Sample "day 14_01_06" fails.
+
+## Nonzero Features
+
+```{r}
+qc_data_sample %>%
+   ggplot(aes(y = sample, x = pct_features_nonzero)) +
+   geom_col() +
+   xlab("% nonzero features") +
+   ylab("Sample name") +
+   theme_bw(base_size = 12)
+```
+
+Sample "day 14_01_06" has slightly less.
+
+## Features below negative control
+
+```{r}
+qc_data_sample %>%
+   filter(mean_neg > 0) %>%
+   ggplot(aes(y = sample, x = genes_below_bg_percent)) +
+   geom_col() +
+   xlab("% genes below negative control background") +
+   ylab("Sample name") +
+   theme_bw(base_size = 12) +
+   ggtitle("", subtitle = "Only samples with mean negative control counts above 0 are included in this plot")
+```
+
+May of the "day 10" samples have significantly more genes below background, many over 50-75%.
+
+## Binding Density
+
+The ideal range 0.1 - 2.25 spots per square micron has been established for assays run on an nCounter MAX or FLEX system 
+and 0.1 - 1.8 spots per square micron on the nCounter SPRINT system. 
+
+The Nanostring FAS suggested this is actually a conservative cutoff and so long as the binding density is similar among 
+samples, a lower binding density may provide usable data.
+
+```{r}
+qc_data_sample %>%
+   ggplot(aes(y = sample, x = binding_density)) +
+   geom_col() +
+   xlab("Binding Density") +
+   ylab("Sample name") +
+   geom_vline(xintercept = 0.1, color = "blue", linewidth = 1) +
+   geom_vline(xintercept = 1.8, color = "blue", linewidth = 1) +
+   theme_bw(base_size = 12)
+```
+
+Sample "day 14_01_06" fails, much too high.
+
+## Positive control linearity
+
+This metric performs a correlation analysis in log2 space between the known concentrations of positive control 
+target molecules added by NanoString and the resulting counts. Correlation values lower than 0.95 may indicate 
+an issue with the hybridization reaction and/or assay performance.
+
+```{r}
+qc_data_sample %>%
+   ggplot(aes(y = sample, x = r_squared)) +
+   geom_col() +
+   xlab("Correlation value of positive control") +
+   ylab("Sample name") +
+   geom_vline(xintercept = 0.95, color = "red", size = 1) +
+   theme_bw(base_size = 12)
+```
+
+Sample "day 14_01_06" has no data (probably no control detection).
+
+```{r}
+posQC_plt
+```
+
+
+## POS A
+
+```{r poscontrol}
+# Extract positive control counts
+positive_control_names <- data.frame(dat$dict) %>%
+   filter(CodeClass == "Positive") %>% pull(Accession)
+positive_control_counts <- dat$exprs[positive_control_names, ]
+positive_control_counts <- data.frame(positive_control_counts) %>% 
+   tibble::rownames_to_column(var = "Accession") %>%
+   left_join(data.frame(dat$dict), by = "Accession") %>%
+   relocate(Name) %>% select(-CodeClass)
+positive_control_counts %<>% pivot_longer(-c(Name, Accession), names_to = "sample", values_to = "count")
+```
+
+The Nanostring FAS noted that POS A should be above about 10K counts. The concern is that positive control 
+normalization when Pos A is lower than this could amplify noise instead of reducing it. This flag would 
+probably co-occur with LOD or linearity flags.  
+
+```{r}
+positive_control_counts %>%
+   filter(Name == "POS_A(128)") %>%
+   ggplot(aes(y = sample, x = count)) +
+   geom_col() +
+   xlab("Counts of POS_A") +
+   ylab("Sample name") +
+   theme_bw(base_size = 12)
+```
+
+Sample "day 14_01_06" fails.
+
+## Negative control background
+
+```{r}
+negQC_plt
+```
+
+Everything is below 30.
+
+## Positive control LOD
+
+This measures the limit of detection of the assay by comparing the results from the positive control 
+probes and those from the negative control probes. Specifically, it is expected that the 0.5 fM positive 
+control probe (Pos_E) will produce raw counts at least two standard deviations higher than the mean of 
+the negative control probes.
+
+```{r negcontrol}
+# Extract control counts
+negative_control_names <- data.frame(dat$dict) %>%
+   filter(CodeClass == "Negative") %>% pull(Accession)
+negative_control_counts <- dat$exprs[negative_control_names, ]
+negative_control_counts <- data.frame(negative_control_counts) %>% 
+   tibble::rownames_to_column(var = "Accession") %>%
+   left_join(data.frame(dat$dict), by = "Accession") %>%
+   relocate(Name) %>% select(-CodeClass)
+negative_control_counts %<>% pivot_longer(-c(Name, Accession), names_to = "sample", values_to = "count")
+
+controls_df <- positive_control_counts %>% 
+   filter(Name == "POS_E(0.5)") %>% 
+   select(sample, pos_E = count) %>%
+   left_join(negative_control_counts %>% 
+               group_by(sample) %>% 
+               summarize(negative_control_mean = mean(count), 
+                         negative_control_sd = sd(count)), by = "sample") %>%
+   mutate(positive_control_lod = (pos_E - negative_control_mean)/negative_control_sd) %>% 
+   left_join(positive_control_counts %>% 
+   filter(Name == "POS_A(128)") %>% 
+   select(sample, pos_A = count), by = "sample")
+
+# Samples are in same order although names slightly different
+qc_data_sample <- bind_cols(qc_data_sample, controls_df %>% select(-sample))
+```
+
+```{r}
+positive_control_counts %>%
+   ggplot(aes(y = sample, x = count)) +
+   geom_jitter(shape = 21, fill = "gray", width=0, height=0.1) +
+   xlab("Counts of positive controls") +
+   ylab("Sample name") +
+   theme_bw(base_size = 12)
+```
+
+Sample "day 14_01_06" has much lower counts than the rest of the samples, which seem consistent in magnitude.
+"day 10" samples have slightly higher values of the highest postitive control compared to "day 14" samples.
+
+```{r}
+bind_rows(negative_control_counts %>% mutate(ControlType = "negative"), positive_control_counts %>% mutate(ControlType = "positive")) %>%
+   ggplot(aes(y = sample, x = count, fill = ControlType)) +
+   geom_jitter(shape = 21, width=0, height=0.2, alpha = 0.5) +
+   xlab("Counts of positive and negative controls") +
+   ylab("Sample name") +
+   theme_bw(base_size = 12)
+```
+
+Sample "day 14_01_06" has low positive, mixed in with negative.
+
+```{r}
+controls_df %>%
+   ggplot(aes(y = sample)) +
+   geom_point(aes(x = negative_control_mean), color = "blue") +
+   geom_point(aes(x = pos_E), color = "red") +
+   geom_errorbar(aes(x = negative_control_mean, xmin = negative_control_mean, xmax = negative_control_mean + negative_control_sd*2)) +
+   ylab("") + xlab("Count") + ggtitle("Mean of negative controls + 2 stdev of negative\ncontrols < POS_E")
+```
+
+Sample "day 14_01_06" fails and should definitely be removed.
+
+```{r}
+controls_df %>%
+   ggplot(aes(y = sample, x = positive_control_lod)) +
+   geom_col() +
+   xlab("Number of negative-control standard deviations\nabove the negative-control mean of POS_E") +
+   ylab("Sample name") +
+   geom_vline(xintercept = 2, color = "red", size = 1) +
+   theme_bw(base_size = 12)
+```

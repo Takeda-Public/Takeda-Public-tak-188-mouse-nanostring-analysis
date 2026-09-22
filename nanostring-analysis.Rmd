@@ -1,0 +1,966 @@
+---
+title: "Mouse Nanostring analysis for publication: TAK-188, a Novel Antibody-Drug Conjugate, Disrupts Immune Suppression and Leads to Antitumor Immunity Through Depletion of CCR8+ Intratumoral Regulatory T Cells"
+author: "Takeda Pharmaceuticals"
+date: "`r Sys.Date()`"
+output:
+   html_document:
+     toc: true
+     toc_float: true
+     toc_depth: 2
+     code_folding: hide
+---
+
+```{r setup, include=FALSE}
+# Available on CRAN
+library(dplyr)
+library(ggplot2)
+library(magrittr)
+library(ruv)
+library(tibble)
+library(janitor)
+library(tidyr)
+library(reshape2)
+
+# Available on Bioconductor
+library(GSVA)
+library(NanoTube)
+```
+
+```{r}
+sample_metadata_filepath <- "/root/capsule/data/tak188-mouse-preclinical-nanostring-v2/"
+results_filepath <- "/root/capsule/data/tak188-mouse-preclinical-nanostring-results/"
+rcc_filepath <- "/root/capsule/data/tak188-mouse-preclinical-nanostring-v2/"
+panel_info_filepath <- "/root/capsule/data/parsed-mouse-io360-panel-info-revised/"
+```
+
+# Read in data
+
+```{r}
+sample_info <- read.csv(file.path(sample_metadata_filepath, "20260408_metadata.csv"))
+# Add a 'replicate' column to sample_info
+sample_info %<>%
+   group_by(treatment, day) %>%
+   mutate(replicate = row_number()) %>%
+   ungroup()
+sample_info %<>%
+    mutate(sample_id_clean = janitor::make_clean_names(file_name))
+
+# Read in from Results object
+load(file = file.path(results_filepath, "nanostring_results.RData"))
+```
+
+```{r eval=F}
+# List all files with .RCC extension in the specified directory
+rcc_files <- list.files(rcc_filepath, 
+                  pattern = "\\.RCC$", 
+                  full.names = TRUE)
+```
+
+```{r}
+load(file.path(panel_info_filepath, "mouse_io360_panel_info.RData"))
+```
+
+# Preprocessing and Normalization
+
+## Selection of HKGs
+
+7/20 of the HKG on the panel are omitted for normalization purposes
+due to lower than 100 mean expression (pre-normalization) 
+or expression below negative control background in > 80% of samples.
+
+```{r eval=F}
+use_hkg_names <- c("NM_009089.2", "NM_001159605.1", "NM_023281.1", "NM_013854.1", "NM_011638.4", 
+"NM_013684.3", "NM_010368.1", "NM_028076.2", "NM_008062.2", "NM_008753.4", "NM_027886.3", 
+"NM_011874.2", "NM_144522.5")
+```
+
+## Sample removal
+
+Day 14, Sample 06 was removed due to QC Fail.
+
+D10 Sample 05 and D14 Sample 09 were removed as PCA outliers.
+
+Samples at D10 with higher expression of all genes (1, 2, 12) and 
+at D14 with lower expression of all genes (2, 7) were left in 
+as normalization seems to be able to take care of it.
+
+```{r eval=F}
+rcc_d10 <- rcc_files[grepl("day 10", rcc_files)]
+rcc_d10 <- rcc_d10[c(1,2,3,4,6,7,8,9,10,11,12)]
+
+rcc_d14 <- rcc_files[grepl("day 14", rcc_files)]
+rcc_d14 <- rcc_d14[c(1,2,3,4,5,7,8,10,11)]
+```
+
+## RUVg normalization 
+
+Few features remaining using bgPVal and t-test; so didn't remove background.
+
+### Can we do both days together? Doesn't look like it.
+
+```{r eval=F}
+# 1 component - high variability
+# 2 components - D14 looks even, D10 definitely not
+# More than 2 - no change from 2
+datRUVg_bothdays <- processNanostringData(nsFiles = c(rcc_d10, rcc_d14),
+                             normalization = "RUVg",
+                             bgType = "none", 
+                             n.unwanted = 2, 
+                             RUVg.drop = 0,
+                             housekeeping = use_hkg_names,
+                             output.format = "list")
+```
+
+```{r eval=F}
+ruv::ruv_rle(t(log2(datRUVg_bothdays$exprs)), ylim = c(-2, 2))
+p <- nanostringPCA(datRUVg_bothdays, interactive.plot = TRUE)
+p$plt
+```
+
+```{r eval=F}
+# Days separate.
+data.frame(p$pca$x) %>%
+   rownames_to_column("sample") %>%
+   mutate(sample = gsub(sample, pattern = "20260408_day ", replacement = "", fixed=T)) %>%
+   mutate(sample = gsub(sample, pattern = ".RCC", replacement = "", fixed=T)) %>%
+   mutate(day = ifelse(grepl("10", sample), "D10", "D14")) %>%
+   ggplot(aes(x = PC1, y = PC2)) +
+   geom_point(size = 3, aes(color = day)) +
+   theme_bw(base_size = 12) +
+   ggtitle("Both days")
+```
+
+### D10 - 2 components
+
+RLE plot shows that Sample 12 distribution has a higher mean, especially with only 1 unwanted component (default).
+I upped it to 2 which improves it a bit.
+
+PC1 (30% of variance), PC2 (15% of variance).
+
+```{r eval=F}
+datRUVg_d10 <- processNanostringData(nsFiles = rcc_d10,
+                             normalization = "RUVg",
+                             bgType = "none", 
+                             n.unwanted = 2, 
+                             RUVg.drop = 0,
+                             housekeeping = use_hkg_names,
+                             output.format = "list")
+```
+
+```{r}
+ruv::ruv_rle(t(log2(datRUVg_d10$exprs)), ylim = c(-2, 2))
+p <- nanostringPCA(datRUVg_d10, interactive.plot = TRUE)
+p$plt
+```
+
+```{r}
+data.frame(p$pca$x) %>%
+   rownames_to_column("sample") %>%
+   mutate(sample = gsub(sample, pattern = "20260408_day 10_01_", replacement = "", fixed=T)) %>%
+   mutate(sample = gsub(sample, pattern = ".RCC", replacement = "", fixed=T)) %>%
+   ggplot(aes(x = PC1, y = PC2)) +
+   geom_point(size = 3) +
+   theme_bw(base_size = 12) +
+   ggtitle("D10 samples only, RUVg (2 components)") +
+   scale_color_gradient(low = "blue", high = "red") +
+   ggrepel::geom_label_repel(aes(label = sample), size = 8)
+```
+
+### D14 - 1 component
+
+With one component, the distributions are similar in the RLE plot.
+
+PC1 (33% of variance), PC2 (20% of variance).
+
+```{r eval=F}
+datRUVg_d14 <- processNanostringData(nsFiles = rcc_d14,
+                             normalization = "RUVg",
+                             bgType = "none", 
+                             n.unwanted = 1, 
+                             RUVg.drop = 0,
+                             housekeeping = use_hkg_names, 
+                             output.format = "list")
+```
+
+```{r}
+ruv::ruv_rle(t(log2(datRUVg_d14$exprs)), ylim = c(-2, 2))
+p <- nanostringPCA(datRUVg_d14, interactive.plot = TRUE)
+
+p$plt
+```
+
+```{r}
+data.frame(p$pca$x) %>%
+   rownames_to_column("sample") %>%
+   mutate(sample = gsub(sample, pattern = "20260408_day 14_01_", replacement = "", fixed=T)) %>%
+   ggplot(aes(x = PC1, y = PC2)) +
+   geom_point(size = 3) +
+   theme_bw(base_size = 12) +
+   ggtitle("D14 samples only, RUVg (1 component)") +
+   scale_color_gradient(low = "blue", high = "red") +
+   geom_label(aes(label = sample), size = 8, vjust = 1.5)
+```
+
+
+# Differential expression with limma
+
+
+```{r eval=F}
+# Extract expression data
+
+expression_d10 <- data.frame(datRUVg_d10$exprs)
+expression_d10 %<>% rownames_to_column("Accession") %>% 
+  left_join(data.frame(datRUVg_d10$dict), by = "Accession") %>%
+  dplyr::filter(CodeClass == "Endogenous")
+
+expression_d14 <- data.frame(datRUVg_d14$exprs)
+expression_d14 %<>% rownames_to_column("Accession") %>% 
+  left_join(data.frame(datRUVg_d14$dict), by = "Accession") %>%
+  dplyr::filter(CodeClass == "Endogenous")
+
+# Normalize in the same way as above, output in expression set format
+datRUVg_d10_exprSet <- processNanostringData(nsFiles = rcc_d10,
+                             normalization = "RUVg",
+                             bgType = "none", 
+                             n.unwanted = 2, 
+                             RUVg.drop = 0,
+                             housekeeping = use_hkg_names)
+
+datRUVg_d14_exprSet <- processNanostringData(nsFiles = rcc_d14,
+                             normalization = "RUVg",
+                             bgType = "none", 
+                             n.unwanted = 1, 
+                             RUVg.drop = 0,
+                             housekeeping = use_hkg_names)
+```
+
+```{r}
+# Helper function for gene of interest plots
+goi_plots <- function(goi, stats_data, expr_data, day) {
+    print(stats_data[goi,])
+
+    print(
+    expr_data %>% 
+        filter(Name == goi) %>% 
+        pivot_longer(contains("RCC")) %>% 
+        mutate(sample_id_clean = janitor::make_clean_names(name)) %>% 
+        mutate(day_color = ifelse(grepl("day.10", name), "D10", "D14")) %>%
+        mutate(sample = gsub(name, pattern = "X20260408_day.10_01_", replacement = "", fixed=T)) %>%
+        mutate(sample = gsub(sample, pattern = "X20260408_day.14_01_", replacement = "", fixed=T)) %>%
+        mutate(sample = gsub(sample, pattern = ".RCC", replacement = "", fixed=T)) %>%
+        left_join(sample_info, by = "sample_id_clean") %>% 
+            ggplot(aes(y = value, x = treatment)) + 
+            geom_boxplot(outlier.shape = NA, alpha=0.5,) + 
+            geom_point(aes(color = day_color)) + 
+            theme_bw() +
+            ggrepel::geom_label_repel(aes(label=sample, color = day_color), size = 8)   +
+            ggtitle(paste0(goi, " expression in Day ", day, " samples")) +
+            labs(x = "Treatment", y = paste0(goi, " gene expression"))
+    )
+}
+``` 
+
+IO genes of interest (Il27 is not present in the panel)
+
+```{r}
+io_goi <- c("Csf1", "Il1a", "Il27", "Ccl3", "Vcam1", 
+"Csf2", "Il1b", "Ccl9", "Il10", "Ifng", "Tnf", "Il2", 
+"Ccl11", "Il18", "Ccl4", "Il6", "Cxcl1")
+io_goi <- intersect(io_goi, gene_details$official_symbol)
+
+my_goi <- c("Foxp3", "Ifng", "Tnf", "Ccl3", "Cd274", "Pdcd1", "Cd163", "Cd86", "Ms4a4a")
+```
+
+## Both days together?
+
+```{r eval=F}
+# Extract expression data
+
+expression_bothdays <- data.frame(datRUVg_bothdays$exprs)
+expression_bothdays %<>% rownames_to_column("Accession") %>% 
+  left_join(data.frame(datRUVg_bothdays$dict), by = "Accession") %>%
+  dplyr::filter(CodeClass == "Endogenous")
+
+# Normalize in the same way as above, output in expression set format
+datRUVg_bothdays_exprSet <- processNanostringData(nsFiles = c(rcc_d10, rcc_d14),
+                             normalization = "RUVg",
+                             bgType = "none", 
+                             n.unwanted = 2, 
+                             RUVg.drop = 0,
+                             housekeeping = use_hkg_names)
+
+group_bothdays <- factor(c(rep("Control", 5), rep("Treatment", 6),
+                           rep("Control", 5), rep("Treatment", 4)), 
+                    levels = c("Control", "Treatment"))
+day_bothdays <- factor(c(rep("D10", 11), rep("D14", 9)), levels = c("D10", "D14"))
+
+design <- model.matrix(~group_bothdays + day_bothdays)
+
+de_results_bothdays <- runLimmaAnalysis(
+    dat = datRUVg_bothdays_exprSet, 
+    groups = group_bothdays, 
+    base.group = "Control",
+    codeclass.retain = "Endogenous",
+    design = design
+)
+limmaStats_bothdays <- makeDiffExprFile(de_results_bothdays, filename = NULL, returns = "stats")
+limmaStats_bothdays <- as.data.frame(limmaStats_bothdays)
+```
+
+```{r eval=F}
+for (g in c("Cd8a")) {
+    goi_plots(g, limmaStats_bothdays, expression_bothdays, day = "Both")
+}
+```
+
+## D10
+
+Nominal p-value used in volcano plot and DEG output table as no genes were significant by q-value.
+
+```{r eval=F}
+# Define the group variable
+group_d10 <- factor(c(rep("Control", 5), rep("Treatment", 6)), 
+                    levels = c("Control", "Treatment"))
+
+# Perform differential expression analysis
+de_results_d10 <- runLimmaAnalysis(
+    dat = datRUVg_d10_exprSet, 
+    groups = group_d10, 
+    base.group = "Control",
+    codeclass.retain = "Endogenous"
+)
+limmaStats_d10 <- makeDiffExprFile(de_results_d10, filename = NULL, returns = "stats")
+limmaStats_d10 <- as.data.frame(limmaStats_d10)
+```
+
+```{r}
+deVolcano(de_results_d10, y.var = "p.value") +
+  geom_hline(yintercept = 1.3, linetype = "dashed", colour = "darkred") + # 0.05 p-value threshold
+  geom_vline(xintercept = 0.5, linetype = "dashed", colour = "darkred") + # fold change of 2 (linear scale)
+  geom_vline(xintercept = -0.5, linetype = "dashed", colour = "darkred")
+```
+
+```{r}
+DT::datatable(limmaStats_d10 %>%
+  filter(abs(`Log2FC (Treatment)`) > 0.5,
+         `p-val (Treatment)` < 0.05))
+```
+
+```{r}
+for (g in my_goi) {
+    goi_plots(g, limmaStats_d10, expression_d10, day = "10")
+}
+```
+
+```{r}
+subset_data <- expression_d10 %>% 
+filter(Name %in% io_goi) %>%
+column_to_rownames("Name") %>%
+select(contains("X20260408"))
+
+# Normalize with z-score on the rows
+z_score_data <- data.frame(t(apply(subset_data, 1, function(x) (x - mean(x, na.rm = TRUE)) / sd(x, na.rm = TRUE))))
+
+# Convert to a matrix for heatmap
+heatmap_matrix <- as.matrix(z_score_data)
+
+
+# Create the heatmap
+
+
+# Melt the heatmap matrix for ggplot
+heatmap_data <- melt(heatmap_matrix)
+colnames(heatmap_data) <- c("Gene", "Sample", "Expression")
+
+# Create the heatmap using ggplot
+# Perform hierarchical clustering on rows
+row_order <- hclust(dist(heatmap_matrix))$order
+heatmap_data$Gene <- factor(heatmap_data$Gene, levels = rownames(heatmap_matrix)[row_order])
+
+# Create the heatmap with clustered rows
+ggplot(heatmap_data, aes(x = Sample, y = Gene, fill = Expression)) +
+    geom_tile() +
+    scale_fill_gradient2(low = "blue", mid = "white", high = "red", midpoint = 0) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1),
+                axis.text.y = element_text(size = 30)) +
+    labs(x = "D10 Samples", y = "Cell Types", fill = "Z-Score")
+``` 
+
+```{r}
+sig_genes <- rownames(limmaStats_d10 %>%
+  filter(abs(`Log2FC (Treatment)`) > 0.5,
+         `p-val (Treatment)` < 0.05) %>% arrange(`Log2FC (Treatment)`))
+subset_data <- expression_d10 %>% 
+filter(Name %in% sig_genes) %>%
+column_to_rownames("Name") %>%
+select(contains("X20260408"))
+
+# Normalize with z-score on the rows
+z_score_data <- data.frame(t(apply(subset_data, 1, function(x) (x - mean(x, na.rm = TRUE)) / sd(x, na.rm = TRUE))))
+
+# Convert to a matrix for heatmap
+heatmap_matrix <- as.matrix(z_score_data[match(sig_genes, rownames(z_score_data)), ])
+
+# Create the heatmap
+
+
+# Melt the heatmap matrix for ggplot
+heatmap_data <- melt(heatmap_matrix)
+colnames(heatmap_data) <- c("Gene", "Sample", "Expression")
+
+# Create the heatmap using ggplot
+ggplot(heatmap_data, aes(x = Sample, y = Gene, fill = Expression)) +
+    geom_tile() +
+    scale_fill_gradient2(low = "blue", mid = "white", high = "red", midpoint = 0) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1, ),
+                axis.text.y = element_text(size = 30)) +
+    labs(x = "D10 Samples", y = "Cell Types", fill = "Z-Score")
+``` 
+
+
+## D14
+
+```{r eval=F}
+# Define the group variable
+group_d14 <- factor(c(rep("Control", 5), rep("Treatment", 4)), levels = c("Control", "Treatment"))
+
+# Perform differential expression analysis
+de_results_d14 <- runLimmaAnalysis(
+    dat = datRUVg_d14_exprSet, 
+    groups = group_d14, 
+    base.group = "Control",
+    codeclass.retain = "Endogenous"
+)
+limmaStats_d14 <- makeDiffExprFile(de_results_d14, filename = NULL, returns = "stats")
+limmaStats_d14 <- as.data.frame(limmaStats_d14)
+```
+
+```{r}
+deVolcano(de_results_d14, y.var = "p.value") +
+  geom_hline(yintercept = 1.3, linetype = "dashed", colour = "darkred") +
+  geom_vline(xintercept = 0.5, linetype = "dashed", colour = "darkred") +
+  geom_vline(xintercept = -0.5, linetype = "dashed", colour = "darkred")
+```
+
+```{r}
+DT::datatable(limmaStats_d14 %>%
+  filter(abs(`Log2FC (Treatment)`) > 0.5,
+         `p-val (Treatment)` < 0.05))
+```
+
+```{r}
+for (g in my_goi) {
+    goi_plots(g, limmaStats_d14, expression_d14, day = "14")
+}
+```
+```{r}
+subset_data <- expression_d14 %>% 
+filter(Name %in% io_goi) %>%
+column_to_rownames("Name") %>%
+select(contains("X20260408"))
+
+# Normalize with z-score on the rows
+z_score_data <- data.frame(t(apply(subset_data, 1, function(x) (x - mean(x, na.rm = TRUE)) / sd(x, na.rm = TRUE))))
+
+# Convert to a matrix for heatmap
+heatmap_matrix <- as.matrix(z_score_data)
+
+
+# Create the heatmap
+
+
+# Melt the heatmap matrix for ggplot
+heatmap_data <- melt(heatmap_matrix)
+colnames(heatmap_data) <- c("Gene", "Sample", "Expression")
+
+# Create the heatmap using ggplot
+# Perform hierarchical clustering on rows
+row_order <- hclust(dist(heatmap_matrix))$order
+heatmap_data$Gene <- factor(heatmap_data$Gene, levels = rownames(heatmap_matrix)[row_order])
+
+# Create the heatmap with clustered rows
+ggplot(heatmap_data, aes(x = Sample, y = Gene, fill = Expression)) +
+    geom_tile() +
+    scale_fill_gradient2(low = "blue", mid = "white", high = "red", midpoint = 0) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1),
+                axis.text.y = element_text(size = 30)) +
+    labs(x = "D10 Samples", y = "Cell Types", fill = "Z-Score")
+``` 
+
+Decreased the nominal p-value cutoff to 0.01 because there are a lot of genes with p < 0.05, for plotting crowding purposes.
+```{r}
+sig_genes <- rownames(limmaStats_d14 %>%
+  filter(abs(`Log2FC (Treatment)`) > 0.5,
+         `p-val (Treatment)` < 0.01) %>% arrange(`Log2FC (Treatment)`))
+subset_data <- expression_d14 %>% 
+filter(Name %in% sig_genes) %>%
+column_to_rownames("Name") %>%
+select(contains("X20260408"))
+
+# Normalize with z-score on the rows
+z_score_data <- data.frame(t(apply(subset_data, 1, function(x) (x - mean(x, na.rm = TRUE)) / sd(x, na.rm = TRUE))))
+
+# Convert to a matrix for heatmap
+heatmap_matrix <- as.matrix(z_score_data[match(sig_genes, rownames(z_score_data)), ])
+
+# Create the heatmap
+
+
+# Melt the heatmap matrix for ggplot
+heatmap_data <- melt(heatmap_matrix)
+colnames(heatmap_data) <- c("Gene", "Sample", "Expression")
+
+# Create the heatmap using ggplot
+ggplot(heatmap_data, aes(x = Sample, y = Gene, fill = Expression)) +
+    geom_tile() +
+    scale_fill_gradient2(low = "blue", mid = "white", high = "red", midpoint = 0) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1, ),
+                axis.text.y = element_text(size = 30)) +
+    labs(x = "D10 Samples", y = "Cell Types", fill = "Z-Score")
+``` 
+
+```{r eval=F}
+bind_rows(expression_d10 %>% mutate(dayname = "Day 10") %>% pivot_longer(contains("RCC")), expression_d14 %>% mutate(dayname = "Day 14") %>% pivot_longer(contains("RCC"))) %>%
+    filter(Name %in% c("Ifng", "Ccl3", "Tnf")) %>% 
+    mutate(sample_id_clean = janitor::make_clean_names(name, allow_dupes = T)) %>% 
+    mutate(sample = gsub(name, pattern = "X20260408_day.10_01_", replacement = "", fixed=T)) %>%
+    mutate(sample = gsub(sample, pattern = ".RCC", replacement = "", fixed=T)) %>%
+    left_join(sample_info, by = "sample_id_clean") %>% 
+    ggplot(aes(y = value, x = treatment)) + 
+    geom_boxplot(outlier.shape = NA, alpha=0.5) + geom_point() + theme_bw() +
+    facet_grid(rows = vars(Name), cols = vars(dayname), scales = "free_y") 
+```
+
+# GSEA on panel gene sets from limma
+## D10
+```{r eval=F}
+fgseaResults_d10 <- limmaToFGSEA(de_results_d10, 
+    gene.sets = c(cell_type_gene_sets, annotation_gene_sets))$Treatment
+fgseaResults_d10_annot_only <- limmaToFGSEA(de_results_d10, 
+    gene.sets = annotation_gene_sets)$Treatment
+```
+```{r}
+DT::datatable(fgseaResults_d10 %>% filter(padj < 0.05) %>% arrange(padj))
+```
+
+
+## D14
+```{r eval=F}
+fgseaResults_d14 <- limmaToFGSEA(de_results_d14, 
+    gene.sets = c(cell_type_gene_sets, annotation_gene_sets))$Treatment
+fgseaResults_d14_annot_only <- limmaToFGSEA(de_results_d14, 
+    gene.sets = annotation_gene_sets)$Treatment
+```
+```{r}
+DT::datatable(fgseaResults_d14 %>% filter(padj < 0.05) %>% arrange(padj))
+#View(fgseaResults_d14 %>% filter(padj < 0.05) %>% arrange(padj))
+```
+
+## Visualize
+
+```{r eval=F}
+# include cell types and other gene sets
+fgsea_results_combined <- bind_rows(
+    fgseaResults_d14 %>% mutate(day = "D14"),
+    fgseaResults_d10 %>% mutate(day = "D10")
+)
+
+fgsea_results_combined %>%
+    mutate(star = ifelse(padj < 0.01, "**", ifelse(padj < 0.05, "*", ""))) %>%
+    ggplot(aes(x = day, y = pathway, fill = NES)) +
+    geom_tile() +
+    geom_text(aes(label = star), color = "black", size = 5) +
+    scale_fill_gradient2(low = "blue", mid = "white", high = "red", midpoint = 0) +
+    theme_minimal() +
+    labs(x = "Day", y = "Pathway or Cell Type", fill = "Normalized\nEnrichment\nScore\n(GSVA)") +
+    theme(axis.text.y = element_text(size = 10))
+```
+
+```{r}
+fgsea_results_annot_only_combined <- bind_rows(
+    fgseaResults_d14_annot_only %>% mutate(day = "D14"),
+    fgseaResults_d10_annot_only %>% mutate(day = "D10")
+)
+
+fgsea_results_annot_only_combined %>%
+    mutate(pathway = gsub("_", " ", pathway) %>% tools::toTitleCase()) %>%
+    mutate(pathway = gsub("Nk Cell", "NK Cells", pathway)) %>%
+    mutate(pathway = gsub("t Cell", "T Cell", pathway, ignore.case = TRUE)) %>%
+    mutate(pathway = gsub("t Cells", "T Cells", pathway, ignore.case = TRUE)) %>%
+    mutate(pathway = gsub("Jak Stat", "JAK STAT", pathway)) %>%
+    mutate(pathway = gsub("Nf Kappa b", "NF Kappa B", pathway)) %>%
+    mutate(pathway = gsub("Wnt", "WNT", pathway)) %>%
+    mutate(pathway = gsub("Tgf", "TGF", pathway)) %>%
+    mutate(pathway = gsub("Pi3k Akt", "PI3K AKT ", pathway, ignore.case = TRUE)) %>%
+    mutate(pathway = gsub("Mapk", "MAPK ", pathway, ignore.case = TRUE)) %>%
+    mutate(pathway = gsub("Dna", "DNA", pathway, ignore.case = TRUE)) %>%
+
+
+    mutate(day = gsub("D", "Day ", day, ignore.case = F)) %>%
+    group_by(pathway) %>%  
+    mutate(avg_NES = mean(NES, na.rm = TRUE)) %>%
+    ungroup() %>%
+    arrange(avg_NES) %>%
+    mutate(pathway = factor(pathway, levels = unique(pathway))) %>%
+    mutate(star = ifelse(padj < 0.01, "**", ifelse(padj < 0.05, "*", ""))) %>%
+    ggplot(aes(x = day, y = pathway, fill = NES)) +
+    geom_tile() +
+    geom_text(aes(label = star), color = "black", size = 10) +
+    scale_fill_gradient2(low = "goldenrod1", mid = "white", high = "#00A600", midpoint = 0) +
+    theme_minimal() +
+    labs(x = "", y = "", fill = "Normalized\nEnrichment\nScore\n(GSVA)") +
+    theme(axis.text.y = element_text(size = 20, hjust = 1.06),
+          legend.title = element_text(size = 20),
+          legend.text = element_text(size = 24),
+          legend.key.height = unit(1, "cm"),
+          legend.key.width = unit(1, "cm"),
+          axis.text.x = element_text(size = 30),
+          axis.label.x = element_text(size = 30)) 
+
+
+```
+
+# GSEA on specific signatures
+
+## Gene sets
+
+```{r}
+# Ideas from Rohan - looking in the literature for more.
+m1_genes <- c("Cd80", "Cd86", "Cd68", "Tlr4", "Tlr2", 
+"Tnfrsf1b", "Cxcl9", "Cxcl10", "Cxcl11", "Tnf", "Il12b", 
+"Il6", "Nos2")
+m2_genes <- c("Cd163", "Mrc1", "Msr1", "Mertk", 
+"Marco", "Serpina1", "Ms4a4a", "Arg1")
+
+pro_cytokines <- c("Ccl1","Ccl3","Ccl4","Ccl20","Cxcl1",
+"Cxcl2","Cxcl3","Cxcl5","Cxcl9","Cxcl10","Cxcl11","Cxcl16",
+"Cxcr2","Cxcr3","Il1a","Il1b","Il12rb2","Il15","Il16","Il17a",
+"Il18","Il18r1","Il2","Il23r",
+"Il33","Csf2","Stat1","Nfkb1","Rela","Ikbkb","Chuk")
+
+anti_cytokines <- c("Ccl2","Ccl5","Ccl7","Ccl8","Ccl22",
+"Cxcl12","Cxcr4","Csf1","Csf1r","Il6","Stat3","Il10","Il4")
+
+print("M1 genes to be used: ")
+print(intersect(m1_genes, expression_d14$Name))
+
+print("M2 genes to be used: ")
+print(intersect(m2_genes, expression_d14$Name))
+
+print("Missing from panel but was suggested:")
+# "Il2b" is missing from M1
+setdiff(m1_genes, expression_d14$Name)
+# "Msr1"     "Mertk"    "Serpina1" are missing from M2
+setdiff(m2_genes, expression_d14$Name)
+
+print("Pro-inflammatory cytokine genes to be used: ")
+print(intersect(pro_cytokines, expression_d14$Name))
+
+print("Anti-inflammatory cytokine genes to be used: ") 
+print(intersect(anti_cytokines, expression_d14$Name))
+
+exhausted_cd8_genes <- c(cell_type_gene_sets[["exhausted_cd8"]], "Pdcd1", "Havcr2", "Entpd1")
+
+print("Exhausted CD8 T cell genes to be used: ")
+print(intersect(exhausted_cd8_genes, expression_d14$Name))
+
+
+treg_genes <- c(
+    "Foxp3", "Ikzf2", "Ikzf4", "Bach2", "Irf4", "Prdm1", "Il2ra", 
+    "Ctla4", 
+    "Tnfrsf18", "Tnfrsf4",
+    "Tigit", "Lag3", 
+    "Itga4", 
+    "Entpd1", 
+    "Il10", "Tnfrsf9", "Layn", "Cd80", "Icos", "Fzd2"
+)
+
+print("Treg genes to be used: ")
+print(intersect(treg_genes, expression_d14$Name))
+
+signature_genes <- list(
+    "m1" = m1_genes, 
+    "m2" = m2_genes,
+    "exhausted_cd8" = exhausted_cd8_genes,
+    "pro_cytokines" = pro_cytokines,
+    "anti_cytokines" = anti_cytokines,
+    "treg" = treg_genes
+    )
+    
+```
+
+```{r}
+fgseaResults_sigs_d10 <- limmaToFGSEA(de_results_d10, 
+    gene.sets = signature_genes)$Treatment
+DT::datatable(fgseaResults_sigs_d10 %>% arrange(padj))
+
+fgseaResults_sigs_d14 <- limmaToFGSEA(de_results_d14, 
+    gene.sets = signature_genes)$Treatment
+DT::datatable(fgseaResults_sigs_d14 %>% arrange(padj))
+
+ssgseaParam_d14_sig <- ssgseaParam(
+    de_results_d14$eset,
+    signature_genes
+)
+ssgsea_scores_sig_d14 <- data.frame(exprs(gsva(
+    ssgseaParam_d14_sig
+))) %>% rownames_to_column("sig") %>% pivot_longer(contains("RCC")) %>% 
+mutate(sample_id_clean = janitor::make_clean_names(name, allow_dupes=T)) %>% 
+mutate(sample = gsub(name, pattern = "X20260408_day.14_01_", replacement = "", fixed=T)) %>%
+mutate(sample = gsub(sample, pattern = ".RCC", replacement = "", fixed=T)) %>%
+left_join(sample_info, by = "sample_id_clean")
+
+ssgseaParam_d10_sig <- ssgseaParam(
+    de_results_d10$eset,
+    signature_genes
+)
+ssgsea_scores_sig_d10 <- data.frame(exprs(gsva(
+    ssgseaParam_d10_sig
+))) %>% rownames_to_column("sig") %>% pivot_longer(contains("RCC")) %>% 
+mutate(sample_id_clean = janitor::make_clean_names(name, allow_dupes=T)) %>% 
+mutate(sample = gsub(name, pattern = "X20260408_day.10_01_", replacement = "", fixed=T)) %>%
+mutate(sample = gsub(sample, pattern = ".RCC", replacement = "", fixed=T)) %>%
+left_join(sample_info, by = "sample_id_clean")
+
+ssgsea_scores_sig_bothdays <- bind_rows(
+    ssgsea_scores_sig_d14 %>% mutate(dayname = "Day 14"),
+    ssgsea_scores_sig_d10 %>% mutate(dayname = "Day 10")
+)
+```
+
+## Visualize
+
+### M1/M2
+
+```{r}
+ssgsea_scores_sig_bothdays %>%
+    mutate(treatment = factor(treatment, levels = c("PBS", "TAK-188"), labels = c("Veh", "2.5 mpk\nTAK-188"))) %>%
+    mutate(sig = factor(sig, levels = c("m1", "m2"), labels = c("M1", "M2"))) %>%
+    filter(!is.na(sig)) %>%
+    ggplot(aes(x = treatment, y = value, fill = treatment)) +
+    geom_boxplot(outlier.shape = NA, alpha=0.5, fill = "white") + 
+    geom_jitter(width = 0.1, shape = 21, size = 4, aes(fill = treatment)) + theme_bw() +
+facet_grid(rows = vars(sig), cols = vars(dayname), scales = "free_y") +
+    labs(x = "", y = "ssGSEA Score for Macrophage Polarization Gene Sets", fill = "Treatment") +
+    theme(axis.text.x = element_text(size = 20),
+          axis.text.y = element_text(size = 20),
+          axis.title.x = element_text(size = 30),
+          axis.title.y = element_text(size = 30),
+          legend.title = element_text(size = 20),
+          legend.text = element_text(size = 24),
+          legend.key.height = unit(1, "cm"),
+          legend.key.width = unit(1, "cm"),
+          strip.text = element_text(size = 25)) +
+    scale_fill_manual(values = c("white", "orangered2")) +
+    ggpubr::stat_compare_means(method = "t.test", 
+    label = "p.signif", 
+    size = 8,
+    label.x.npc = "center")
+```
+
+```{r eval=F}
+fgsea_results_combined_mac <- bind_rows(
+    fgseaResults_mac_d14 %>% mutate(day = "D14"),
+    fgseaResults_mac_d10 %>% mutate(day = "D10")
+)
+```
+
+```{r eval=F}
+fgsea_results_combined_mac %>%
+    mutate(star = ifelse(padj < 0.01, "**", ifelse(padj < 0.05, "*", ""))) %>%
+    ggplot(aes(x = day, y = pathway, fill = NES)) +
+    geom_tile() +
+    geom_text(aes(label = star), color = "white", size = 30) +
+    scale_fill_gradient2(low = "blue", mid = "white", high = "red", midpoint = 0) +
+    theme_minimal() +
+    labs(x = "Day", y = "Macrophage Polarization", fill = "Normalized\nEnrichment\nScore\n(GSVA)") +
+    theme(axis.text.y = element_text(size = 10))
+```
+
+```{r eval=F}
+## Other M1/M2 gene sets from the literature
+
+
+# https://ashpublications.org/blood/article/121/9/e57/138847/Genetic-programs-expressed-in-resting-and-IL-4
+# Table 2List of genes regulated by IL-4 in both human and mouse macrophages as detected with microarrays
+mac_down <- c("Klf4","Ptgs1","Aqp9","Irf4","Pdcd1lg2","Cish","Ch25h","Socs1","Tgm2","Rgl1","Bcar3","Gars","Aldh1a2","Myc","Sla","Shmt2")
+mac_up <- c("Cd37","Ifitm3","Slc9a9","Cxcl2","Sparc","Klhl6","Apoc2","Dusp6","Sephs2","Alox5ap","Ptk2b","Sorl1","S100a8","Slc40a1","Lpar6","Aif1","Sepp1","Cd14","Cybb")
+
+# 5 in common
+print("Macrophage Down genes: ")
+print(intersect(mac_down, expression_d14$Name))
+
+# 4 in common
+print("Macrophage Up genes: ")
+print(intersect(mac_up, expression_d14$Name))
+
+# Not enough overlap.
+
+# https://pmc.ncbi.nlm.nih.gov/articles/PMC6543837/
+# https://www.bio-rad-antibodies.com/macrophage-polarization-minireview.html
+# https://www.gsea-msigdb.org/gsea/msigdb/mouse/geneset/COATES_MACROPHAGE_M1_VS_M2_DN.html
+```
+
+
+## Treg
+
+```{r}
+ssgsea_scores_sig_bothdays %>%
+    filter(sig == "treg") %>%
+    mutate(treatment = factor(treatment, levels = c("PBS", "TAK-188"), labels = c("Veh", "2.5 mpk\nTAK-188"))) %>%
+    ggplot(aes(x = treatment, y = value, fill = treatment)) +
+    geom_boxplot(outlier.shape = NA, alpha=0.5, fill = "white") + 
+    geom_jitter(width = 0.1, shape = 21, size = 4, aes(fill = treatment)) + theme_bw() +
+    facet_wrap(vars(dayname), scales = "free_y") +
+    labs(x = "", y = "ssGSEA Score for Treg Gene Set", fill = "Treatment") +
+    theme(axis.text.x = element_text(size = 20),
+          axis.text.y = element_text(size = 20),
+          axis.title.x = element_text(size = 30),
+          axis.title.y = element_text(size = 30),
+          legend.title = element_text(size = 20),
+          legend.text = element_text(size = 24),
+          legend.key.height = unit(1, "cm"),
+          legend.key.width = unit(1, "cm"),
+          strip.text = element_text(size = 25)) +
+    scale_fill_manual(values = c("white", "orangered2")) +
+    ggpubr::stat_compare_means(method = "t.test", 
+    label = "p.signif", 
+    size = 8,
+    label.x.npc = "center")
+```
+
+## CD8 exhausted
+
+```{r}
+ssgsea_scores_sig_bothdays %>%
+    filter(sig == "exhausted_cd8") %>%
+    mutate(treatment = factor(treatment, levels = c("PBS", "TAK-188"), labels = c("Veh", "2.5 mpk\nTAK-188"))) %>%
+    ggplot(aes(x = treatment, y = value, fill = treatment)) +
+    geom_boxplot(outlier.shape = NA, alpha=0.5, fill = "white") + 
+    geom_jitter(width = 0.1, shape = 21, size = 4, aes(fill = treatment)) + theme_bw() +
+    facet_wrap(vars(dayname), scales = "free_y") +
+    labs(x = "", y = "ssGSEA Score for CD8 Exhaustion Gene Set", fill = "Treatment") +
+    theme(axis.text.x = element_text(size = 20),
+          axis.text.y = element_text(size = 20),
+          axis.title.x = element_text(size = 30),
+          axis.title.y = element_text(size = 30),
+          legend.title = element_text(size = 20),
+          legend.text = element_text(size = 24),
+          legend.key.height = unit(1, "cm"),
+          legend.key.width = unit(1, "cm"),
+          strip.text = element_text(size = 25)) +
+    scale_fill_manual(values = c("white", "orangered2")) +
+    ggpubr::stat_compare_means(method = "t.test", 
+    label = "p.signif", 
+    size = 8,
+    label.x.npc = "center")
+```
+
+## cytokine
+
+```{r}
+ssgsea_scores_sig_bothdays %>%
+    mutate(treatment = factor(treatment, levels = c("PBS", "TAK-188"), labels = c("Veh", "2.5 mpk\nTAK-188"))) %>%
+    mutate(sig = factor(sig, levels = c("pro_cytokines", "anti_cytokines"), labels = c("Pro-inflammatory", "Anti-inflammatory"))) %>%
+    filter(!is.na(sig)) %>%
+    ggplot(aes(x = treatment, y = value, fill = treatment)) +
+    geom_boxplot(outlier.shape = NA, alpha=0.5, fill = "white") + 
+    geom_jitter(width = 0.1, shape = 21, size = 4, aes(fill = treatment)) + theme_bw() +
+    facet_grid(rows = vars(sig), cols = vars(dayname), scales = "free_y") +
+    labs(x = "", y = "ssGSEA Score for Cytokine and Chemokine Gene Sets", fill = "Treatment") +
+    theme(axis.text.x = element_text(size = 20),
+          axis.text.y = element_text(size = 20),
+          axis.title.x = element_text(size = 30),
+          axis.title.y = element_text(size = 30),
+          legend.title = element_text(size = 20),
+          legend.text = element_text(size = 24),
+          legend.key.height = unit(1, "cm"),
+          legend.key.width = unit(1, "cm"),
+          strip.text = element_text(size = 25)) +
+    scale_fill_manual(values = c("white", "orangered2")) +
+    ggpubr::stat_compare_means(method = "t.test", 
+    label = "p.signif", 
+    size = 8,
+    label.x.npc = "center")
+```
+
+
+```{r eval=F}
+# Save to Results object
+save(
+    datRUVg_d10, datRUVg_d14, 
+    datRUVg_d10_exprSet, datRUVg_d14_exprSet,
+    de_results_d10, de_results_d14,
+    expression_d10, expression_d14,
+    limmaStats_d10, limmaStats_d14, 
+    fgseaResults_d10, fgseaResults_d14, 
+    fgseaResults_d10_annot_only, fgseaResults_d14_annot_only,
+    # Leave out macrophage for now
+    sample_info, # Didn't do this yet, need to re-generate.
+file = "/root/capsule/results/nanostring_results.RData")
+
+readr::write_csv(x = ssgsea_scores_sig_bothdays %>% select(-c(name, X, X.1)), 
+    file = "/root/capsule/results/20260430_TAK188_MouseNanostring_ssGSEA.csv")
+readr::write_csv(x = fgsea_results_annot_only_combined %>% select(-leadingEdge), 
+    file = "/root/capsule/results/20260430_TAK188_MouseNanostring_fgsea_annotation_sets.csv")
+```
+
+# Export DEG for cytokine genes
+
+```{r eval=F}
+DE_cytokines <- limmaStats_d10 %>%
+    rownames_to_column("gene_name") %>%
+    filter(gene_name %in% annotation_gene_sets$cytokine_and_chemokine_signaling) %>%
+    arrange(`p-val (Treatment)`) %>% 
+    select(gene_name, `D10 Log2FC` = `Log2FC (Treatment)`, 
+    `D10 p-val` = `p-val (Treatment)`, 
+    `D10 q-val` = `q-val (Treatment)`) %>% left_join(by = "gene_name",
+    limmaStats_d14 %>%
+        rownames_to_column("gene_name") %>%
+        filter(gene_name %in% annotation_gene_sets$cytokine_and_chemokine_signaling) %>%
+        arrange(`p-val (Treatment)`) %>% 
+        select(gene_name, `D14 Log2FC` = `Log2FC (Treatment)`, 
+        `D14 p-val` = `p-val (Treatment)`, 
+        `D14 q-val` = `q-val (Treatment)`))
+
+write.table(DE_cytokines, 
+file = "/root/capsule/results/20260430_TAK188_MouseNanostring_cytokine_DE_days_separate.tsv", 
+sep = "\t", row.names = F, quote = F)
+
+
+DE_cytokines_bothdays <- limmaStats_bothdays %>%
+    rownames_to_column("gene_name") %>%
+    filter(gene_name %in% annotation_gene_sets$cytokine_and_chemokine_signaling) %>%
+    arrange(`p-val (group_bothdaysTreatment)`) %>% 
+    dplyr::select(gene_name, `Log2FC` = `Log2FC (group_bothdaysTreatment)`, 
+    `p-val` = `p-val (group_bothdaysTreatment)`, 
+    `q-val` = `q-val (group_bothdaysTreatment)`)
+
+write.table(DE_cytokines_bothdays, 
+file = "/root/capsule/results/20260430_TAK188_MouseNanostring_cytokine_DE_days_together.tsv", 
+sep = "\t", row.names = F, quote = F)
+```
+
+# Export DEG for all genes
+
+```{r}
+DE_toWrite <- limmaStats_d10 %>%
+    rownames_to_column("gene_name") %>%
+    arrange(`p-val (Treatment)`) %>% 
+    select(gene_name, `D10 Log2FC` = `Log2FC (Treatment)`, 
+    `D10 p-val` = `p-val (Treatment)`, 
+    `D10 q-val` = `q-val (Treatment)`) %>% left_join(by = "gene_name",
+    limmaStats_d14 %>%
+        rownames_to_column("gene_name") %>%
+        select(gene_name, `D14 Log2FC` = `Log2FC (Treatment)`, 
+        `D14 p-val` = `p-val (Treatment)`, 
+        `D14 q-val` = `q-val (Treatment)`))
+
+write.table(DE_toWrite, 
+file = "/root/capsule/results/20260512_TAK188_MouseNanostring_allgenes_DE_days_separate.tsv", 
+sep = "\t", row.names = F, quote = F)
+```

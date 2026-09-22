@@ -1,0 +1,771 @@
+"","official_symbol","accession","alias_previous_symbol","official_full_name","other_targets_or_isoform_information","internal_reference_gene"
+"1","4930578C19Rik","NM_175228.4",NA,"RIKEN cDNA 4930578C19 gene",NA,FALSE
+"2","A2m","NM_175628.3","A2mp","alpha-2-macroglobulin",NA,FALSE
+"3","Acvr1c","NM_001033369.3","Alk-7,ALK7","activin A receptor, type IC",NA,FALSE
+"4","Adam12","NM_007400.2","meltrin, alpha,MGD-MRK-33047,Mltna","a disintegrin and metallopeptidase domain 12 (meltrin alpha)",NA,FALSE
+"5","Adgre1","NM_010130.1","DD7A5-7,EGF-like module containing, mucin-like, hormone receptor-like sequence 1,EGF-TM7,Emr1,F4/80,glycoprotein f4/80 protein,Gpf480,Ly71,lymphocyte antigen 71,MGD-MRK-32093,MGD-MRK-35122,MGD-MRK-35373,MGI:105054,MGI:106663,TM7LN3","adhesion G protein-coupled receptor E1",NA,FALSE
+"6","Adm","NM_009627.1","AM,MGD-MRK-37094","adrenomedullin",NA,FALSE
+"7","Adora2a","NM_009630.2","A2AAR,A2aR,A2a, Rs,AA2AR,MGD-MRK-16163","adenosine A2a receptor",NA,FALSE
+"8","Akt1","NM_009652.3","Akt,MGD-MRK-1257,PKB,PKB/Akt,PKBalpha","thymoma viral proto-oncogene 1",NA,FALSE
+"9","Aldoa","NM_001177307.1","Aldo1,Aldo-1,aldolase 1 [Aldo-A isoform, skeletal muscle, brain],MGD-MRK-1276,MGD-MRK-1278","aldolase A, fructose-bisphosphate",NA,FALSE
+"10","Aldoc","NM_009657.3","AI847350,Aldo3,Aldolase C,AU040929,expressed sequence AI847350,expressed sequence AU040929,MGD-MRK-18688,MGI:1328309,MGI:2144291,MGI:2144424,scrapie responsive gene 2,Scrg2,zebrin II","aldolase C, fructose-bisphosphate",NA,FALSE
+"11","Angpt1","NM_009640.3","1110046O21Rik,ang1,Ang-1,Angiopoietin-1,MGD-MRK-37492,MGI:1916073,RIKEN cDNA 1110046O21 gene","angiopoietin 1",NA,FALSE
+"12","Angpt2","NM_007426.3","Ang2,Ang-2","angiopoietin 2",NA,FALSE
+"13","Angptl4","NM_020581.2","BK89,FIAF,HFARP,NG27","angiopoietin-like 4",NA,FALSE
+"14","Anln","NM_028390.3","1110037A17Rik,2900037I21Rik,C78101,expressed sequence C78101,MGI:1915993,MGI:2143393,RIKEN cDNA 1110037A17 gene,RIKEN cDNA 2900037I21 gene,Scraps","anillin, actin binding protein",NA,FALSE
+"15","Apc","NM_007462.3","AI047805,AU020952,AW124434,CC1,expressed sequence AI047805,expressed sequence AU020952,expressed sequence AW124434,MGD-MRK-1347,MGD-MRK-16245,MGI:2147196,MGI:2147309,MGI:2147352,Min,multiple intestinal neoplasia","adenomatosis polyposis coli",NA,FALSE
+"16","Aph1b","NM_177583.4","2310057K14Rik,MGI:1916945,RIKEN cDNA 2310057K14 gene","aph1 homolog B, gamma secretase subunit",NA,FALSE
+"17","Api5","NM_007466.2","AAC-11,AI196452,expressed sequence AI196452,MGI:2138859","apoptosis inhibitor 5",NA,FALSE
+"18","Aplnr","NM_011784.3","Agtrl1,angiotensin receptor-like 1,APJ,msr/apj","apelin receptor",NA,FALSE
+"19","Apoe","NM_001305844.1","AI255918,expressed sequence AI255918,MGD-MRK-1376,MGI:2141887","apolipoprotein E",NA,FALSE
+"20","Apol6","NM_001163621.1","2310076O14Rik,RIKEN cDNA 2310076O14 gene","apolipoprotein L 6",NA,FALSE
+"21","Aqp9","NM_001271843.1","1700020I22Rik,AI266899,expressed sequence AI266899,MGI:1919512,MGI:2143005,RIKEN cDNA 1700020I22 gene","aquaporin 9",NA,FALSE
+"22","Areg","NM_009704.3","AR,Mcub,MGD-MRK-1388,MGD-MRK-16238,MGI:1890801,modifier of curly bare,schwannoma derived growth factor,Sdgf","amphiregulin",NA,FALSE
+"23","Arg1","NM_007482.3","AI,AI256583,Arg-1,expressed sequence AI256583,MGD-MRK-1392,MGD-MRK-1393,MGI:2143548,PGIF","arginase, liver",NA,FALSE
+"24","Arg2","NM_009705.3","AII,AU022422,expressed sequence AU022422,MGI:2144959","arginase type II",NA,FALSE
+"25","Arid1a","NM_001080819.1","1110030E03Rik,BAF250a,MGI:1915989,Osa1,RIKEN cDNA 1110030E03 gene,Smarcf1,SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily f, member 1","AT rich interactive domain 1A (SWI-like)",NA,FALSE
+"26","Arnt2","NM_007488.2","bHLHe1,MGD-MRK-35649,mKIAA0307","aryl hydrocarbon receptor nuclear translocator 2",NA,FALSE
+"27","Atf3","NM_007498.3","LRG-21,MGD-MRK-38429","activating transcription factor 3",NA,FALSE
+"28","Atm","NM_007499.1","AI256621,C030026E19Rik,expressed sequence AI256621,MGD-MRK-35663,MGI:1924666,MGI:2143000,RIKEN cDNA C030026E19 gene","ataxia telangiectasia mutated",NA,FALSE
+"29","Axin1","NM_001159598.1","AI316800,expressed sequence AI316800,Fu,fused,Kb,Ki,kinky,knobbly,MGD-MRK-11553,MGD-MRK-11586,MGD-MRK-9891,MGI:2146821,MGI:95592","axin 1",NA,FALSE
+"30","Axl","NM_009465.3","AI323647,Ark,expressed sequence AI323647,MGD-MRK-15343,MGI:2141908,MGI:98896,Tyro7,Ufo,ufo oncogene homolog","AXL receptor tyrosine kinase",NA,FALSE
+"31","B2m","NM_009735.3","beta2-m,beta 2 microglobulin,Ly-m11,lymphocyte antigen m11,MGD-MRK-12010,MGD-MRK-1492","beta-2 microglobulin",NA,FALSE
+"32","Bad","NM_007522.3","AI325008,Bbc2,expressed sequence AI325008,MGI:2147509","BCL2-associated agonist of cell death",NA,FALSE
+"33","Bambi","NM_026505.2","2610003H06Rik,RIKEN cDNA 2610003H06 gene","BMP and activin membrane-bound inhibitor",NA,FALSE
+"34","Batf3","NM_030060.2","9130211I03Rik,RIKEN cDNA 9130211I03 gene","basic leucine zipper transcription factor, ATF-like 3",NA,FALSE
+"35","Bax","NM_007527.3","MGD-MRK-16487","BCL2-associated X protein",NA,FALSE
+"36","Bbc3","NM_133234.2","PUMA","BCL2 binding component 3",NA,FALSE
+"37","Bbs1","NM_001033128.3","AI451249,D19Ertd609e,DNA segment, Chr 19, ERATO Doi 609, expressed,expressed sequence AI451249,MGI:2147549","Bardet-Biedl syndrome 1 (human)",NA,FALSE
+"38","Bcat1","NM_001024468.3","Bcat-1,BCATc,c-myc regulatory gene,Eca39,MGD-MRK-28158","branched chain aminotransferase 1, cytosolic",NA,FALSE
+"39","Bcl2","NM_009741.3","AW986256,Bcl-2,C430015F12Rik,D630044D05Rik,D830018M01Rik,expressed sequence AW986256,MGD-MRK-1524,MGD-MRK-1526,MGI:2138629,MGI:2442315,MGI:2444619,MGI:2444682,RIKEN cDNA C430015F12 gene,RIKEN cDNA D630044D05 gene,RIKEN cDNA D830018M01 gene","B cell leukemia/lymphoma 2",NA,FALSE
+"40","Bcl2l1","NM_009743.5","bcl-x,BclX,Bcl-XL,Bcl(X)L,Bcl-Xs,MGD-MRK-1527","BCL2-like 1",NA,FALSE
+"41","Bcl6b","NM_007528.2","Bazf,BcL6-associated zinc finger protein","B cell CLL/lymphoma 6, member B",NA,FALSE
+"42","Bid","NM_007544.3","2700049M22Rik,AI875481,AU022477,expressed sequence AI875481,expressed sequence AU022477,MGD-MRK-37130,MGI:1919829,MGI:2141512,MGI:2141571,RIKEN cDNA 2700049M22 gene","BH3 interacting domain death agonist",NA,FALSE
+"43","Birc3","NM_007464.3","Api2,apoptosis inhibitor 1,AW107670,cIAP2,cIAP-2,expressed sequence AW107670,HIAP2,IAP2,MGI:2143290,MIAP2,MIHC,RNF49","baculoviral IAP repeat-containing 3",NA,FALSE
+"44","Birc5","NM_001012273.1","Api4,apoptosis inhibitor 4,MGI:1196343,survivin,TIAP","baculoviral IAP repeat-containing 5",NA,FALSE
+"45","Blk","NM_007549.2","MGD-MRK-1577","B lymphoid kinase",NA,FALSE
+"46","Blm","NM_001042527.2",NA,"Bloom syndrome, RecQ like helicase",NA,FALSE
+"47","Bmp2","NM_007553.2","AI467020,Bmp2a,bone morphogenetic protein 2a,expressed sequence AI467020,MGD-MRK-1593,MGD-MRK-1595,MGI:2138975","bone morphogenetic protein 2",NA,FALSE
+"48","Bnip3","NM_009760.4","MGD-MRK-38371,Nip3","BCL2/adenovirus E1B interacting protein 3",NA,FALSE
+"49","Bnip3l","NM_009761.3","C86132,D14Ertd719e,DNA segment, Chr 14, ERATO Doi 719, expressed,expressed sequence C86132,MGI:1289182,MGI:2145873,Nip3L,Nix","BCL2/adenovirus E1B interacting protein 3-like",NA,FALSE
+"50","Brca1","NM_009764.3","MGD-MRK-25968","breast cancer 1, early onset",NA,FALSE
+"51","Brca2","NM_009765.3","AI256696,AW045498,expressed sequence AI256696,expressed sequence AW045498,Fancd1,MGD-MRK-38382,MGI:2140824,MGI:2141125,RAB163","breast cancer 2, early onset",NA,FALSE
+"52","Brd3","NM_001113573.1","2410084F24Rik,AW060456,expressed sequence AW060456,Fsrg2,MGI:2139285,ORFX,RIKEN cDNA 2410084F24 gene,RINGL3","bromodomain containing 3",NA,FALSE
+"53","Brd4","NM_001286630.1","DNA segment, WI-11513,HUNK1,MCAP,MGI:1337084,WI-11513","bromodomain containing 4",NA,FALSE
+"54","Brip1","NM_178309.2","3110009N10Rik,8030460J03Rik,BACH1,MGI:1920358,RIKEN cDNA 3110009N10 gene,RIKEN cDNA 8030460J03 gene","BRCA1 interacting protein C-terminal helicase 1",NA,FALSE
+"55","Btla","NM_001037719.2",NA,"B and T lymphocyte associated",NA,FALSE
+"56","C1qa","NM_007572.2","AI255395,C1q,expressed sequence AI255395,MGD-MRK-1696,MGI:2140213","complement component 1, q subcomponent, alpha polypeptide",NA,FALSE
+"57","C1qb","NM_009777.2","MGD-MRK-1697","complement component 1, q subcomponent, beta polypeptide",NA,FALSE
+"58","C2","NM_013484.2","classical-complement pathway C3/C5 convertase,MGD-MRK-1699","complement component 2 (within H-2S)",NA,FALSE
+"59","C5ar1","NM_007577.3","C5aR,C5r1,Cd88,complement component 5, receptor 1,D7Msu1,DNA segment, Chr 7, Michigan State University 1,MGD-MRK-1710,MGI:2180152","complement component 5a receptor 1",NA,FALSE
+"60","C7","XM_356827.7","gene model 1238, (NCBI),Gm1238,LOC383055,MGD-MRK-1713,MGI:2686084","complement component 7",NA,FALSE
+"61","Casp1","NM_009807.2","Caspase-1,ICE,Il1bc,interleukin 1 beta convertase,interleukin 1 beta-converting enzyme,MGD-MRK-11368","caspase 1",NA,FALSE
+"62","Casp3","NM_009810.3","A830040C14Rik,AC-3,Apopain,Caspase-3,CC3,CPP32,melody,MGD-MRK-36315,MGI:2442726,MGI:3717434,mldy,RIKEN cDNA A830040C14 gene,Yama","caspase 3",NA,FALSE
+"63","Casp8","NM_009812.2","Caspase-8,FLICE,MACH,Mch5","caspase 8",NA,FALSE
+"64","Casp9","NM_015733.4","AI115399,AW493809,Caspase-9,expressed sequence AI115399,expressed sequence AW493809,ICE-LAP6,Mch6,MGI:2140188,MGI:2140578","caspase 9",NA,FALSE
+"65","Cblc","NM_023224.5","2310076I21Rik,2310079L19Rik,Cbl3,MGI:1913812,MGI:1919198,RIKEN cDNA 2310076I21 gene,RIKEN cDNA 2310079L19 gene","Casitas B-lineage lymphoma c",NA,FALSE
+"66","Ccl1","NM_011329.2","BF534335,CCR8 ligand,expressed sequence BF534335,I-309,MGD-MRK-14332,MGD-MRK-14736,MGI:2671062,Scya1,small inducible cytokine A1,Tca-3,T-cell activation family 3","chemokine (C-C motif) ligand 1",NA,FALSE
+"67","Ccl11","NM_011330.3","eotaxin,MGD-MRK-24461,Scya11,small inducible cytokine A11","chemokine (C-C motif) ligand 11",NA,FALSE
+"68","Ccl12","NM_011331.2","MCP-5,MGD-MRK-37263,Scya12,small inducible cytokine A12","chemokine (C-C motif) ligand 12",NA,FALSE
+"69","Ccl17","NM_011332.2","ABCD-2,Scya17,small inducible cytokine subfamily A17,TARC","chemokine (C-C motif) ligand 17",NA,FALSE
+"70","Ccl19","NM_011888.2","CKb11,exodus-3,Scya19,small inducible cytokine A19","chemokine (C-C motif) ligand 19",NA,FALSE
+"71","Ccl2","NM_011333.3","AI323594,expressed sequence AI323594,HC11,MCAF,MCP1,MCP-1,MGD-MRK-14333,MGD-MRK-14413,MGI:2144120,monocyte chemoattractant protein-1,monocyte chemotactic protein,Scya2,Sigje,small inducible cytokine A2,small inducible gene JE,SMC-CF","chemokine (C-C motif) ligand 2",NA,FALSE
+"72","Ccl20","NM_016960.1","CKb4,exodus-1,MIP-3[a],MIP3A,MIP-3A,Scya20,small inducible cytokine subfamily A20,ST38","chemokine (C-C motif) ligand 20",NA,FALSE
+"73","Ccl21a","NM_011124.4","6CKBAC2,6Ckine,ALP,AW987545,CKb9,Exodus-2,expressed sequence AW987545,MGI:1270157,MGI:2140627,Scya21,Scya21b,SLC,small inducible cytokine A21,small inducible cytokine A21b (leucine),small ininducible cytokine A21b (leucine),Tca4","chemokine (C-C motif) ligand 21A (serine)","Gm10591 (NM_001193668), Gm13304 (NM_001193666), Ccl21c (NM_023052), Ccl21b (NM_011335), Gm1987 (NM_001193667), Gm21541 (NM_001270360)",FALSE
+"74","Ccl22","NM_009137.2","ABCD-1,MDC,Scya22,small inducible cytokine subfamily A22","chemokine (C-C motif) ligand 22",NA,FALSE
+"75","Ccl24","NM_019577.4","CKb-6,eotaxin-2,MPIF-2,Scya24, small inducible cytokine A24","chemokine (C-C motif) ligand 24",NA,FALSE
+"76","Ccl25","NM_009138.3","AI852536,CKb15,expressed sequence AI852536,MGI:2142637,Scya25,small inducible cytokine A25,TECK","chemokine (C-C motif) ligand 25",NA,FALSE
+"77","Ccl26","NM_001013412.2","Ccl26l,chemokine (C-C motif) ligand 26-like,eotaxin-3","chemokine (C-C motif) ligand 26",NA,FALSE
+"78","Ccl27a","NM_001048179.1","ALP,AW558992,Ccl27,chemokine (C-C motif) ligand 27,CTACK,CTAK,ESkine,expressed sequence AW558992,ILC,MGI:1891388,MGI:2140607,mILC,PESKY,Scya27,Scya27a,skinskine,small inducible cytokine A27,small inducible cytokine A27a","chemokine (C-C motif) ligand 27A",NA,FALSE
+"79","Ccl28","NM_020279.3","CCK1,Scya28,small inducible cytokine A28","chemokine (C-C motif) ligand 28",NA,FALSE
+"80","Ccl3","NM_011337.1","AI323804,expressed sequence AI323804,G0S19-1,LD78alpha,macrophage inflammatory protein-1alpha,macrophage inflammatory protein-1 alpha,MGD-MRK-12241,MGD-MRK-14334,MGI:2144123,Mip1a,MIP1-(a),MIP-1alpha,MIP-1 alpha,MIP1-alpha,Scya3,small inducible cytokine A3","chemokine (C-C motif) ligand 3",NA,FALSE
+"81","Ccl4","NM_013652.2","Act-2,AT744.1,macrophage inflammatory protein-1 beta,MGD-MRK-12242,MGD-MRK-14335,Mip1b,MIP-1B,MIP-1 beta,Scya4,small inducible cytokine A4","chemokine (C-C motif) ligand 4",NA,FALSE
+"82","Ccl5","NM_013653.3","MGD-MRK-14336,MuRantes,RANTES,Scya5,SISd,small inducible cytokine A5,TCP228","chemokine (C-C motif) ligand 5",NA,FALSE
+"83","Ccl6","NM_009139.2","c10,MGD-MRK-14337,MRP-1,Scya6,small inducible cytokine A6","chemokine (C-C motif) ligand 6",NA,FALSE
+"84","Ccl7","NM_013654.3","fic,marc,mcp3,MCP-3,MGD-MRK-16289,Scya7,small inducible cytokine A7","chemokine (C-C motif) ligand 7",NA,FALSE
+"85","Ccl8","NM_021443.2","1810063B20Rik,HC14,MCP-2,MGD-MRK-18704,MGI:1913124,MGI:1917105,RIKEN cDNA 1810063B20 gene,Scya8,small inducible cytokine A8","chemokine (C-C motif) ligand 8",NA,FALSE
+"86","Ccl9","NM_011338.2","CCF18,MGD-MRK-25964,MGD-MRK-25965,MGI:104534,MIP-1 gamma,MRP-2,Scya10,Scya9,small inducible cytokine A10,small inducible cytokine A9","chemokine (C-C motif) ligand 9",NA,FALSE
+"87","Ccna1","NM_007628.3","MGD-MRK-37078","cyclin A1",NA,FALSE
+"88","Ccnb1","NM_172301.3","Ccnb1-rs13,Cycb-4,cyclin B1, related sequence 13,cyclin B4,MGC:18763,MGD-MRK-1814,MGD-MRK-2269","cyclin B1",NA,FALSE
+"89","Ccnd1","NM_007631.1","AI327039,bcl-1,cD1,CycD1,Cyl-1,expressed sequence AI327039,MGD-MRK-1825,MGI:2141923,PRAD1","cyclin D1",NA,FALSE
+"90","Ccnd2","NM_009829.3","2600016F06Rik,AI256817,BF642806,C86853,cD2,EST AI256817,expressed sequence BF642806,expressed sequence C86853,MGD-MRK-15396,MGD-MRK-15397,MGD-MRK-1826,MGI:1353647,MGI:1913821,MGI:2141781,MGI:2683668,RIKEN cDNA 2600016F06 gene,Vin1,Vin-1,viral integration site, radiation leukemia","cyclin D2",NA,FALSE
+"91","Ccnd3","NM_007632.2","9230106B05Rik,AA682053,AL024085,AW146355,C78795,expressed sequence AA682053,expressed sequence AL024085,expressed sequence AW146355,expressed sequence C78795,MGD-MRK-1827,MGI:1924959,MGI:2146781,MGI:2146960,MGI:2147051,MGI:2147125,RIKEN cDNA 9230106B05 gene","cyclin D3",NA,FALSE
+"92","Ccne1","NM_007633.2","AW538188,CycE1,cyclin E,expressed sequence AW538188,MGD-MRK-1828,MGI:2142245","cyclin E1",NA,FALSE
+"93","Ccno","NM_001081062.1","C86987,Ccnu,cyclin U,expressed sequence C86987,Ung2,uracil DNA glycosylase 2","cyclin O",NA,FALSE
+"94","Ccr2","NM_009915.2","CC-CKR-2,CCR2A,CCR2B,CKR2,CKR2A,CKR2B,Cmkbr2,MGD-MRK-33876","chemokine (C-C motif) receptor 2",NA,FALSE
+"95","Ccr4","NM_009916.2","CC CKR-4,chemokine (C-C) receptor 4,Cmkbr4,MGD-MRK-36401,MGD-MRK-37445","chemokine (C-C motif) receptor 4",NA,FALSE
+"96","Ccr5","NM_009917.5","CD195,chemokine (C-C) receptor 5,Cmkbr5,MGD-MRK-35643","chemokine (C-C motif) receptor 5",NA,FALSE
+"97","Ccr9","NM_009913.6","chemokine (C-C) receptor 10,Cmkbr10,GPR-9-6","chemokine (C-C motif) receptor 9",NA,FALSE
+"98","Cd14","NM_009841.3","MGD-MRK-1831","CD14 antigen",NA,FALSE
+"99","Cd163","NM_053094.2",NA,"CD163 antigen",NA,FALSE
+"100","Cd19","NM_009844.2","AW495831,expressed sequence AW495831,MGD-MRK-1833,MGI:2142241","CD19 antigen",NA,FALSE
+"101","Cd1d1","NM_007639.3","AI747460,CD1.1,Cd1a,CD1a antigen,Cd1d,CD1d antigen,expressed sequence AI747460,Ly-38,lymphocyte antigen 38,MGD-MRK-11979,MGD-MRK-1834,MGD-MRK-1836,MGD-MRK-36249,MGI:2139791","CD1d1 antigen",NA,FALSE
+"102","Cd2","NM_013486.2","LFA-2,Ly37,Ly-37,lymphocyte antigen 37,MGD-MRK-11978,MGD-MRK-1837","CD2 antigen",NA,FALSE
+"103","Cd200r1","NM_021325.3","antigen identified by monoclonal antibody MRC OX-2 receptor,CD200R,Mox2r,OX2R","CD200 receptor 1",NA,FALSE
+"104","Cd209e","NM_130905.2","mSIGNR4,SIGNR4","CD209e antigen",NA,FALSE
+"105","Cd244","NM_018729.2","2B4,C9.1,F730046O15Rik,MGD-MRK-38339,MGI:2442562,Nmrk,non MHC restricted killing associated,RIKEN cDNA F730046O15 gene","CD244 natural killer cell receptor 2B4",NA,FALSE
+"106","Cd247","NM_001113391.2","4930549J05Rik,AW552088,CD3 antigen, eta polypeptide,CD3 antigen, zeta polypeptide,CD3-eta,Cd3h,Cd3z,CD3zeta,CD3 zeta,CD3-zeta,CD3-zeta/eta,expressed sequence AW552088,MGD-MRK-14699,MGD-MRK-14930,MGD-MRK-1855,MGD-MRK-1856,MGD-MRK-1857,MGI:1922598,MGI:2138612,RIKEN cDNA 4930549J05 gene,T3z,T3-zeta chain,T-cell receptor zeta chain,TCRk,Tcrz","CD247 antigen",NA,FALSE
+"107","Cd27","NM_001042564.1","MGD-MRK-1844,S152,Tnfrsf7,Tp55,tumor necrosis factor receptor superfamily, member 7","CD27 antigen",NA,FALSE
+"108","Cd274","NM_021893.2","B7-H1,Pdcd1lg1,PD-L1,programmed cell death 1 ligand 1","CD274 antigen",NA,FALSE
+"109","Cd276","NM_133983.4","6030411F23Rik,AU016588,B7h3,B7-H3,B7 homlog 3,B7RP-2,expressed sequence AU016588,MGI:2143194,RIKEN cDNA 6030411F23 gene","CD276 antigen",NA,FALSE
+"110","Cd28","NM_007642.4","MGD-MRK-1845","CD28 antigen",NA,FALSE
+"111","Cd300a","NM_170758.3","B230315M08Rik,Clm8,LMIR1,MAIR-I,MMAC8,Pigr4,RIKEN cDNA B230315M08 gene","CD300A molecule",NA,FALSE
+"112","Cd36","NM_007643.3","FAT,fatty acid translocase,MGD-MRK-36478,Scarb3","CD36 molecule",NA,FALSE
+"113","Cd38","NM_007646.4","CD38 antigen, related sequence 1,Cd38-rs1,MGD-MRK-1851,MGD-MRK-36041","CD38 antigen",NA,FALSE
+"114","Cd3d","NM_013487.3","MGD-MRK-14696,MGD-MRK-1852,T3d,T3-delta chain","CD3 antigen, delta polypeptide",NA,FALSE
+"115","Cd3e","NM_007648.4","AI504783,CD3,CD3epsilon,expressed sequence AI504783,MGD-MRK-14697,MGD-MRK-1853,MGI:2143086,T3e,T3-epsilon chain","CD3 antigen, epsilon polypeptide",NA,FALSE
+"116","Cd3g","NM_009850.2","Ctg3,Ctg-3,MGD-MRK-14698,MGD-MRK-1854,MGD-MRK-2212,MGD-MRK-2213,T3g,T3-gamma chain","CD3 antigen, gamma polypeptide",NA,FALSE
+"117","Cd4","NM_013488.2","L3T4,Ly-4,lymphocyte antigen 4,MGD-MRK-11981,MGD-MRK-1858","CD4 antigen",NA,FALSE
+"118","Cd40","NM_011611.2","AI326936,Bp50,expressed sequence AI326936,MGD-MRK-1859,MGI:2138913,p50,Tnfrsf5,tumor necrosis factor receptor superfamily, member 5","CD40 antigen",NA,FALSE
+"119","Cd40lg","NM_011616.2","CD154,CD40 antigen ligand,Cd40l,Cd40L,gp39,HIGM1,IMD3,Ly62,Ly-62,lymphocyte antigen 62,MGD-MRK-12004,MGD-MRK-12047,MGD-MRK-1860,T-BAM,Tnfsf5,tumor necrosis factor (ligand) superfamily, member 5","CD40 ligand",NA,FALSE
+"120","Cd44","NM_009851.2","AU023126,AW121933,AW146109,expressed sequence AU023126,expressed sequence AW121933,expressed sequence AW146109,HERMES,Ly-24,lymphocyte antigen 24,MGD-MRK-11964,MGD-MRK-13281,MGD-MRK-1863,MGI:2139311,MGI:2139322,MGI:3035411,Pgp-1,phagocyte glycoprotein 1","CD44 antigen",NA,FALSE
+"121","Cd47","NM_010581.3","9130415E20Rik,AA407862,AI848868,AW108519,B430305P08Rik,expressed sequence AA407862,expressed sequence AI848868,expressed sequence AW108519,IAP,integrin-associated protein,Itgp,MGD-MRK-11496,MGI:1918837,MGI:1925789,MGI:2146333,MGI:2146503,MGI:2146621,RIKEN cDNA 9130415E20 gene,RIKEN cDNA B430305P08 gene","CD47 antigen (Rh-related antigen, integrin-associated signal transducer)",NA,FALSE
+"122","Cd48","NM_007649.4","AI449234,AW610730,B-cell membrane protein 1,Bcm-1,BCM1,BLAST-1,expressed sequence AI449234,expressed sequence AW610730,MGD-MRK-1529,MGD-MRK-1865,MGI:2138248,MGI:2138623,Sgp-60","CD48 antigen",NA,FALSE
+"123","Cd5","NM_007650.3","Ly-1,Ly-12,Ly-A,lymphocyte antigen 1,lymphocyte antigen 12,Lyt-1,MGD-MRK-11947,MGD-MRK-11950,MGD-MRK-12073,MGD-MRK-1866,T-lymphocyte antigen 1","CD5 antigen",NA,FALSE
+"124","Cd6","NM_001037801.2","MGD-MRK-24451","CD6 antigen",NA,FALSE
+"125","Cd68","NM_009853.1","gp110,Lamp4,macrosialin,MGD-MRK-1868,Scard1","CD68 antigen",NA,FALSE
+"126","Cd69","NM_001033122.3","5830438K24Rik,AI452015,AIM,EST AI452015,MGD-MRK-1869,MGI:1889838,MGI:1923299,RIKEN cDNA 5830438K24 gene,VEA","CD69 antigen",NA,FALSE
+"127","Cd7","NM_009854.1","MGD-MRK-1870","CD7 antigen",NA,FALSE
+"128","Cd70","NM_011617.1","CD27LG,Ki-24 antigen,Tnfsf7,tumor necrosis factor (ligand) superfamily, member 7","CD70 antigen",NA,FALSE
+"129","Cd74","NM_001042605.1","CLIP,Ia-associated invariant chain,Ii,MGD-MRK-11344","CD74 antigen (invariant polypeptide of major histocompatibility complex, class II antigen-associated)",NA,FALSE
+"130","Cd79a","NM_007655.3","aimmunoglobulin-associated alpha,CD79a antigen,Iga,Igalpha,Ig alpha,Ig-alpha,immunoglobulin-associated alpha,Ly54,Ly-54,lymphocyte antigen 54,mb-1,MGD-MRK-11997,MGD-MRK-12040,MGD-MRK-18581","CD79A antigen (immunoglobulin-associated alpha)",NA,FALSE
+"131","Cd79b","NM_008339.2","B29,Igb,Igbeta,Ig-beta,immunoglobulin-associated beta,MGD-MRK-11225","CD79B antigen",NA,FALSE
+"132","Cd80","NM_009855.2","B7-1,B7.1,CD28 antigen ligand,Cd28l,Ly53,Ly-53,lymphocyte antigen 53,MGD-MRK-11996,MGD-MRK-12039,MGD-MRK-1846,MGD-MRK-18582","CD80 antigen",NA,FALSE
+"133","Cd84","NM_013489.2","A130013D22Rik,CDw84,MGI:2444272,RIKEN cDNA A130013D22 gene,SLAMF5","CD84 antigen",NA,FALSE
+"134","Cd86","NM_019388.3","B70,B7-2,B7.2,CD28 antigen ligand,Cd28l2,Ly58,Ly-58,lymphocyte antigen 58,MB7-2,MGD-MRK-12000,MGD-MRK-12043,MGD-MRK-18572,MGD-MRK-18580","CD86 antigen",NA,FALSE
+"135","Cd8a","NM_001081110.2","BB154331,expressed sequence BB154331,Ly-2,Ly-35,Ly-B,lymphocyte antigen 2,lymphocyte antigen 35,Lyt-2,MGD-MRK-11958,MGD-MRK-11976,MGD-MRK-12074,MGD-MRK-1872,MGI:2141733,T-lymphocyte antigen 2","CD8 antigen, alpha chain",NA,FALSE
+"136","Cd8b1","NM_009858.2","Ly-3,Ly-C,lymphocyte antigen 3,Lyt-3,MGD-MRK-11970,MGD-MRK-12075,MGD-MRK-1873,T-lymphocyte antigen 3","CD8 antigen, beta chain 1",NA,FALSE
+"137","Cd96","NM_032465.2","1700109I12Rik,MGI:1920816,RIKEN cDNA 1700109I12 gene,Tactile","CD96 antigen",NA,FALSE
+"138","Cdc20","NM_023223.2","2310042N09Rik,C87100,expressed sequence C87100,MGI:1913810,MGI:2146726,p55CDC,RIKEN cDNA 2310042N09 gene","cell division cycle 20",NA,FALSE
+"139","Cdc25c","NM_009860.2","Cdc25,cell division cycle control protein 25c,MGD-MRK-1876,MGD-MRK-1877","cell division cycle 25C",NA,FALSE
+"140","Cdh1","NM_009864.2","AA960649,Ecad,E-cad,E-cadherin,expressed sequence AA960649,L-CAM,MGD-MRK-15349,MGD-MRK-1881,MGD-MRK-19360,MGI:2142457,Um,UM,uvomorulin","cadherin 1",NA,FALSE
+"141","Cdh11","NM_009866.5","Cad11,MGD-MRK-15974,OB-cadherin,osteoblast-cadherin","cadherin 11",NA,FALSE
+"142","Cdh2","NM_007664.5","cadherin, N-,MGD-MRK-12785,MGD-MRK-1882,Ncad,N-CAD,N-cadherin","cadherin 2",NA,FALSE
+"143","Cdh5","NM_009868.4","7B4/cadherin-5,AA408225,CD144,expressed sequence AA408225,MGD-MRK-32096,MGI:2142402,VEC,VEcad,VE-Cad,VE-cadherin,VECD","cadherin 5",NA,FALSE
+"144","Cdk2","NM_016756.4","A630093N05Rik,MGD-MRK-28064,MGI:2443873,RIKEN cDNA A630093N05 gene","cyclin-dependent kinase 2",NA,FALSE
+"145","Cdk6","NM_009873.2","AI504062,CDC2-related kinase 2,Crk2,expressed sequence AI504062,MGD-MRK-2146,MGI:2140921,MGI:88503","cyclin-dependent kinase 6",NA,FALSE
+"146","Cdkn1a","NM_007669.4","CAP20,CDKI,Cdkn1,CIP1,cyclin dependent kinase inhibitor,mda6,MGD-MRK-16760,MGD-MRK-25990,P21,p21Cip1,p21WAF,p21<WAF1/CIP1>,SDI1,Waf1","cyclin-dependent kinase inhibitor 1A (P21)",NA,FALSE
+"147","Cdkn1c","NM_009876.3","AL024410,CDKI,expressed sequence AL024410,Kip2,MGD-MRK-25998,MGI:2142098,p57Kip2","cyclin-dependent kinase inhibitor 1C (P57)",NA,FALSE
+"148","Cdkn2a","NM_001040654.1","Arf,ARF-INK4a,Ink4a/Arf,INK4a-ARF,MGD-MRK-23975,MGD-MRK-27101,MGI:103111,MTS1,p16,p16INK4a,p19ARF,p19<ARF>,Pctr1,plasmacytoma resistance 1","cyclin-dependent kinase inhibitor 2A",NA,FALSE
+"149","Cdkn2b","NM_007670.4","AV083695,expressed sequence AV083695,MGD-MRK-27100,MGI:2140526,MTS2,p15,p15INK4b","cyclin-dependent kinase inhibitor 2B (p15, inhibits CDK4)",NA,FALSE
+"150","Ceacam3","NM_054059.1","cea12,EG384557,MGI:1891356,predicted gene, EG384557,pregnancy-specific glycoprotein 24,Psg24","carcinoembryonic antigen-related cell adhesion molecule 3",NA,FALSE
+"151","Cebpb","NM_009883.4","C/EBPbeta,C/EBP BETA,CRP2,IL-6DBP,LAP,LIP,MGD-MRK-12827,MGD-MRK-1917,MGI:97310,Nfil6,NF-IL6,NF-M,nuclear protein Il6","CCAAT/enhancer binding protein (C/EBP), beta",NA,FALSE
+"152","Cenpf","NM_001081363.2","6530404A22Rik,AI325968,expressed sequence AI325968,Lek1,Lek1 protein,leucine, glutamic acid, lysine family 1 protein,MGI:1344369,MGI:1915046,MGI:2138210,mitosin,RIKEN cDNA 6530404A22 gene","centromere protein F",NA,FALSE
+"153","Cep55","NM_028760.1","1200008O12Rik,2700032M20Rik,MGI:1919843,RIKEN cDNA 1200008O12 gene,RIKEN cDNA 2700032M20 gene","centrosomal protein 55",NA,FALSE
+"154","Ces3a","NM_001164681.1","Es31,Es-male carboxylesterase,esterase 31,MGD-MRK-19680","carboxylesterase 3A",NA,FALSE
+"155","Chd9","NM_177224.2","1810014J18Rik,9030205D12Rik,A330063D19Rik,AD013,MGI:1924942,MGI:2444510,mKIAA0308,RIKEN cDNA 1810014J18 gene,RIKEN cDNA 9030205D12 gene,RIKEN cDNA A330063D19 gene","chromodomain helicase DNA binding protein 9",NA,FALSE
+"156","Chuk","NM_001162410.1","AI256658,Chuk1,expressed sequence AI256658,IkappaB kinase alpha,IKK1,IKK 1,IKK-1,IKK[a],IKKalpha,IKK alpha,IKK-alpha,MGD-MRK-16258,MGI:2147493","conserved helix-loop-helix ubiquitous kinase",NA,FALSE
+"157","Clec14a","NM_025809.5","1200003C23Rik,AI642649,expressed sequence AI642649,MGI:2144870,RIKEN cDNA 1200003C23 gene","C-type lectin domain family 14, member a",NA,FALSE
+"158","Clec4e","NM_019948.2","C86253,Clecsf9,C-type (calcium dependent, carbohydrate recognition domain) lectin, superfamily member 9,expressed sequence C86253,MGI:2141778,Mincle","C-type lectin domain family 4, member e",NA,FALSE
+"159","Clec5a","NM_001038604.1","Clecsf5,C-type (calcium dependent, carbohydrate-recognition domain) lectin, superfamily member 5,Ly100,MDL-1,myeloid DAP12-associating lectin-1","C-type lectin domain family 5, member a",NA,FALSE
+"160","Clec7a","NM_020008.2","beta-glucan receptor,beta-GR,BGR,Clecsf12,C-type (calcium dependent, carbohydrate recognition domain) lectin, superfamily member 12,dectin-1","C-type lectin domain family 7, member a",NA,FALSE
+"161","Cmklr1","NM_008153.3","ChemR23,Gpcr27,G-protein coupled receptor 27,MGD-MRK-39602","chemokine-like receptor 1",NA,FALSE
+"162","Cmtm4","NM_153582.5","chemokine-like factor super family 4,Cklfsf4,D19397,expressed sequence D19397","CKLF-like MARVEL transmembrane domain containing 4",NA,FALSE
+"163","Cmtm6","NM_026036.3","2810051A14Rik,AA536733,chemokine-like factor super family 6,Cklfsf6,expressed sequence AA536733,MGI:1914463,MGI:2142952,RIKEN cDNA 2810051A14 gene","CKLF-like MARVEL transmembrane domain containing 6",NA,FALSE
+"164","Cntfr","NM_001146080.1","Cntfralpha,MGD-MRK-16390","ciliary neurotrophic factor receptor",NA,FALSE
+"165","Col11a1","NM_007729.2","C530001D20Rik,cho,chondrodysplasia,MGD-MRK-1972,MGD-MRK-2053,MGI:1924905,RIKEN cDNA C530001D20 gene","collagen, type XI, alpha 1",NA,FALSE
+"166","Col11a2","NM_009926.2","MGD-MRK-2054","collagen, type XI, alpha 2",NA,FALSE
+"167","Col17a1","NM_007732.2","BP180,Bpag,Bpag2,BPAg2,bullous pemphigoid antigen,bullous pemphigoid antigen 2 (180 kDa),MGD-MRK-1612,MGD-MRK-1614,MGD-MRK-2057","collagen, type XVII, alpha 1",NA,FALSE
+"168","Col4a5","NM_001163155.1","MGD-MRK-2070","collagen, type IV, alpha 5",NA,FALSE
+"169","Col5a1","NM_015734.2","AI413331,expressed sequence AI413331,MGD-MRK-2071,MGI:2138923","collagen, type V, alpha 1",NA,FALSE
+"170","Col6a3","XM_897036.2","AI507288,Col6a-3,expressed sequence AI507288,MGD-MRK-2075,MGD-MRK-2078,MGI:2138284,procollagen type VI, alpha 3","collagen, type VI, alpha 3",NA,FALSE
+"171","Comp","NM_016685.2","MGD-MRK-2091,thrombospondin-5,TSP5","cartilage oligomeric matrix protein",NA,FALSE
+"172","Cpa3","NM_007753.2","mast cell carboxypeptidase A,MC-CPA,MGD-MRK-2103,mMC-CPA","carboxypeptidase A3, mast cell",NA,FALSE
+"173","Crabp2","NM_007759.2","AI893628,Crabp-2,CrabpII,expressed sequence AI893628,MGD-MRK-2127,MGD-MRK-2129,MGI:2139840","cellular retinoic acid binding protein II",NA,FALSE
+"174","Csf1","NM_001113529.1","C87615,colony-stimulating factor-1,colony stimulating factor, macrophage,CSF-1,Csfm,expressed sequence C87615,M-CSF,MGD-MRK-13034,MGD-MRK-2191,MGI:2140102,MGI:88534,op,osteopetrosis","colony stimulating factor 1 (macrophage)",NA,FALSE
+"175","Csf1r","NM_001037859.1","AI323359,CD115,c-fms oncogene,CSF-1R,Csfmr,expressed sequence AI323359,Fim2,Fim-2,Fms,Friend MuLV integration site 2,M-CSFR,MGD-MRK-2192,MGD-MRK-9798,MGD-MRK-9845,MGI:2147208,MGI:88535","colony stimulating factor 1 receptor",NA,FALSE
+"176","Csf2","NM_009969.4","colony stimulating factor, granulocyte macrophage,Csfgm,Gm-CSf,GMCSF,MGD-MRK-2187,MGI:88531,MGI-IGM","colony stimulating factor 2 (granulocyte-macrophage)",NA,FALSE
+"177","Csf2rb","NM_007780.4","AI848964,AIC2B,Bc,beta c,CDw131,colony stimulating factor 2 receptor, beta 1, low-affinity (granulocyte-macrophage),colony stimulating factor, granulocyte macrophage receptor, beta chain,common beta chain,Csf2rb1,Csfgmrb,expressed sequence AI848964,Il3r,Il3rb,Il3rb1,Il5rb,interleukin 3 receptor beta chain,interleukin 3 receptor, beta chain 1,interleukin 5 receptor beta,MGD-MRK-11380,MGD-MRK-11382,MGD-MRK-11383,MGD-MRK-11390,MGD-MRK-2189,MGI:2146084,MGI:96554","colony stimulating factor 2 receptor, beta, low-affinity (granulocyte-macrophage)",NA,FALSE
+"178","Csf3","NM_009971.1","colony stimulating factor, granulocyte,Csfg,G-CSF,MGD-MRK-2186,MGI:88530,MGI-IG","colony stimulating factor 3 (granulocyte)",NA,FALSE
+"179","Csf3r","NM_001252651.1","Cd114,colony stimulating factor, granulocyte receptor,Csfgr,G-CSFR,MGD-MRK-2190,MGI:88533","colony stimulating factor 3 receptor (granulocyte)",NA,FALSE
+"180","Ctla4","NM_009843.3","Cd152,CD152 antigen,Ctla-4,cytotoxic T lymphocyte-associated protein 4,Ly-56,MGD-MRK-2224,MGD-MRK-2234","cytotoxic T-lymphocyte-associated protein 4",NA,FALSE
+"181","Ctnnb1","NM_007614.3","batface,beta catenin,beta-catenin,Bfc,catenin beta,Catnb,MGD-MRK-1775,MGI:2656732","catenin (cadherin associated protein), beta 1",NA,FALSE
+"182","Ctss","NM_021281.3","Cat S,MGD-MRK-35807","cathepsin S",NA,FALSE
+"183","Ctsw","NM_009985.5","lymphopain","cathepsin W",NA,FALSE
+"184","Cx3cl1","NM_009142.3","AB030188,AI848747,CX3C,D8Bwg0439e,DNA segment, Chr 8, Brigham & Women's Genetics 0439 expressed,expressed sequence AI848747,fractalkine,hypothetical protein, clone 1-53,MGD-MRK-35756,MGI:107291,MGI:1930149,MGI:2142630,neurotactin,Scyd1,small inducible cytokine subfamily D, 1","chemokine (C-X3-C motif) ligand 1",NA,FALSE
+"185","Cx3cr1","NM_009987.3",NA,"chemokine (C-X3-C motif) receptor 1",NA,FALSE
+"186","Cxcl1","NM_008176.1","fibroblast secretory protein,Fsp,Gro1,GRO1 oncogene,KC,KC/GRO-alpha,melanoma growth stimulatory activity,MGD-MRK-12226,MGD-MRK-37105,MGD-MRK-9878,Mgsa,N51,Scyb1","chemokine (C-X-C motif) ligand 1",NA,FALSE
+"187","Cxcl10","NM_021274.1","C7,CRG-2,gIP-10,Ifi10,INP10,interferon activated gene 10,IP10,IP-10,MGD-MRK-11217,MGI:96424,mob-1,Scyb10,small inducible cytokine B subfamily (Cys-X-Cys), member 10","chemokine (C-X-C motif) ligand 10",NA,FALSE
+"188","Cxcl11","NM_019494.1","betaR1,b-R1,H174,IP9,ITAC,I-TAC,Scyb11,SCYB9B,small inducible cytokine subfamily B (Cys-X-Cys), member 11","chemokine (C-X-C motif) ligand 11",NA,FALSE
+"189","Cxcl12","NM_013655.4","AI174028,expressed sequence AI174028,MGD-MRK-16620,MGD-MRK-16621,MGD-MRK-24440,MGI:2141381,PBSF,PBSF/SDF-1,Scyb12,Sdf1,SDF-1,Sdf1a,Sdf1b,stromal cell derived factor 1,stromal cell derived factor 1A,stromal cell derived factor 1B,TLSF-a,TLSF-b,TPAR1","chemokine (C-X-C motif) ligand 12",NA,FALSE
+"190","Cxcl13","NM_018866.2","4631412M08Rik,ANGIE2,BCA-1,BLC,MGI:1918033,RIKEN cDNA 4631412M08 gene,Scyb13,small inducible cytokine subfamily B (Cys-X-Cys), member 13","chemokine (C-X-C motif) ligand 13",NA,FALSE
+"191","Cxcl14","NM_019568.2","1110031L23Rik,1200006I23Rik,AI414372,BRAK,expressed sequence AI414372,Kec,MGI:1915056,MGI:1915961,MGI:2145226,MIP-2g,RIKEN cDNA 1110031L23 gene,RIKEN cDNA 1200006I23 gene,Scyb14,small inducible cytokine subfamily B (Cys-X-Cys), member 14","chemokine (C-X-C motif) ligand 14",NA,FALSE
+"192","Cxcl15","NM_011339.2","Il8,interleukin 8,lungkine,Scyb15,small inducible cytokine subfamily B, member 15,weche","chemokine (C-X-C motif) ligand 15",NA,FALSE
+"193","Cxcl16","NM_023158.6","0910001K24Rik,AV290116,BB024863,expressed sequence AV290116,expressed sequence BB024863,MGI:1913352,MGI:2144468,MGI:2144594,RIKEN cDNA 0910001K24 gene,Scavenger Receptor,SR-PSOX,SR-PSOX/CXCL16","chemokine (C-X-C motif) ligand 16",NA,FALSE
+"194","Cxcl2","NM_009140.2","CINC-2a,Gro2,GROb,macrophage inflammatory protein 2,MGD-MRK-12243,MGD-MRK-14338,MGI:96991,MGI:98264,Mgsa-b,Mip2,MIP-2,MIP-2a,Scyb,Scyb2,small inducible cytokine B subfamily,small inducible cytokine subfamily, member 2","chemokine (C-X-C motif) ligand 2",NA,FALSE
+"195","Cxcl3","NM_203320.2","Dcip1,gene model 1960, (NCBI),Gm1960","chemokine (C-X-C motif) ligand 3",NA,FALSE
+"196","Cxcl5","NM_009141.2","AMCF-II,Cxcl6,ENA-78,GCP-2,granulocyte chemotactic protein-2,LIX,MGI:1352761,Scyb5,Scyb6,small inducible cytokine B subfamily, member 5,small inducible cytokine subfamily B, member 15","chemokine (C-X-C motif) ligand 5",NA,FALSE
+"197","Cxcl9","NM_008599.2","BB139920,CMK,crg-10,expressed sequence BB139920,MGD-MRK-33048,MGI:105379,MGI:2141267,Mig,monokine induced by gamma interferon,Scyb9,small inducible cytokine B subfamily (Cys-X-Cys), member 9","chemokine (C-X-C motif) ligand 9",NA,FALSE
+"198","Cxcr2","NM_009909.3","CD128,chemokine (C-X-C) receptor 2,Cmkar2,Gpcr16,G-protein coupled receptor 16,IL8RA,Il8rb,IL-8rb,IL-8Rh, interleukin 8 receptor, beta,interleukin 8 receptor, beta,MGD-MRK-11396,MGD-MRK-16347,MGD-MRK-32344,MGI:99567","chemokine (C-X-C motif) receptor 2",NA,FALSE
+"199","Cxcr3","NM_009910.2","Cd183,chemokine (C-X-C) receptor 3,Cmkar3","chemokine (C-X-C motif) receptor 3",NA,FALSE
+"200","Cxcr4","NM_009911.3","b2b220Clo,CD184,chemokine (C-X-C) receptor 4,Cmkar4,fusin,MGD-MRK-39562,MGI:5311025,Mutant line 220,PB-CKR,Sdf1r","chemokine (C-X-C motif) receptor 4",NA,FALSE
+"201","Cxcr5","NM_007551.2","Blr1,Burkitt lymphoma receptor 1,CXCR-5,Gpcr6,G-protein coupled receptor 6,MGD-MRK-16340,MGD-MRK-24452,MGI:99562","chemokine (C-X-C motif) receptor 5",NA,FALSE
+"202","Cxcr6","NM_030712.4","BB217514,BONZO,expressed sequence BB217514,MGI:2143371,STRL33","chemokine (C-X-C motif) receptor 6",NA,FALSE
+"203","Cybb","NM_007807.5","C88302,Cgd,expressed sequence C88302,gp91phox,gp91<phox>,MGD-MRK-1965,MGD-MRK-2263,MGI:2148082,Nox2","cytochrome b-245, beta polypeptide",NA,FALSE
+"204","Dab2","NM_023118.5","5730435J12Rik,AA960054,AI957090,D15Wsu122e,D630005B22Rik,DNA segment, Chr 15, Wayne State University 122, expressed,expressed sequence AA960054,expressed sequence AI957090,MGD-MRK-35708,MGD-MRK-38219,MGI:107243,MGI:1917805,MGI:2145932,MGI:2146101,MGI:3045240,p96,RIKEN cDNA 5730435J12 gene,RIKEN cDNA D630005B22 gene","disabled 2, mitogen-responsive phosphoprotein",NA,FALSE
+"205","Ddb2","NM_028119.5","2610043A19Rik,MGI:1919388,p48,RIKEN cDNA 2610043A19 gene","damage specific DNA binding protein 2",NA,FALSE
+"206","Deptor","NM_001037937.3","4731402B04Rik,9130412E02Rik,D15Ertd336e,D15Ertd597e,Depdc6,DEP domain containing 6,DNA segment, Chr 15, ERATO Doi 336, expressed,DNA segment, Chr 15, ERATO Doi 597, expressed,expressed sequence R75183,MGI:1196436,MGI:1289169,MGI:1918827,MGI:1921823,R75183,RIKEN cDNA 4731402B04 gene,RIKEN cDNA 9130412E02 gene","DEP domain containing MTOR-interacting protein",NA,FALSE
+"207","Dkk1","NM_010051.3","mdkk-1","dickkopf WNT signaling pathway inhibitor 1",NA,FALSE
+"208","Dll1","NM_007865.3","Delta1,MGD-MRK-26099","delta like canonical Notch ligand 1",NA,FALSE
+"209","Dll4","NM_019454.3","Delta4","delta like canonical Notch ligand 4",NA,FALSE
+"210","Dnmt1","NM_010066.3","Cxxc9,Dnmt1o,MGD-MRK-12204,MGD-MRK-12206,MGD-MRK-8877,MGI:3586536,modifier of murine metastable epialleles, D2,MommeD2,MTase","DNA methyltransferase (cytosine-5) 1",NA,FALSE
+"211","Dpp4","NM_001159543.1","Cd26,CD26 antigen,Dpp-4,MGD-MRK-1843,MGD-MRK-8884,MGD-MRK-8887,THAM","dipeptidylpeptidase 4",NA,FALSE
+"212","Dsc3","NM_007882.3","5430426I24Rik,MGI:1918578,RIKEN cDNA 5430426I24 gene","desmocollin 3",NA,FALSE
+"213","Dtx3l","NM_001013371.2","AU042200,BC023741,cDNA sequence BC023741,expressed sequence AU042200,MGI:3035479","deltex 3-like, E3 ubiquitin ligase",NA,FALSE
+"214","Dtx4","NM_172442.3","AI449438,BC044798,cDNA sequence BC044798,expressed sequence AI449438,MGI:2147542,RNF155","deltex 4, E3 ubiquitin ligase",NA,FALSE
+"215","Dusp1","NM_013642.3","3CH134,erp,expressed sequence U19515,MGD-MRK-32161,MGI:2147160,mkp-1,MKP1,protein tyrosine phosphatase, non-receptor type 16,Ptpn16,U19515","dual specificity phosphatase 1",NA,FALSE
+"216","Dusp2","NM_010090.2","MGD-MRK-18740,PAC1","dual specificity phosphatase 2",NA,FALSE
+"217","Dusp5","NM_001085390.1","gene model 337, (NCBI),Gm337,LOC240672","dual specificity phosphatase 5",NA,FALSE
+"218","E2f3","NM_010093.3","E2f3a,E2F3b,mKIAA0075","E2F transcription factor 3",NA,FALSE
+"219","Edn1","NM_010104.3","ET-1,MGD-MRK-9298","endothelin 1",NA,FALSE
+"220","Egf","NM_010113.4","AI790464,expressed sequence AI790464,MGD-MRK-9315,MGI:2139798","epidermal growth factor",NA,FALSE
+"221","Egfr","NM_207655.2","9030024J15Rik,AI552599,avian erythroblastic leukemia viral (v-erb-b) oncogene homolog,avian erythroblastosis oncogene B,Erbb,Errb1,expressed sequence AI552599,MGD-MRK-15422,MGD-MRK-15424,MGD-MRK-9322,MGD-MRK-9570,MGI:1890525,MGI:2144221,RIKEN cDNA 9030024J15 gene,wa2,wa-2,Wa5,waved 2,waved 5","epidermal growth factor receptor",NA,FALSE
+"222","Egr1","NM_007913.5","A530045N19Rik,Egr-1,ETR103,Krox-1,Krox24,Krox-24,Kruppel box 1,Kruppel box 24,MGD-MRK-11608,MGD-MRK-11621,MGD-MRK-15902,MGD-MRK-9324,MGD-MRK-9326,MGI:2444717,NGF1-A,NGFIA,NGFI-A,RIKEN cDNA A530045N19 gene,TIS8,Zenk,Zfp-6,Zif268,zinc finger protein 6","early growth response 1",NA,FALSE
+"223","Eif2ak2","NM_011163.4","2310047A08Rik,4732414G15Rik,AI467567,AI747578,dsRNA-activated kinase,eIF-2 alpha,eukaryotic translation initiation factor 2 alpha kinase 2,expressed sequence AI467567,expressed sequence AI747578,IFN-induced and double-stranded RNA-activated kinase,IFN- type I-induced and dsRNA-activated kinase,MGD-MRK-13612,MGD-MRK-15108,MGI:1924009,MGI:2146878,MGI:2146919,MGI:97761,MGI:98750,Pkr,Prkr,protein kinase, interferon inducible double stranded RNA dependent,protein kinase, interferon-inducible double stranded RNA dependent,RIKEN cDNA 2310047A08 gene,RIKEN cDNA 4732414G15 gene,T-cell viral integration site,Tik","eukaryotic translation initiation factor 2-alpha kinase 2",NA,FALSE
+"224","Eif2b4","NM_010122.2","Eif2b,eukaryotic translation initiation factor 2B,MGD-MRK-9333","eukaryotic translation initiation factor 2B, subunit 4 delta",NA,FALSE
+"225","Eif4ebp1","NM_007918.3","4e-bp1,AA959816,expressed sequence AA959816,MGD-MRK-24146,MGI:2142450,PHAS-I","eukaryotic translation initiation factor 4E binding protein 1",NA,FALSE
+"226","Elob","NM_026305.2","0610040H15Rik,18 kDa, elongin B,RIKEN cDNA 0610040H15 gene,Tceb2,transcription elongation factor B (SIII), polypeptide 2","elongin B",NA,FALSE
+"227","Eno1","NM_023119.2","2-phospho-D-glycerate hydrolase,AL022784,alpha-enolase,c-Myc promoter binding protein,Eno-1,expressed sequence AL022784,MBP-1,MGD-MRK-9503,MGD-MRK-9506,MGI:2143710","enolase 1, alpha non-neuron",NA,FALSE
+"228","Entpd1","NM_009848.3","2610206B08Rik,AA408691,Cd39,CD39 antigen,ectoapyrase,expressed sequence AA408691,MGD-MRK-19713,MGI:1919726,MGI:2147438,NTPDase-1,RIKEN cDNA 2610206B08 gene","ectonucleoside triphosphate diphosphohydrolase 1",NA,FALSE
+"229","Eomes","NM_010136.2","C77258,expressed sequence C77258,MGI:1313283,MGI:2143384,T-box brain gene 2,Tbr2","eomesodermin",NA,FALSE
+"230","Epcam","NM_008532.2","CD326,EGP-2,Egp314,Ep-CAM,EpCAM1,epithelial glycoprotein 314,GA733-2,gp40,Ly74,lymphocyte antigen 74,MGD-MRK-35111,MGD-MRK-35182,panepithelial glycoprotein 314,Tacstd1,TROP1,tumor-associated calcium signal transducer 1","epithelial cell adhesion molecule",NA,FALSE
+"231","Epm2aip1","NM_175266.4","A930003G21Rik,mKIAA0766,RIKEN cDNA A930003G21 gene","EPM2A (laforin) interacting protein 1",NA,FALSE
+"232","Erbb2","NM_001003817.1","avian erythroblastosis oncogene B 2,c-erbB2,c-neu,Erbb-2,ErbB-2,HER2,HER-2,l11Jus8,lethal, Chr 11, Justice 8,MGD-MRK-9571,MGD-MRK-9573,MGI:2671273,mKIAA3023,Neu,Neu oncogene","erb-b2 receptor tyrosine kinase 2",NA,FALSE
+"233","Ero1l","NM_015774.3",NA,"ERO1-like (S. cerevisiae)",NA,FALSE
+"234","Esr1","NM_007956.5","AA420328,AU041214,ERa,ER[a],ERalpha,ER-alpha,ESR,Estr,Estra,estrogen receptor,estrogen receptor alpha,expressed sequence AA420328,expressed sequence AU041214,MGD-MRK-38393,MGD-MRK-9655,MGI:109348,MGI:2143478,MGI:3034239,Nr3a1","estrogen receptor 1 (alpha)",NA,FALSE
+"235","Exo1","NM_012012.4","5730442G03Rik,MGI:1917804,Msa,RIKEN cDNA 5730442G03 gene","exonuclease 1",NA,FALSE
+"236","Ezh2","NM_007971.2","enhancer of zeste homolog (Drosophila),Enx-1,Enx1h,KMT6,MGD-MRK-35129,MGD-MRK-36520,MGI:106670","enhancer of zeste 2 polycomb repressive complex 2 subunit",NA,FALSE
+"237","F2rl1","NM_007974.4","Gpcr11,G-protein coupled receptor 11,MGD-MRK-18739,Par2,PAR-2,Protease-activated receptor-2,proteinase-activated receptor-2","coagulation factor II (thrombin) receptor-like 1",NA,FALSE
+"238","Fadd","NM_010175.5","MGD-MRK-38369,Mort1/FADD","Fas (TNFRSF6)-associated via death domain",NA,FALSE
+"239","Fam124b","NM_173425.3","A830043J08Rik,RIKEN cDNA A830043J08 gene","family with sequence similarity 124, member B",NA,FALSE
+"240","Fanca","NM_016925.3","AW208693,expressed sequence AW208693,MGI:2142773","Fanconi anemia, complementation group A",NA,FALSE
+"241","Fap","NM_007986.2","MGD-MRK-39607","fibroblast activation protein",NA,FALSE
+"242","Fas","NM_007987.2","AI196731,APO-1,CD95,expressed sequence AI196731,lpr,lymphoproliferation,MGD-MRK-11878,MGD-MRK-9711,MGI:2147489,TNFR6,TNF receptor superfamily member 6,Tnfrsf6","Fas (TNF receptor superfamily member 6)",NA,FALSE
+"243","Fasl","NM_001205243.1","APT1LG1,CD178,CD95L,Fas antigen ligand,Fas-L,generalized lymphoproliferative disease,gld,MGD-MRK-10104,MGD-MRK-16013,Tnfsf6,tumor necrosis factor (ligand) superfamily, member 6","Fas ligand (TNF superfamily, member 6)",NA,FALSE
+"244","Fbp1","NM_019395.3","Fbp-2,Fbp3,FBPase brain isoform,FBPase liver,fructose bisphosphatase 2,fructose bisphosphatase 3,MGD-MRK-9720,MGD-MRK-9722,MGI:1330236","fructose bisphosphatase 1",NA,FALSE
+"245","Fcer1a","NM_010184.1","Fce1a,Fc epsilon high affinity receptor alpha,FcERI,Fcr-5,MGD-MRK-9724,MGD-MRK-9728,MGD-MRK-9741","Fc receptor, IgE, high affinity I, alpha polypeptide",NA,FALSE
+"246","Fcgr1","NM_010186.5","AI323638,AV092959,CD64,expressed sequence AI323638,expressed sequence AV092959,FcgammaRI,MGD-MRK-9732,MGI:2139673,MGI:2139933","Fc receptor, IgG, high affinity I",NA,FALSE
+"247","Fcgr2b","NM_001077189.1","AI528646,CD32,expressed sequence AI528646,F630109E10Rik,Fc-gamma receptor 2,Fc-gamma receptor 3,FcgammaRIIB,Fc gamma RIIB,Fcgr2,Fcgr2a,FcgRII,Fc[g]RII,Fcr-2,Fcr-3,Fc receptor, IgG, low affinity  II,Fc receptor, IgG, low affinity IIa,Ly-17,Lym-1,LyM-1,Ly-m20,lymphocyte antigen 17,lymphocyte antigen m20,MGD-MRK-11955,MGD-MRK-12013,MGD-MRK-12069,MGD-MRK-12070,MGD-MRK-9733,MGD-MRK-9734,MGD-MRK-9735,MGD-MRK-9739,MGD-MRK-9740,MGI:2138286,MGI:2445072,RIKEN cDNA F630109E10 gene","Fc receptor, IgG, low affinity IIb",NA,FALSE
+"248","Fcgr3","NM_010188.5","CD16,FcgammaRIII,Fcg receptor III,MGD-MRK-9736","Fc receptor, IgG, low affinity III",NA,FALSE
+"249","Fcgr4","NM_144559.1","4833442P21Rik,CD16-2,Fc fragment of IgG, low affinity IIIa, receptor,FcgammaRIV,Fcgr3a,MGI:2443436,RIKEN cDNA 4833442P21 gene","Fc receptor, IgG, low affinity IV",NA,FALSE
+"250","Fcgrt","NM_010189.3","FcRn,MGD-MRK-23854,neonatal Fc receptor","Fc receptor, IgG, alpha chain transporter",NA,FALSE
+"251","Fcnb","NM_010190.1",NA,"ficolin B",NA,FALSE
+"252","Fcrlb","NM_001029984.2","Fc receptor related Y,FcRL2,Fcry,FREB2,FREB-2,mFCRL2","Fc receptor-like B",NA,FALSE
+"253","Fgf13","NM_010200.2","Fhf2,MGD-MRK-38222","fibroblast growth factor 13",NA,FALSE
+"254","Fgf18","NM_008005.2","D130055P09Rik,FGF-18,MGI:2441946,RIKEN cDNA D130055P09 gene","fibroblast growth factor 18",NA,FALSE
+"255","Fgf9","NM_013518.4","Eks,elbow knee synostosis,glia activating factor,MGD-MRK-27086,MGI:2182125","fibroblast growth factor 9",NA,FALSE
+"256","Fgfr1","NM_010206.2","AW208770,ear askew,Eask,expressed sequence AW208770,Fgfr-1,FGFR-I,Flt-2,FMS-like tyrosine kinase 2,Hspy,hush puppy,MGD-MRK-9776,MGD-MRK-9781,MGD-MRK-9833,MGI:2142774,MGI:2662561,MGI:3836280","fibroblast growth factor receptor 1",NA,FALSE
+"257","Flnb","NM_134080.1","AL024016,expressed sequence AL024016,MGI:2145716","filamin, beta",NA,FALSE
+"258","Flt1","NM_010228.3","AI323757,expressed sequence AI323757,Flt-1,MGD-MRK-9832,MGD-MRK-9836,MGI:2140833,sFlt1,vascular endothelial growth factor receptor-1,VEGFR1,VEGFR-1","FMS-like tyrosine kinase 1",NA,FALSE
+"259","Fosl1","NM_010235.2","AW538199,expressed sequence AW538199,fra-1,Fra1,MGD-MRK-35640,MGI:2147739","fos-like antigen 1",NA,FALSE
+"260","Foxp3","NM_054039.2","JM2,MGD-MRK-14368,MGI:98281,scurfin,scurfy,sf","forkhead box P3",NA,FALSE
+"261","Fpr1","NM_013521.2","fMLF-R,FPR,MGD-MRK-35914","formyl peptide receptor 1",NA,FALSE
+"262","Fpr3","NM_008042.2","formyl peptide receptor-like 1,formyl peptide receptor, related sequence 1,Fprl1,Fpr-rs1,Lxa4r,LXA4-R,MGI:1278320","formyl peptide receptor 3",NA,FALSE
+"263","Fstl3","NM_031380.2","E030038F23Rik,Flrg,MGI:2443015,RIKEN cDNA E030038F23 gene","follistatin-like 3",NA,FALSE
+"264","Fut4","NM_010242.3","3-fucosyl-N-acetyl-lactosamine epitope,AI451562,expressed sequence AI451562,FAL,FucT-IV,LeX,MGD-MRK-9894,MGI:2143062,Ssea1,SSEA-1","fucosyltransferase 4",NA,FALSE
+"265","Fyn","NM_008054.2","AI448320,AW552119,expressed sequence AI448320,expressed sequence AW552119,MGD-MRK-9909,MGI:2143602,MGI:2143864,Src Kinase p59","Fyn proto-oncogene",NA,FALSE
+"266","Fzd8","NM_008058.2","Fz8,mFZ8,MGD-MRK-37504","frizzled class receptor 8",NA,FALSE
+"267","Fzd9","NM_010246.1","frizzled 9,mfz9","frizzled class receptor 9",NA,FALSE
+"268","Gas1","NM_008086.1","AW554192,expressed sequence AW554192,Gas-1,MGD-MRK-9985,MGD-MRK-9992,MGI:2145453","growth arrest specific 1",NA,FALSE
+"269","Gata3","NM_008091.3","Gata-3,jal,juvenile alopecia,MGD-MRK-10000,MGD-MRK-10004,MGI:2181648","GATA binding protein 3",NA,FALSE
+"270","Gbp2","NM_010260.1","MGD-MRK-19679","guanylate binding protein 2",NA,FALSE
+"271","Gbp2b","NM_010259.2","Gbp1,Gbp-1,guanylate binding protein 1,macrophage activation 1,Mag-1,MGD-MRK-10008,MGD-MRK-10009,MGD-MRK-12400,MGD-MRK-12402,MGI:97071,Mpa1,Mpa-1","guanylate binding protein 2b",NA,FALSE
+"272","Gbp3","NM_018734.3","AW228655,expressed sequence AW228655,MGI:2139979","guanylate binding protein 3",NA,FALSE
+"273","Ghr","NM_001048147.1","AA986417,expressed sequence AA986417,GHBP,GHR/BP,MGD-MRK-10070,MGI:2145937","growth hormone receptor",NA,FALSE
+"274","Gimap4","NM_001243199.1","AU019574,E430007K16Rik,expressed sequence AU019574,Ian1,immune associated nucleotide 1,MGI:2141562,RIKEN cDNA E430007K16 gene","GTPase, IMAP family member 4",NA,FALSE
+"275","Gimap6","NM_153175.3","4833419H03Rik,Ian6,immune associated nucleotide 6,RIKEN cDNA 4833419H03 gene","GTPase, IMAP family member 6",NA,FALSE
+"276","Gli1","NM_010296.2","AV235269,expressed sequence AV235269,MGD-MRK-10105,MGD-MRK-15893,MGD-MRK-15948,MGI:2143787,MGI:99196,Zfp5,Zfp-5,zinc finger protein 5","GLI-Kruppel family member GLI1",NA,FALSE
+"277","Gls","NM_001081081.2","AI314027,B230365M23Rik,expressed sequence AI314027,MGD-MRK-10135,MGI:2138193,MGI:2444416,RIKEN cDNA B230365M23 gene","glutaminase",NA,FALSE
+"278","Glud1","NM_008133.4","AI118167,anonymous DNA segment, Chr 14,expressed sequence AI118167,Gdh-X,Glud,Gludl,glutamate dehydrogenase like sequence,MGD-MRK-10046,MGD-MRK-10136,MGD-MRK-10139,MGI:2145599","glutamate dehydrogenase 1",NA,FALSE
+"279","Glul","NM_008131.3","Glns,glutamine synthetase,GS,MGD-MRK-10117","glutamate-ammonia ligase (glutamine synthetase)",NA,FALSE
+"280","Gm5150","NM_001081687.1","381484,predicted gene, 381484","predicted gene 5150",NA,FALSE
+"281","Gmip","NM_198101.1","5031419I10Rik,RIKEN cDNA 5031419I10 gene","Gem-interacting protein",NA,FALSE
+"282","Gng4","NM_010317.2","4,MGD-MRK-19607","guanine nucleotide binding protein (G protein), gamma 4",NA,FALSE
+"283","Got1","NM_010324.2","AI789014,cAspAT,cytosolic aspartate aminotransferase,expressed sequence AI789014,Got-1,MGD-MRK-10213,MGD-MRK-10215,MGI:2147593","glutamic-oxaloacetic transaminase 1, soluble",NA,FALSE
+"284","Got2","NM_010325.2","AL022787,expressed sequence AL022787,FABP-pm,Got-2,Kyat4,mAspAT,MGD-MRK-10214,MGD-MRK-10216,MGI:2142656,mitochondrial aspartate aminotransferase,plasma membrane fatty acid binding protein","glutamatic-oxaloacetic transaminase 2, mitochondrial",NA,FALSE
+"285","Gpc4","NM_008150.2","9530073D23Rik,AF311610,AI385680,AI661372,expressed sequence AF311610,expressed sequence AI385680,expressed sequence AI661372,K-glypican,MGD-MRK-29056,MGI:1925872,MGI:2147881,MGI:2147905,MGI:2152785,RIKEN cDNA 9530073D23 gene","glypican 4",NA,FALSE
+"286","Gpr160","NM_001134386.1","1700025D19Rik,RIKEN cDNA 1700025D19 gene","G protein-coupled receptor 160",NA,FALSE
+"287","Gpsm3","NM_134116.5","AA960287,AGS4,expressed sequence AA960287","G-protein signalling modulator 3 (AGS3-like, C. elegans)",NA,FALSE
+"288","Gzma","NM_010370.2","AW494114,BLT esterase,Ctla3,Ctla-3,cytotoxic T lymphocyte-associated protein 3,expressed sequence AW494114,Hanukah factor,Hf,H factor,MGD-MRK-10699,MGD-MRK-2223,MGD-MRK-2233,MGD-MRK-38311,MGI:2145434,SE1,serine esterase 1,TSP1,TSP-1","granzyme A",NA,FALSE
+"289","Gzmb","NM_013542.2","AI553453,CCP1,CCP-1/C11,Ctla1,Ctla-1,cytotoxic T lymphocyte-associated protein 1,expressed sequence AI553453,GZB,MGD-MRK-2219,MGD-MRK-2229,MGD-MRK-38312,MGI:2145670","granzyme B",NA,FALSE
+"290","Gzme","NM_010373.3","CCP3,Ctla6,Ctla-6,cytotoxic T lymphocyte-associated protein 6,MCSP-2,MGD-MRK-2226,MGD-MRK-2236,MGD-MRK-38310","granzyme E",NA,FALSE
+"291","H2-Aa","NM_010378.2","Aalpha,A alpha,H-2Aa,histocompatibility 2, class II antigen A alpha,Ia1,Ia-1,I-Aalpha,I region-associated antigen 1,MGD-MRK-10377,MGD-MRK-10490,MGD-MRK-11044,MGD-MRK-11049","histocompatibility 2, class II antigen A, alpha",NA,FALSE
+"292","H2-Ab1","NM_207105.3","Abeta,A beta,AI845868,expressed sequence AI845868,H-2Ab,H2-Ab,histocompatibility 2, class II antigen A, beta,Ia2,Ia-2,IAb,I-A<b>,I-Abeta,I-region-associated antigen 2,MGD-MRK-10378,MGD-MRK-10491,MGD-MRK-11045,MGD-MRK-11050,MGD-MRK-23932,MGI:1890696,MGI:2146934,response to metastatic cancers 1,Rmcs1","histocompatibility 2, class II antigen A, beta 1",NA,FALSE
+"293","H2-D1","NM_010380.3","H-2D,MGD-MRK-10379,MGD-MRK-10492","histocompatibility 2, D region locus 1",NA,FALSE
+"294","H2-DMa","NM_010386.4","H-2Ma,H2-Ma,H2-M alpha,histocompatibility 2, class II, locus Ma,MGD-MRK-10405,MGD-MRK-10517","histocompatibility 2, class II, locus DMa",NA,FALSE
+"295","H2-DMb1","NM_010387.2","AI385589,expressed sequence AI385589,H-2Mb1,H2-Mb1,H2-M beta1,MGD-MRK-10406,MGD-MRK-10518,MGI:2146833","histocompatibility 2, class II, locus Mb1",NA,FALSE
+"296","H2-DMb2","NM_010388.4","H-2Mb2,H2-Mb2,H2-M beta2,MGD-MRK-10407,MGD-MRK-10519","histocompatibility 2, class II, locus Mb2",NA,FALSE
+"297","H2-Eb1","NM_010382.2","H-2Eb,Ia4,Ia-4,I region-associated antigen 4,MGD-MRK-10384,MGD-MRK-10497,MGD-MRK-11047,MGD-MRK-11052","histocompatibility 2, class II antigen E beta",NA,FALSE
+"298","H2-K1","NM_001001892.2","H-2K,MGD-MRK-10388,MGD-MRK-10500","histocompatibility 2, K1, K region",NA,FALSE
+"299","H2-M3","NM_013819.2","H-2M3,Hmt,MGD-MRK-10400,MGD-MRK-10511,MGD-MRK-10801,R4B2","histocompatibility 2, M region locus 3",NA,FALSE
+"300","H2-Ob","NM_010389.3","A-beta2,A-beta-2,H2-Ab,H2-Ab2,H-2I,H2-IAb2,H-2Ob,histocompatibility 2, class II antigen A, beta,histocompatiblility 2, class II antigen A beta 2,MGD-MRK-10378,MGD-MRK-10409,MGD-MRK-10491,MGD-MRK-10521,MGD-MRK-23933,Ob","histocompatibility 2, O region beta locus",NA,FALSE
+"301","H2-Pa","ENSMUST00000182803.1","MGD-MRK-32355","histocompatibility 2, P region alpha locus",NA,FALSE
+"302","H2-Q1","NM_010390.3","15006,H-2Q1,MGD-MRK-10412,MGD-MRK-10524,MGD-MRK-13708,MGD-MRK-13718,MGD-MRK-13736,MGI:3779428,predicted gene, 15006,Q1,Q1b,Q1d,Q1k","histocompatibility 2, Q region locus 1",NA,FALSE
+"303","H2-Q10","NM_010391.4","H-2Q10,MGD-MRK-10413,MGD-MRK-10525,MGD-MRK-13707,MGD-MRK-13719,Q10,Qa10,Qa lymphocyte antigen 10,Q region gene 10","histocompatibility 2, Q region locus 10",NA,FALSE
+"304","H2-Q2","NM_010392.2","BE136769,ENSMUSG00000079507,expressed sequence BE136769,Gm11132,H-2Q2,MGD-MRK-10414,MGD-MRK-10527,MGI:3035350,MGI:3779387,predicted gene 11132,predicted gene, ENSMUSG00000079507","histocompatibility 2, Q region locus 2",NA,FALSE
+"305","H2-T23","NM_010398.3","37b,37c,H-2T23,MGD-MRK-10439,MGD-MRK-10553,Qa1,Qa-1,Qed-1,T18c,T18c(37),T23b,T23d","histocompatibility 2, T region locus 23",NA,FALSE
+"306","H2afx","NM_010436.2","AW228881,expressed sequence AW228881,gammaH2ax,H2ax,H2A.X,H2AX histone,Hist5-2ax,histone 5 protein 2ax,MGD-MRK-19571,MGD-MRK-19591,MGI:2143303","H2A histone family, member X",NA,FALSE
+"307","Havcr2","NM_134250.2","T-cell immunoglobulin and mucin domain containing 3,Tim3,TIM-3,Timd3","hepatitis A virus cellular receptor 2",NA,FALSE
+"308","Hc","NM_010406.2","C5,C5a,He,MGD-MRK-10645,MGD-MRK-10689,MGD-MRK-1703","hemolytic complement",NA,FALSE
+"309","Hck","NM_010407.3","AI849071,B-cell myeloid kinase,Bmk,expressed sequence AI849071,Hck-1,hemopoietic cell kinase 1,MGD-MRK-10666,MGD-MRK-10667,MGD-MRK-1590,MGI:2139076","hemopoietic cell kinase",NA,FALSE
+"310","Hdac11","NM_144919.2","MGC:27683","histone deacetylase 11",NA,FALSE
+"311","Hdac3","NM_010411.2","AW537363,expressed sequence AW537363,MGI:2147071","histone deacetylase 3",NA,FALSE
+"312","Hdac4","XM_006529302.1","4932408F19Rik,AI047285,expressed sequence AI047285,MGI:3034516,RIKEN cDNA 4932408F19 gene","histone deacetylase 4",NA,FALSE
+"313","Hdac5","NM_010412.3","AI426555,expressed sequence AI426555,MGI:2144155,mHDA1,mKIAA0600","histone deacetylase 5",NA,FALSE
+"314","Hdc","NM_008230.6","AW108189,expressed sequence AW108189,Hdc-a,Hdc-c,Hdc-e,Hdc-s,histidine decarboxylase concentration (kidney),histidine decarboxylase estrogen response,histidine decarboxylase, structural (kidney),histidine decarboxylase testosterone reponse,L-histidine decarboxylase,MGD-MRK-10682,MGD-MRK-10683,MGD-MRK-10684,MGD-MRK-10685,MGD-MRK-10686,MGI:2139302,MGI:96063,MGI:96064,MGI:96065,MGI:96066","histidine decarboxylase",NA,FALSE
+"315","Hells","NM_008234.3","AI323785,E130115I21Rik,expressed sequence AI323785,LSH,lymphoid specific helicase,Lysh,MGD-MRK-33900,MGD-MRK-33901,MGI:106208,MGI:1925121,MGI:2147507,PASG,proliferation-associated SNF2-like,RIKEN cDNA E130115I21 gene,YFK8","helicase, lymphoid specific",NA,FALSE
+"316","Herc6","NM_025992.2","1700121D12Rik,2510038N07Rik,4930427L17Rik,AI451296,CEB1,EST AI451296,hect domain and RLD 5,Herc5,MGI:1889836,MGI:1921562,MGI:1921870,RIKEN cDNA 1700121D12 gene,RIKEN cDNA 2510038N07 gene,RIKEN cDNA 4930427L17 gene","hect domain and RLD 6",NA,FALSE
+"317","Hes1","NM_008235.2","bHLHb39,hairy (Drosophila) homolog,Hry,MGD-MRK-10940,MGD-MRK-28150","hes family bHLH transcription factor 1",NA,FALSE
+"318","Hey1","NM_010423.2","AI316788,AI414254,bHLHb31,CHF2,expressed sequence AI316788,expressed sequence AI414254,Herp2,hesr-1,Hesr1,HRT1,MGI:2139670,MGI:2139691","hairy/enhancer-of-split related with YRPW motif 1",NA,FALSE
+"319","Hif1a","NM_010431.2","AA959795,bHLHe78,expressed sequence AA959795,HIF1alpha,HIF-1alpha,MGD-MRK-35379,MGI:2144750,MOP1","hypoxia inducible factor 1, alpha subunit",NA,FALSE
+"320","Hk1","NM_001146100.1","BB404130,dea,downeast anemia,expressed sequence BB404130,Hk-1,Hk1-s,MGD-MRK-10735,MGD-MRK-10736,MGI:1891296,MGI:3035452,mHk1-s","hexokinase 1",NA,FALSE
+"321","Hk2","NM_013820.3","AI642394,expressed sequence AI642394,HKII,MGI:2141455","hexokinase 2",NA,FALSE
+"322","Hmga1","NM_001166545.1","AL023995,expressed sequence AL023995,high mobility group protein I,Hmga1a,Hmga1b,Hmgi,Hmgiy,HMG-I(Y),HMGI(Y),HMGY,MGD-MRK-10796,MGI:2144347","high mobility group AT-hook 1",NA,FALSE
+"323","Hmgb1","NM_010439.3","amphoterin,DEF,high mobility group protein 1,Hmg1,HMG-1,MGD-MRK-10748,p30,SBP-1","high mobility group box 1",NA,FALSE
+"324","Hnf1a","NM_009327.1","AI323641,expressed sequence AI323641,hepatic nuclear factor 1,hepatocyte nuclear factor 1,Hnf-1,HNF1,HNF1[a],Hnf1alpha,HNF1-alpha,LFB1,MGD-MRK-10803,MGD-MRK-14747,MGD-MRK-14753,MGI:2140832,Tcf1,Tcf-1,transcription factor 1","HNF1 homeobox A",NA,FALSE
+"325","Hras","NM_001130443.1","c-H-ras,c-rasHa,Ha-ras,Harvey-ras,Harvey rat sarcoma virus oncogene 1,H-ras,Hras1,Hras-1,MGD-MRK-10930,MGD-MRK-10931","Harvey rat sarcoma virus oncogene",NA,FALSE
+"326","Hsd11b1","NM_001044751.1","11beta-HSD-1,11beta-hydroxysteroid dehydrogenase type 1,MGD-MRK-24447","hydroxysteroid 11-beta dehydrogenase 1",NA,FALSE
+"327","Icam1","NM_010493.2","CD54,Icam-1,Ly-47,lymphocyte antigen 47,MALA-2,MGC:6195,MGD-MRK-11146,MGD-MRK-11148,MGD-MRK-11989","intercellular adhesion molecule 1",NA,FALSE
+"328","Icam2","NM_010494.1","CD102,Icam-2,MGD-MRK-11147,MGD-MRK-11150","intercellular adhesion molecule 2",NA,FALSE
+"329","Icam5","NM_008319.2","CD50,Icam3,intercellular adhesion molecule 3,MGD-MRK-18600,MGD-MRK-38475,MGI:101792,telencephalin,Tlcn,TLN","intercellular adhesion molecule 5, telencephalin",NA,FALSE
+"330","Icos","NM_017480.1",NA,"inducible T cell co-stimulator",NA,FALSE
+"331","Icosl","NM_015790.3","AU044799,B7h,B7-H2,B7RP-1,BG071784,EST BG071784,expressed sequence AU044799,GL50,GL50-B,ICOS-L,LICOS,MGI:2143770,MGI:2652130","icos ligand",NA,FALSE
+"332","Id4","NM_031166.2","bHLHb27,Idb4,MGD-MRK-16175","inhibitor of DNA binding 4",NA,FALSE
+"333","Ido1","NM_008324.2","Ido,Indo,indole 2,3-dioxygenase,indole 2,4-dioxygenase,indoleamine-pyrrole 2,3 dioxygenase,MGD-MRK-11186","indoleamine 2,3-dioxygenase 1",NA,FALSE
+"334","Ier3","NM_133662.2","AI663993,cAMP inducible gene 3,cI-3,expressed sequence AI663993,gly96,IEX-1,MGD-MRK-28108,MGI:2146916","immediate early response 3",NA,FALSE
+"335","Ifi203","NM_001045481.1","MGD-MRK-11221","interferon activated gene 203",NA,FALSE
+"336","Ifi27","NM_026790.2","1110013J02Rik,2900026P10Rik,D12Ertd647e,DNA segment, Chr 12, ERATO Doi 647, expressed,Ifi27l1,interferon, alpha-inducible protein 27 like 1,MGI:1915877,MGI:1925649,RIKEN cDNA 1110013J02 gene,RIKEN cDNA 2900026P10 gene","interferon, alpha-inducible protein 27",NA,FALSE
+"337","Ifi35","NM_027320.4","2010008K16Rik,AW986054,expressed sequence AW986054,IFP35,MGI:2144592,RIKEN cDNA 2010008K16 gene","interferon-induced protein 35",NA,FALSE
+"338","Ifih1","NM_027835.3","9130009C22Rik,Helicard,MDA5,MDA-5,RIKEN cDNA 9130009C22 gene","interferon induced with helicase C domain 1",NA,FALSE
+"339","Ifit1","NM_008331.2","Ifi56,interferon inducible protein 56,ISG56,MGD-MRK-16219","interferon-induced protein with tetratricopeptide repeats 1",NA,FALSE
+"340","Ifit2","NM_008332.2","AV302338,expressed sequence AV302338,Ifi54,interferon inducible protein 54,MGD-MRK-16218,MGI:2147678","interferon-induced protein with tetratricopeptide repeats 2",NA,FALSE
+"341","Ifit3","NM_010501.1","Ifi49,interferon inducible protein 49","interferon-induced protein with tetratricopeptide repeats 3","Ifit3b (NM_001005858)",FALSE
+"342","Ifitm1","NM_001112715.1","1110036C17Rik,fragilis2,interferon induced transmembrane protein 2 like,Mil2,RIKEN cDNA 1110036C17 gene","interferon induced transmembrane protein 1",NA,FALSE
+"343","Ifitm2","NM_030694.1","fragilis3,Ifitm3l,interferon induced transmembrane protein 3-like,mil-3","interferon induced transmembrane protein 2",NA,FALSE
+"344","Ifna1","NM_010502.2","Ifa1,MGD-MRK-11201,MGD-MRK-36243","interferon alpha 1","Ifna12 (NM_177361), Ifna11 (NM_008333), Ifna7 (NM_008334)",FALSE
+"345","Ifnar1","NM_010508.1","Ifar,IFN-alpha/betaR,Ifrc,MGD-MRK-11211,MGD-MRK-11223,MGD-MRK-36233","interferon (alpha and beta) receptor 1",NA,FALSE
+"346","Ifng","NM_008337.1","Ifg,IFN-gamma,MGD-MRK-11214,MGD-MRK-36231","interferon gamma",NA,FALSE
+"347","Ifngr1","NM_010511.2","CD119,Ifgr,IFN-gammaR,IFN-gamma R,Ifngr,MGD-MRK-11215,MGD-MRK-36230,Nktar","interferon gamma receptor 1",NA,FALSE
+"348","Ifngr2","NM_008338.3","Ifgr2,Ifgt,interferon gamma transducer,MGD-MRK-11216,MGD-MRK-25614,MGD-MRK-36229","interferon gamma receptor 2",NA,FALSE
+"349","Igf2r","NM_010515.2","AI661837,CD222,CI-MPR,expressed sequence AI661837,IGF-II/CI-MPR,M6P/IGF2R,mannose-6-phosphate receptor, cation independent,MGD-MRK-11231,MGI:2146909,Mpr300","insulin-like growth factor 2 receptor",NA,FALSE
+"350","Ihh","NM_010544.2","MGD-MRK-11343","Indian hedgehog",NA,FALSE
+"351","Ikbkb","NM_010546.2","AI132552,expressed sequence AI132552,IKK2,IKK-2,IKK[b],IKKbeta,IKK-beta,MGI:2142466","inhibitor of kappaB kinase beta",NA,FALSE
+"352","Ikbkg","NM_001161423.1","1110037D23Rik,AI848108,AI851264,AW124339,expressed sequence AI848108,expressed sequence AI851264,expressed sequence AW124339,IKK[g],MGI:1923574,MGI:2147920,MGI:2147925,MGI:2148001,NEMO,RIKEN cDNA 1110037D23 gene","inhibitor of kappaB kinase gamma",NA,FALSE
+"353","Ikzf1","NM_009578.2","5832432G11Rik,early lymphoid specific transcription factor,Ikaros,LyF-1,MGD-MRK-11345,MGI:2442667,MGI:96535,RIKEN cDNA 5832432G11 gene,Zfpn1a1,zinc finger protein, subfamily 1A, 1 (Ikaros)","IKAROS family zinc finger 1",NA,FALSE
+"354","Ikzf2","NM_011770.4","A730095J18Rik,Helios,lymphoid restricted transcription factor,MGI:1276117,MGI:2442076,RIKEN cDNA A730095J18 gene,Zfpn1a2,zinc finger protein, subfamily 1A, 2 (Helios)","IKAROS family zinc finger 2",NA,FALSE
+"355","Ikzf3","NM_011771.1","5830411O07Rik,Aiolos,lymphoid restricted transcription factor,MGI:1926180,MGI:891998,RIKEN cDNA 5830411O07 gene,Zfpn1a3,zinc finger protein, subfamily 1A, 3 (Aiolos)","IKAROS family zinc finger 3",NA,FALSE
+"356","Il10","NM_010548.1","cytokine synthesis inhibitory factor,Il-10,IL-10,MGD-MRK-11347,MGD-MRK-11361","interleukin 10",NA,FALSE
+"357","Il10ra","NM_008348.2","AW553859,CDw210,expressed sequence AW553859,Il10r,interleukin 10 receptor,MGD-MRK-11362,MGI:2143329,mIL-10R","interleukin 10 receptor, alpha",NA,FALSE
+"358","Il11","NM_008350.2","IL-11,MGD-MRK-36187","interleukin 11",NA,FALSE
+"359","Il11ra1","NM_010549.3","AI314697,expressed sequence AI314697,Il11ra,Il-11ra,Il-11ra-alpha,interleukin 11 receptor, alpha chain,MGD-MRK-35897,MGI:3034462,NR1","interleukin 11 receptor, alpha chain 1",NA,FALSE
+"360","Il12rb2","NM_008354.3","A930027I18Rik,Ifnm,IL-12RB2,interferon response to microorganisms,MGI:1924481,MGI:2152339,RIKEN cDNA A930027I18 gene","interleukin 12 receptor, beta 2",NA,FALSE
+"361","Il15","NM_008357.2","AI503618,expressed sequence AI503618,MGD-MRK-23851,MGI:2142577","interleukin 15",NA,FALSE
+"362","Il16","NM_010551.3",NA,"interleukin 16",NA,FALSE
+"363","Il17a","NM_010552.3","Ctla8,Ctla-8,cytotoxic T lymphocyte-associated protein 8,Il17,IL-17A,interleukin 17,MGD-MRK-2228,MGD-MRK-2238,MGD-MRK-35831","interleukin 17A",NA,FALSE
+"364","Il18","NM_008360.1","Igif,Il-18,interferon gamma inducing factor,MGD-MRK-36516","interleukin 18",NA,FALSE
+"365","Il18bp","NM_010531.1","Igifbp,IL-18BP,interferon gamma inducing factor binding protein,MC54L","interleukin 18 binding protein",NA,FALSE
+"366","Il18r1","NM_001161842.1","Il18ralpha,Il1rrp,interleukin 1 receptor related protein,MGD-MRK-33052","interleukin 18 receptor 1",NA,FALSE
+"367","Il1a","NM_010554.4","Il-1a,MGD-MRK-11351,MGD-MRK-11366","interleukin 1 alpha",NA,FALSE
+"368","Il1b","NM_008361.3","Il-1b,IL-1B,IL-1beta,MGD-MRK-11352,MGD-MRK-11367","interleukin 1 beta",NA,FALSE
+"369","Il1r2","NM_010555.4","CD121b,Il1r-2,IL-1 receptor beta chain,MGD-MRK-11370,MGD-MRK-11372","interleukin 1 receptor, type II",NA,FALSE
+"370","Il1rn","NM_001039701.3","F630041P17Rik,IL-1ra,MGD-MRK-11373,MGI:2443250,RIKEN cDNA F630041P17 gene","interleukin 1 receptor antagonist",NA,FALSE
+"371","Il2","NM_008366.3","Il-2,IL-2,MGD-MRK-11353,MGD-MRK-11374","interleukin 2",NA,FALSE
+"372","Il21r","NM_021887.1","NILR","interleukin 21 receptor",NA,FALSE
+"373","Il22ra1","NM_178257.1","Il22r","interleukin 22 receptor, alpha 1",NA,FALSE
+"374","Il23r","NM_144548.1",NA,"interleukin 23 receptor",NA,FALSE
+"375","Il24","NM_053095.2","FISP,Mda-7","interleukin 24",NA,FALSE
+"376","Il2ra","NM_008367.2","CD25,Il2r,IL-2R alpha chain,interleukin 2 receptor,Ly-43,lymphocyte antigen 43,MGD-MRK-11375,MGD-MRK-11376,MGD-MRK-11985","interleukin 2 receptor, alpha chain",NA,FALSE
+"377","Il2rb","NM_008368.3","CD122,IL15Rbeta,IL-15Rbeta,IL-15 receptor beta chain,IL-2/15Rbeta,Il-2Rbeta,MGD-MRK-11377","interleukin 2 receptor, beta chain",NA,FALSE
+"378","Il2rg","NM_013563.3","CD132,common cytokine receptor gamma chain,common gamma chain,gamma(c),gammaC,gamma C receptor,gc,[g]c,MGD-MRK-11378","interleukin 2 receptor, gamma chain",NA,FALSE
+"379","Il33","NM_133775.1","9230117N10Rik,Il1f11,Il-33,NF-HEV,RIKEN cDNA 9230117N10 gene","interleukin 33",NA,FALSE
+"380","Il34","NM_001135100.2","2010004A03Rik,AI593503,expressed sequence AI593503,MGI:2142587,RIKEN cDNA 2010004A03 gene","interleukin 34",NA,FALSE
+"381","Il4","NM_021283.1","Il-4,MGD-MRK-11355,MGD-MRK-11385","interleukin 4",NA,FALSE
+"382","Il6","NM_031168.1","Il-6,MGD-MRK-11357,MGD-MRK-11391","interleukin 6",NA,FALSE
+"383","Il6ra","NM_010559.2","CD126,Il6r,IL-6R,IL-6 receptor alpha chain,interleukin 6 receptor,MGD-MRK-11392,MGD-MRK-32345","interleukin 6 receptor, alpha",NA,FALSE
+"384","Il7r","NM_008372.3","CD127,IL-7Ralpha,IL-7 receptor alpha chain,MGD-MRK-11395","interleukin 7 receptor",NA,FALSE
+"385","Inhba","NM_008380.2","activin beta-A,MGD-MRK-11407","inhibin beta-A",NA,FALSE
+"386","Irf1","NM_008390.2","AU020929,expressed sequence AU020929,Irf-1,MGD-MRK-11464,MGD-MRK-11465,MGI:2144403","interferon regulatory factor 1",NA,FALSE
+"387","Irf2","NM_008391.4","9830146E22Rik,AI646973,expressed sequence AI646973,Irf-2,MGD-MRK-11466,MGI:2142602,MGI:2443654,RIKEN cDNA 9830146E22 gene","interferon regulatory factor 2",NA,FALSE
+"388","Irf3","NM_016849.4","C920001K05Rik,IRF-3,MGI:2441924,RIKEN cDNA C920001K05 gene","interferon regulatory factor 3",NA,FALSE
+"389","Irf4","NM_013674.1","AI385587,expressed sequence AI385587,IRF-4,MGD-MRK-29048,MGI:104895,MGI:2145221,Sfpi1/PU.1 interaction partner,Spip","interferon regulatory factor 4",NA,FALSE
+"390","Irf5","NM_001252382.1","AW491843,expressed sequence AW491843,MGI:2141682,mirf5","interferon regulatory factor 5",NA,FALSE
+"391","Irf7","NM_016850.2",NA,"interferon regulatory factor 7",NA,FALSE
+"392","Irf8","NM_008320.3","AI893568,expressed sequence AI893568,ICSBP,Icsbp1,interferon consensus sequence binding protein 1,IRF-8,MGD-MRK-11151,MGI:2142648,MGI:3574547,myeloproliferative syndrome,Myls","interferon regulatory factor 8",NA,FALSE
+"393","Irf9","NM_008394.2","interferon dependent positive acting transcription factor 3 gamma,Irf-9,Isgf3g,MGD-MRK-36159,p48","interferon regulatory factor 9",NA,FALSE
+"394","Isg15","NM_015783.3","100038882,G1p2,interferon, alpha-inducible protein,interferon-stimulated protein,MGI:3809535,predicted gene, 100038882","ISG15 ubiquitin-like modifier",NA,FALSE
+"395","Itga1","NM_001033228.3","CD49A,E130012M19Rik,MGD-MRK-11478,MGD-MRK-19432,MGI:2444353,RIKEN cDNA E130012M19 gene,Vla1","integrin alpha 1",NA,FALSE
+"396","Itga2","NM_008396.2","CD49B,DX5,MGD-MRK-11479,VLA-2 receptor, alpha 2 subunit","integrin alpha 2",NA,FALSE
+"397","Itga4","NM_010576.3","MGD-MRK-11482,VLA-4 receptor, alpha 4 subunit","integrin alpha 4",NA,FALSE
+"398","Itga6","NM_008397.4","5033401O05Rik,AI115430,Cd49f,expressed sequence AI115430,MGD-MRK-11484,MGI:1923212,MGI:2138837,RIKEN cDNA 5033401O05 gene","integrin alpha 6",NA,FALSE
+"399","Itgae","NM_008399.1","alpha-E1,CD103","integrin alpha E, epithelial-associated",NA,FALSE
+"400","Itgal","NM_008400.2","Cd11a,CD11a  antigen,LFA-1,Ly-15,Ly-21,lymphocyte antigen 15,lymphocyte antigen 21,MGD-MRK-11485,MGD-MRK-11953,MGD-MRK-11960,MGD-MRK-1830","integrin alpha L",NA,FALSE
+"401","Itgam","NM_001082960.1","Cd11b,CD11b/CD18,CD11B  (p170),complement component receptor 3 alpha,complement receptor type 3,CR3,F730045J24Rik,Ly-40,lymphocyte antigen 40,Mac-1,Mac-1a,Mac-1 alpha,macrophage antigen alpha chain (integrin),MGD-MRK-11486,MGD-MRK-11982,MGD-MRK-12094,MGI:2444489,RIKEN cDNA F730045J24 gene","integrin alpha M",NA,FALSE
+"402","Itgav","NM_008402.3","1110004F14Rik,2610028E01Rik,alphav-integrin,CD51,D430040G12Rik,MGD-MRK-11487,MGI:1923548,MGI:1923608,MGI:2445000,RIKEN cDNA 1110004F14 gene,RIKEN cDNA 2610028E01 gene,RIKEN cDNA D430040G12 gene,vitronectin receptor alpha polypeptide  (VNRA)","integrin alpha V",NA,FALSE
+"403","Itgax","NM_021334.2","AI449405,Cd11c,CD11C  (p150) alpha polypeptide,expressed sequence AI449405,MGD-MRK-11488,MGI:2141963","integrin alpha X",NA,FALSE
+"404","Itgb2","NM_008404.4","2E6,AI528527,Cd18,CD18 antigen,expressed sequence AI528527,Mac-1 beta,MGD-MRK-11490,MGD-MRK-1832,MGI:2143637","integrin beta 2",NA,FALSE
+"405","Itgb3","NM_016780.2","CD61,MGD-MRK-11491,platelet glycoprotein IIIa  (GP3A)","integrin beta 3",NA,FALSE
+"406","Itgb8","NM_177290.3","4832412O06Rik,MGI:2445021,RIKEN cDNA 4832412O06 gene","integrin beta 8",NA,FALSE
+"407","Itpk1","NM_172584.3","BC031182,cDNA sequence BC031182","inositol 1,3,4-triphosphate 5/6 kinase",NA,FALSE
+"408","Jag1","NM_013822.5","ABE2,Gsfabe2,gsf abnormal behavior 2,headturner,Headturner,Htu,MGI:1891333,MGI:2664252,MGI:3530800,Ozz,ozzy,Serrate-1","jagged 1",NA,FALSE
+"409","Jag2","NM_010588.2","D12Ggc2e,DNA segment, Chr 12, G. Consalez 2, expressed,MGD-MRK-14445,MGD-MRK-36557,MGD-MRK-39539,MGI:107977,MGI:109540,MGI:98321,Serh,serrate homolog (Drosophila),sm,syndactylism","jagged 2",NA,FALSE
+"410","Jak1","NM_146145.2","AA960307,BAP004,bone alkaline phospatase mutant 004,C130039L05Rik,expressed sequence AA960307,MGD-MRK-11516,MGI:2140180,MGI:2443062,MGI:5425487,RIKEN cDNA C130039L05 gene","Janus kinase 1",NA,FALSE
+"411","Jak2","NM_008413.3","AI504024,C81284,expressed sequence AI504024,expressed sequence C81284,MGD-MRK-11517,MGI:2147569,MGI:2147795","Janus kinase 2",NA,FALSE
+"412","Jak3","NM_010589.6","MGD-MRK-16730,MGI:3584392,MGI:3584403,wil,willow","Janus kinase 3",NA,FALSE
+"413","Jup","NM_010593.2","AL022715,AW545708,Ctnng,D930025P04Rik,expressed sequence AL022715,expressed sequence AW545708,gamma-catenin,MGD-MRK-11544,MGI:2144342,MGI:2144558,PG,plakoglobin,RIKEN cDNA D930025P04 gene","junction plakoglobin",NA,FALSE
+"414","Kat2b","NM_020005.3","A930006P13Rik,AI461839,AW536563,expressed sequence AI461839,expressed sequence AW536563,MGI:2146869,MGI:2147070,MGI:2445128,p300/CBP-associated factor,Pcaf,RIKEN cDNA A930006P13 gene","K(lysine) acetyltransferase 2B",NA,FALSE
+"415","Kdr","NM_010612.2","fetal liver kinase 1,Flk1,Flk-1,MGD-MRK-11605,MGD-MRK-11606,MGD-MRK-9826,MGD-MRK-9828,MGI:5004964,MGI:95555,orv,orvieto,vascular endothelial growth factor receptor- 2,VEGFR2,VEGFR-2,VEGF receptor-2","kinase insert domain protein receptor",NA,FALSE
+"416","Kif2c","NM_134471.4","4930402F02Rik,EST X83316,MGC:11883,MGD-MRK-28119,MGI:104825,RIKEN cDNA 4930402F02 gene,X83316","kinesin family member 2C",NA,FALSE
+"417","Kir3dl1","NM_177749.3","Kirl1,LOC245615","killer cell immunoglobulin-like receptor, three domains, long cytoplasmic tail, 1",NA,FALSE
+"418","Kir3dl2","NM_177748.2","Kirl2,LOC245615","killer cell immunoglobulin-like receptor, three domains, long cytoplasmic tail, 2",NA,FALSE
+"419","Kit","NM_001122733.1","belly-spot,Bs,CD117,c-KIT,dominant spotting,Dominant white spotting,Fdc,Gsfsco1,Gsfsco5,Gsfsow3,gsf spotted coat 1,gsf spotted coat 5,MGD-MRK-11588,MGD-MRK-14609,MGD-MRK-15420,MGD-MRK-1672,MGD-MRK-9743,MGI:3530304,MGI:3530312,MGI:3530319,phenotype like Sl or W 3,SCO1,SCO5,SOW3,spotted sterile male,Ssm,Steel Factor Receptor,Tr-kit,W","KIT proto-oncogene receptor tyrosine kinase",NA,FALSE
+"420","Klra1","NM_016659.3","Ly49a,Ly49A,Ly49o<129>,lymphocyte antigen 49 complex, locus A,MGD-MRK-18734","killer cell lectin-like receptor, subfamily A, member 1",NA,FALSE
+"421","Klrb1","NM_001099918.1","100043861,4930431A04Rik,Gm4696,Ly55,Ly-55,lymphocyte antigen 55,MGD-MRK-11998,MGD-MRK-12041,MGI:1914651,MGI:3782876,Nkrp1g,predicted gene, 100043861,predicted gene 4696,RIKEN cDNA 4930431A04 gene","killer cell lectin-like receptor subfamily B member 1",NA,FALSE
+"422","Klrd1","NM_010654.2","CD94","killer cell lectin-like receptor, subfamily D, member 1",NA,FALSE
+"423","Klrg1","NM_016970.1","2F1-Ag","killer cell lectin-like receptor subfamily G, member 1",NA,FALSE
+"424","Klrk1","NM_001083322.1","D6H12S2489E,DNA Segment, Chr 6, human D12S2489E,Nkg2d,NKG2-D","killer cell lectin-like receptor subfamily K, member 1",NA,FALSE
+"425","Kras","NM_021284.5","AI929937,expressed sequence AI929937,Ki-ras,Kirsten rat sarcoma oncogene 2, expressed,K-ras,Kras2,Kras-2,MGD-MRK-11597,MGD-MRK-11601,MGI:2141518","Kirsten rat sarcoma viral oncogene homolog",NA,FALSE
+"426","Lag3","NM_008479.2","CD223,LAG-3,Ly66,lymphocyte antigen 66,MGD-MRK-35044","lymphocyte-activation gene 3",NA,FALSE
+"427","Lair1","NM_001113474.1","5133400O11Rik,BB115266,D7Bwg0421e,DNA segment, Chr 7, Brigham & Women's Genetics  0421 expressed,expressed sequence BB115266,Lair-1,MGD-MRK-33164,MGI:1918474,MGI:2142289,mLair-1,RIKEN cDNA 5133400O11 gene","leukocyte-associated Ig-like receptor 1",NA,FALSE
+"428","Lama1","NM_008480.2","AA408497,expressed sequence AA408497,Lama,laminin, A subunit,MGD-MRK-11733,MGD-MRK-16687,MGI:2146751","laminin, alpha 1",NA,FALSE
+"429","Lamb3","NM_008484.2","MGD-MRK-16713,nicein, 125kDa","laminin, beta 3",NA,FALSE
+"430","Lamc2","NM_008485.3","AA589349,expressed sequence AA589349,MGD-MRK-16711,MGI:2138115,nicein, 100kDa","laminin, gamma 2",NA,FALSE
+"431","Lck","NM_001162433.1","Hck-3,hemopoietic cell kinase 3,MGD-MRK-10669,MGD-MRK-11758,p56<lck>","lymphocyte protein tyrosine kinase",NA,FALSE
+"432","Ldha","NM_010699.2","l7R2,lactate dehydrogenase-A,Ldh1,Ldh-1,LDH-A,lethal, Chr 7, Oak Ridge 2,MGD-MRK-11762,MGD-MRK-11768,MGI:1890511","lactate dehydrogenase A",NA,FALSE
+"433","Ldhb","NM_008492.2","AI790582,expressed sequence AI790582,H-Ldh,lactate dehydrogenase-B,Ldh-2,MGD-MRK-11766,MGD-MRK-11772,MGI:2141472","lactate dehydrogenase B",NA,FALSE
+"434","Lgals9","NM_010708.1","AA407335,AI194909,AI265545,expressed sequence AA407335,expressed sequence AI194909,expressed sequence AI265545,gal-9,galectin-9,lectin, galactose binding, soluble 5,LGALS35,Lgals5,MGD-MRK-24103,MGD-MRK-39495,MGI:103231,MGI:2143968,MGI:2144080,MGI:2144105","lectin, galactose binding, soluble 9",NA,FALSE
+"435","Lif","NM_008501.2","MGD-MRK-11807","leukemia inhibitory factor",NA,FALSE
+"436","Lilra5","NM_001081239.2","EG232801,Gm4878,predicted gene 4878,predicted gene, EG232801","leukocyte immunoglobulin-like receptor, subfamily A (with TM domain), member 5",NA,FALSE
+"437","Lilrb4a","NM_013532.3","CD85K,glycoprotein 49 B,Gp49b,HM18,ILT3,leukocyte immunoglobulin-like receptor, subfamily B, member 4,Lilrb4,MGD-MRK-19605","leukocyte immunoglobulin-like receptor, subfamily B, member 4A",NA,FALSE
+"438","Loxl2","NM_033325.2","1110004B06Rik,9430067E15Rik,MGI:1915706,MGI:2443992,RIKEN cDNA 1110004B06 gene,RIKEN cDNA 9430067E15 gene","lysyl oxidase-like 2",NA,FALSE
+"439","Ltb","NM_008518.2","AI662801,expressed sequence AI662801,LTbeta,lymphotoxin beta,MGD-MRK-16192,MGD-MRK-28088,MGI:2146913,p33,Tnfc,Tnfsf3,tumor necrosis factor C","lymphotoxin B",NA,FALSE
+"440","Ly6c1","NM_010741.3","AA682074,AA959465,expressed sequence AA682074,expressed sequence AA959465,Ly6c,Ly-6C,lymphocyte antigen 6 complex, locus C,lymphocyte antigen 6, subunit C,MGD-MRK-12005,MGD-MRK-12048,MGI:2145928,MGI:2145929","lymphocyte antigen 6 complex, locus C1","Ly6a (NM_001271417;NM_010738;NM_001271419;NM_001271416)",FALSE
+"441","Ly6g","XM_909927.2","Gr1,Gr-1,Ly-6G,MGD-MRK-38485","lymphocyte antigen 6 complex, locus G",NA,FALSE
+"442","Ly9","NM_008534.2","AI893573,CD229,expressed sequence AI893573,Lgp100,Ly-9,MGD-MRK-12008,MGD-MRK-12051,MGI:2138373,SLAMF3,T100","lymphocyte antigen 9",NA,FALSE
+"443","Ly96","NM_016923.2","ESOP-1,MD2,MD-2,myeloid differentiation factor-2","lymphocyte antigen 96",NA,FALSE
+"444","Lyz1","NM_013590.3","lysozyme,Lyz,Lzp-s,MGD-MRK-12088,P lysozyme structural,renal amyloidosis","lysozyme 1",NA,FALSE
+"445","Magea1","NM_020015.2","Mage-a1","melanoma antigen, family A, 1","Magea2 (NM_020016), Magea8 (NM_020020)",FALSE
+"446","Magea3","NM_020017.2","Mage-a3","melanoma antigen, family A, 3",NA,FALSE
+"447","Magea4","NM_020280.2","Mage-a4","melanoma antigen, family A, 4",NA,FALSE
+"448","Mageb4","NM_001033492.2","CN716893,expressed sequence CN716893,Mage-b4,MGI:3584456,mMage-b4","melanoma antigen, family B, 4",NA,FALSE
+"449","Maml2","NM_001013813.3","BC032967,cDNA sequence BC032967,MGI:2679714","mastermind like transcriptional coactivator 2",NA,FALSE
+"450","Map3k12","NM_001163643.1","DLK,MGD-MRK-19592,MGI:102689,MUK,zipper (leucine) protein kinase,Zpk","mitogen-activated protein kinase kinase kinase 12",NA,FALSE
+"451","Map3k5","NM_008580.4","7420452D20Rik,ASK,ASK1,Mekk5,MEK kinase 5,MGI:1101761,MGI:2445207,RIKEN cDNA 7420452D20 gene","mitogen-activated protein kinase kinase kinase 5",NA,FALSE
+"452","Map3k7","NM_172688.2","C87327,EST C87327,MGI:1203726,MGI:2135559,Tak1,TAK1,TGF-beta activated kinase 1,TGF-beta-activated kinase 1,transforming growth factor beta-activated kinase 1,transforming growth factor-beta-activated kinase 1","mitogen-activated protein kinase kinase kinase 7",NA,FALSE
+"453","Map3k8","NM_007746.2","cancer Osaka thyroid, oncogene,c-COT,Cot,Cot/Tpl2,MGD-MRK-15201,MGD-MRK-2095,MGI:88472,MGI:98808,Tpl2,Tpl-2,tumor progression locus 2","mitogen-activated protein kinase kinase kinase 8",NA,FALSE
+"454","Mapk10","NM_009158.2","C230008H04Rik,JNK3,MGD-MRK-36125,MGI:107554,MGI:2442453,p493F12,RIKEN cDNA C230008H04 gene,SAPK/Erk/kinase 2,Serk2","mitogen-activated protein kinase 10",NA,FALSE
+"455","Marco","NM_010766.2","AI323439,expressed sequence AI323439,MGI:2138205,Scara2","macrophage receptor with collagenous structure",NA,FALSE
+"456","Mb21d1","NM_173386.4","cGas,E330016A19Rik,RIKEN cDNA E330016A19 gene","Mab-21 domain containing 1",NA,FALSE
+"457","Mdm2","NM_010786.3","1700007J15Rik,AA415488,expressed sequence AA415488,Mdm-2,MGD-MRK-12169,MGD-MRK-12172,MGI:1916580,MGI:2143477,RIKEN cDNA 1700007J15 gene","transformed mouse 3T3 cell double minute 2",NA,FALSE
+"458","Melk","NM_010790.2","AI327312,expressed sequence AI327312,MGD-MRK-35385,MGI:2140251,mKIAA0175,MPK38","maternal embryonic leucine zipper kinase",NA,FALSE
+"459","Met","NM_008591.2","AI838057,c-Met,expressed sequence AI838057,HGF receptor,MGD-MRK-12203,MGI:1197520,MGI:2141478,Par4,pulmonary adenoma resistance 4","met proto-oncogene",NA,FALSE
+"460","Mfge8","NM_008594.2","AA408458,AI325141,EGF/factor VIII,expressed sequence AA408458,expressed sequence AI325141,lactadherin,MFG-E8,Mfgm,MGD-MRK-19675,MGI:2141815,MGI:2141915,SED1","milk fat globule-EGF factor 8 protein",NA,FALSE
+"461","Mfng","NM_008595.2","AW546563,expressed sequence AW546563,manic fringe,MGI:2146229","MFNG O-fucosylpeptide 3-beta-N-acetylglucosaminyltransferase",NA,FALSE
+"462","Mgmt","NM_008598.2","Agat,AGT,AI267024,expressed sequence AI267024,MGD-MRK-1181,MGD-MRK-12222,MGI:2141895,MGI:87956,O-6-alkylguanine-DNA alkyltransferase","O-6-methylguanine-DNA methyltransferase",NA,FALSE
+"463","Mill2","NM_153760.2",NA,"MHC I like leukocyte 2",NA,FALSE
+"464","Mki67","NM_001081117.2","D630048A14Rik,Ki67,Ki-67,MGD-MRK-33719,MGI:2444351,RIKEN cDNA D630048A14 gene","antigen identified by monoclonal antibody Ki 67",NA,FALSE
+"465","Mlana","NM_029993.1","A930034P04Rik,Mart1,melanoma associated antigen recognized by T-cells 1,MGD-MRK-37498,MGI:1925086,RIKEN cDNA A930034P04 gene","melan-A",NA,FALSE
+"466","Mlh1","NM_026810.2","1110035C23Rik,AI317206,AI325952,AI561766,colon cancer, nonpolyposis type 2,expressed sequence AI317206,expressed sequence AI325952,expressed sequence AI561766,MGD-MRK-18771,MGI:1915937,MGI:2143018,MGI:2143023,MGI:2143094,RIKEN cDNA 1110035C23 gene","mutL homolog 1",NA,FALSE
+"467","Mmp12","NM_008605.3","AV378681,expressed sequence AV378681,macrophage elastase,macrophage metalloelastase,MGD-MRK-12275,MGI:2143275,Mmel","matrix metallopeptidase 12",NA,FALSE
+"468","Mmp13","NM_008607.1","Clg,collagenase-1,Collagenase-3,collagenase, fibroblast,interstitial collagenase,matrix metalloproteinase 1,MGD-MRK-12276,MGD-MRK-2012,MGI:97006,Mmp1,MMP-13","matrix metallopeptidase 13",NA,FALSE
+"469","Mmp1a","NM_032006.3","Mcol-A","matrix metallopeptidase 1a (interstitial collagenase)",NA,FALSE
+"470","Mmp7","NM_010810.4","MAT,matrilysin,MGD-MRK-24057","matrix metallopeptidase 7",NA,FALSE
+"471","Mmp9","NM_013599.2","AW743869,B/MMP9,Clg4b,collagenase IVB, basement membrane, 92 kDa,expressed sequence AW743869,gelatinase B,Gelatinase B,Gel B,MGD-MRK-12281,MGD-MRK-2014,MGI:2139414,MMP-9","matrix metallopeptidase 9",NA,FALSE
+"472","Mmrn2","NM_153127.3","AA986839,elastin microfibril interfacer 3,Emilin3,EndoGlyx-1,ENDOGLYX1,expressed sequence AA986839,MGI:2145589","multimerin 2",NA,FALSE
+"473","Mrc1","NM_008625.2","AW259686,CD206,expressed sequence AW259686,MGD-MRK-12537,MGI:2139335,MR","mannose receptor, C type 1",NA,FALSE
+"474","Mre11a","NM_018736.2",NA,"MRE11A homolog A, double strand break repair nuclease",NA,FALSE
+"475","Ms4a1","NM_007641.5","AA960661,Cd20,CD20 antigen,expressed sequence AA960661,Ly-44,lymphocyte antigen 44,MGD-MRK-11986,MGD-MRK-1838,MGI:2147465","membrane-spanning 4-domains, subfamily A, member 1",NA,FALSE
+"476","Ms4a2","NM_001276330.1","Fce1b,Fc epsilon high affinity receptor beta,Fcer1b,FcRB,Fcrbeta,Fc receptor, IgE, high affinity I, beta polypeptide,MGD-MRK-9725,MGD-MRK-9729","membrane-spanning 4-domains, subfamily A, member 2",NA,FALSE
+"477","Ms4a4a","XM_003086124.1","EG666907,predicted gene, EG666907","membrane-spanning 4-domains, subfamily A, member 4A",NA,FALSE
+"478","Ms4a6b","NM_027209.3","1810027D10Rik,RIKEN cDNA 1810027D10 gene","membrane-spanning 4-domains, subfamily A, member 6B",NA,FALSE
+"479","Msh2","NM_008628.2","AI788990,expressed sequence AI788990,MGD-MRK-18634,MGI:2146922","mutS homolog 2",NA,FALSE
+"480","Msh6","NM_010830.1","AU044881,AW550279,expressed sequence AU044881,expressed sequence AW550279,GTBP,Gtmbp,G/T mismatch binding protein,MGD-MRK-35056,MGI:106600,MGI:2147004,MGI:2147080","mutS homolog 6",NA,FALSE
+"481","Mtor","NM_020009.2","2610315D21Rik,AI327068,expressed sequence AI327068,FK506 binding protein 12-rapamycin associated protein 1,FKBP-rapamycin-associated protein FRAP,flat,flat-top,Frap1,mechanistic target of rapamycin (serine/threonine kinase),MGI:1332655,MGI:1919780,MGI:2140250,RAFT1,RAPT1,RIKEN cDNA 2610315D21 gene","mechanistic target of rapamycin kinase",NA,FALSE
+"482","Mx1","NM_010846.1","AI893580,expressed sequence AI893580,MGD-MRK-12725,MGD-MRK-12726,MGD-MRK-12728,MGI:2146518,Mx,Mx-1,myxovirus (influenza) resistance 1 polypeptide","MX dynamin-like GTPase 1",NA,FALSE
+"483","Mxi1","NM_001008542.2","bHLHc11,Mad2,MGD-MRK-12730","MAX interactor 1, dimerization protein",NA,FALSE
+"484","Myc","NM_001177354.1","AU016757,bHLHe39,c-myc,expressed sequence AU016757,MGD-MRK-12736,MGI:2146128,Myc2,Niard,Nird,non-immunoglobulin rearranging DNA sequence","myelocytomatosis oncogene",NA,FALSE
+"485","Myct1","NM_026793.2","1110020B04Rik,AI225941,AI642973,expressed sequence AI225941,expressed sequence AI642973,MGI:2143542,MGI:2143656,Mtmc1,MT-MC1,RIKEN cDNA 1110020B04 gene","myc target 1",NA,FALSE
+"486","Myd88","NM_010851.2","MGD-MRK-37039","myeloid differentiation primary response gene 88",NA,FALSE
+"487","Nbn","NM_013752.3","Nbs1","nibrin",NA,FALSE
+"488","Ncam1","NM_001113204.1","CD56,E-NCAM,MGD-MRK-12786,NCAM,NCAM-1,NCAM-120,NCAM-140,NCAM-180","neural cell adhesion molecule 1",NA,FALSE
+"489","Ncr1","NM_010746.3","Ly94,lymphocyte antigen 94,MAR1 (mouse activating receptor 1),NKp46","natural cytotoxicity triggering receptor 1",NA,FALSE
+"490","Ndufa4l2","NM_001098789.1","BC064011,cDNA sequence BC064011","NADH dehydrogenase (ubiquinone) 1 alpha subcomplex, 4-like 2",NA,FALSE
+"491","Nectin1","NM_021424.2","AI835281,AW549174,Cd111,expressed sequence AI835281,expressed sequence AW549174,HIgR,HveC,MGI:2143125,MGI:2143319,nectin-1,poliovirus receptor-related 1,PRR,PRR1,Pvrl1","nectin cell adhesion molecule 1",NA,FALSE
+"492","Nectin2","NM_008990.3","AI325026,AI987993,Cd112,expressed sequence AI325026,expressed sequence AI987993,MGD-MRK-13693,MGD-MRK-13694,MGI:2141913,MGI:2142081,MPH,nectin-2,poliovirus receptor,poliovirus receptor-related 2,poliovirus sensitivity,Pvr,Pvrl2,Pvs","nectin cell adhesion molecule 2",NA,FALSE
+"493","Neil1","NM_028347.2","2810450N13Rik,RIKEN cDNA 2810450N13 gene","nei endonuclease VIII-like 1 (E. coli)",NA,FALSE
+"494","Nf1","NM_010897.2","AW494271,dark skin 9,Dsk9,expressed sequence AW494271,Martin Hrabe de Angelis dark skin 9,MGD-MRK-12821,MGD-MRK-12822,MGI:2144546,MGI:2450693,Mhdadsk9,neurofibromatosis 1,neurofibromin,Nf-1","neurofibromin 1",NA,FALSE
+"495","Nfam1","NM_028728.2","4921501M20Rik,RIKEN cDNA 4921501M20 gene","Nfat activating molecule with ITAM motif 1",NA,FALSE
+"496","Nfatc2","NM_001136073.2","AI607462,expressed sequence AI607462,MGD-MRK-12824,MGD-MRK-19300,MGI:2139019,NFAT1,NFAT1-D,Nfatp,NFATp,nuclear factor of activated T-cell phosphoprotein","nuclear factor of activated T cells, cytoplasmic, calcineurin dependent 2",NA,FALSE
+"497","Nfil3","NM_017373.3","AV225605,E4BP4,expressed sequence AV225605,MGD-MRK-39494,MGI:2145396","nuclear factor, interleukin 3, regulated",NA,FALSE
+"498","Nfkb1","NM_008689.2","MGD-MRK-12829,NF-kappaB,NF kappaB1,NF-kappaB p50,nuclear factor kappaB p50,p50,p50/p105,p50 subunit of NF kappaB","nuclear factor of kappa light polypeptide gene enhancer in B cells 1, p105",NA,FALSE
+"499","Nfkb2","NM_019408.3","NF kappaB2,p52","nuclear factor of kappa light polypeptide gene enhancer in B cells 2, p49/p100",NA,FALSE
+"500","Nfkbia","NM_010907.2","AI462015,expressed sequence AI462015,IkappaBalpha,I-kappaBalpha,I(Kappa)B(alpha),MGD-MRK-12830,MGD-MRK-28032,MGI:2144835,Nfkbi,nuclear factor of kappa light chain gene enhancer in B-cells inhibitor","nuclear factor of kappa light polypeptide gene enhancer in B cells inhibitor, alpha",NA,FALSE
+"501","Nfkbie","NM_008690.3",NA,"nuclear factor of kappa light polypeptide gene enhancer in B cells inhibitor, epsilon",NA,FALSE
+"502","Ngfr","NM_033217.3","LNGFR,MGD-MRK-12842,p75,p75 neurotrophin receptor,p75NGFR,p75NTR,Tnfrsf16","nerve growth factor receptor (TNFR superfamily, member 16)",NA,FALSE
+"503","Nid2","NM_008695.2","AW547149,entactin 2,entactin-2,expressed sequence AW547149,MGI:2145830","nidogen 2",NA,FALSE
+"504","Nkg7","NM_024253.4","2500004F03Rik,MGI:1919560,RIKEN cDNA 2500004F03 gene","natural killer cell group 7 sequence",NA,FALSE
+"505","Nlrc5","NM_001033207.3","AI451557,AK220210,cDNA sequence AK220210,expressed sequence AI451557,MGI:2142553","NLR family, CARD domain containing 5",NA,FALSE
+"506","Nlrp3","NM_145827.3","Cias1,cold autoinflammatory syndrome 1 homolog (human),cryopyrin,Mmig1,NALP3,Pypaf1","NLR family, pyrin domain containing 3",NA,FALSE
+"507","Nod2","NM_145857.2","Card15,caspase recruitment domain family, member 15,F830032C23Rik,MGI:2443828,Nlrc2,RIKEN cDNA F830032C23 gene","nucleotide-binding oligomerization domain containing 2",NA,FALSE
+"508","Nos2","NM_010927.3","iNOS,MGD-MRK-12910,MGD-MRK-12913,nitric oxide synthase-2 (brain),Nos-2,Nos2a,NOS-II","nitric oxide synthase 2, inducible",NA,FALSE
+"509","Notch1","NM_008714.3","9930111A19Rik,lin-12,MGD-MRK-12915,MGD-MRK-18791,MGI:1915375,Mis6,Motch A,N1,RIKEN cDNA 9930111A19 gene,Tan1,translocation-associated Notch","notch 1",NA,FALSE
+"510","Notch2","NM_010928.1","AI853703,expressed sequence AI853703,MGD-MRK-12916,MGI:2139830,Motch B,N2","notch 2",NA,FALSE
+"511","Nras","NM_010937.2","AV095280,expressed sequence AV095280,MGD-MRK-12932,MGI:2139934,N-ras","neuroblastoma ras oncogene",NA,FALSE
+"512","Nt5e","NM_011851.4","2210401F01Rik,5' nucleotidase,AI447961,CD73,ecto-5'-nucleotidase,expressed sequence AI447961,MGD-MRK-16568,MGI:1921492,MGI:2143050,Nt5,RIKEN cDNA 2210401F01 gene","5' nucleotidase, ecto",NA,FALSE
+"513","Oas1a","NM_145211.2","L3","2'-5' oligoadenylate synthetase 1A",NA,FALSE
+"514","Oas2","NM_145227.3","2'-5' oligoadenylate synthetase-like 11,Oasl11","2'-5' oligoadenylate synthetase 2",NA,FALSE
+"515","Oas3","NM_145226.2","2'-5' oligoadenylate synthetase-like 10,Oasl10","2'-5' oligoadenylate synthetase 3",NA,FALSE
+"516","Oasl1","NM_145209.3","7530414C13Rik,MGI:2443464,RIKEN cDNA 7530414C13 gene","2'-5' oligoadenylate synthetase-like 1",NA,FALSE
+"517","Olfml2b","NM_177068.4","1110018N05Rik,4832415H08Rik,AI467542,expressed sequence AI467542,MGI:1915832,MGI:2138272,photomedin-2,RIKEN cDNA 1110018N05 gene,RIKEN cDNA 4832415H08 gene","olfactomedin-like 2B",NA,FALSE
+"518","Olr1","NM_001301094.1","LOX-1,Scare1,SR-EI","oxidized low density lipoprotein (lectin-like) receptor 1",NA,FALSE
+"519","Otoa","NM_139310.1",NA,"otoancorin",NA,FALSE
+"520","P2ry13","NM_028808.3","2010001L06Rik,Gpr86,G protein-coupled receptor 86,P2Y13,RIKEN cDNA 2010001L06 gene,SP174","purinergic receptor P2Y, G-protein coupled 13",NA,FALSE
+"521","P4ha1","NM_011030.1","AL022634,expressed sequence AL022634,MGD-MRK-13113,MGI:2143707,P4ha,prolyl 4-hydroxylase, alpha polypeptide","procollagen-proline, 2-oxoglutarate 4-dioxygenase (proline 4-hydroxylase), alpha 1 polypeptide",NA,FALSE
+"522","P4ha2","NM_001136076.2","AA407196,C76437,expressed sequence AA407196,expressed sequence C76437,MGI:2143965,MGI:2144619,P4hl,prolyl 4-hydroxylase-like","procollagen-proline, 2-oxoglutarate 4-dioxygenase (proline 4-hydroxylase), alpha II polypeptide",NA,FALSE
+"523","Palmd","NM_023245.3","4631423C22Rik,MGI:1913938,PALML,RIKEN cDNA 4631423C22 gene","palmdelphin",NA,FALSE
+"524","Parp12","NM_172893.3","AA409132,AA536654,EST AA536654,expressed sequence AA409132,MGI:1889366,Zc3hdc1,zinc finger CCCH type domain containing 1","poly (ADP-ribose) polymerase family, member 12",NA,FALSE
+"525","Parp4","NM_001145978.2","ADP-ribosyltransferase (NAD+; poly (ADP-ribose) polymerase)-like 1,Adprtl1,C030027K23Rik,E230037B21Rik,gene model 743, (NCBI),Gm743,MGI:1924669,p193,PH5P,RIKEN cDNA C030027K23 gene,RIKEN cDNA E230037B21 gene,VAULT3,VPARP","poly (ADP-ribose) polymerase family, member 4",NA,FALSE
+"526","Parp9","NM_030253.2","AW214463,BC003281,cDNA sequence BC003281,expressed sequence AW214463,MGC:7868,MGI:2146631","poly (ADP-ribose) polymerase family, member 9",NA,FALSE
+"527","Pcdhb11","NM_053136.3","Pcdhb5E,PcdhbK","protocadherin beta 11",NA,FALSE
+"528","Pck2","NM_028994.2","1810010O14Rik,9130022B02Rik,MGI:1916307,MGI:1921801,RIKEN cDNA 1810010O14 gene,RIKEN cDNA 9130022B02 gene","phosphoenolpyruvate carboxykinase 2 (mitochondrial)",NA,FALSE
+"529","Pcx","NM_008797.3","MGD-MRK-13166,MGD-MRK-13201,Pc","pyruvate carboxylase",NA,FALSE
+"530","Pdcd1","NM_008798.1","MGD-MRK-13206,MGD-MRK-29032,PD-1,Pdc1,programmed cell death","programmed cell death 1",NA,FALSE
+"531","Pdcd1lg2","NM_021396.2","B7-DC,Btdc,F730015O22Rik,MGI:2442044,PD-L2,RIKEN cDNA F730015O22 gene","programmed cell death 1 ligand 2",NA,FALSE
+"532","Pdgfa","XM_006504659.3","MGD-MRK-13211","platelet derived growth factor, alpha",NA,FALSE
+"533","Pdgfb","NM_011057.3","MGD-MRK-13212,MGD-MRK-14423,PDGF-B,simian sarcoma oncogene,Sis","platelet derived growth factor, B polypeptide",NA,FALSE
+"534","Pdgfrb","NM_001146268.1","AI528809,CD140b,expressed sequence AI528809,MGD-MRK-13214,MGD-MRK-13217,MGI:2147240,Pdgfr,platelet derived growth factor receptor","platelet derived growth factor receptor, beta polypeptide",NA,FALSE
+"535","Pdk1","NM_172665.5","D530020C15Rik,RIKEN cDNA D530020C15 gene","pyruvate dehydrogenase kinase, isoenzyme 1",NA,FALSE
+"536","Pdzk1ip1","NM_026018.3","0610007F13Rik,2700030M23Rik,AU046042,expressed sequence AU046042,Map17,MGI:1918913,MGI:2140501,RIKEN cDNA 0610007F13 gene,RIKEN cDNA 2700030M23 gene","PDZK1 interacting protein 1",NA,FALSE
+"537","Pecam1","NM_008816.2","C85791,Cd31,CD31 antigen,expressed sequence C85791,MGD-MRK-13226,MGD-MRK-1848,MGI:2144682,PECAM-1","platelet/endothelial cell adhesion molecule 1",NA,FALSE
+"538","Pf4","NM_019932.4","chemokine (C-X-C motif) ligand 4,Cxcl4,Scyb4","platelet factor 4",NA,FALSE
+"539","Pfkfb3","NM_133232.2","E330010H22Rik,MGI:2442800,RIKEN cDNA E330010H22 gene,uPFK-2","6-phosphofructo-2-kinase/fructose-2,6-biphosphatase 3",NA,FALSE
+"540","Pfkm","NM_001163487.1","AI131669,expressed sequence AI131669,MGD-MRK-13244,MGD-MRK-13245,MGD-MRK-13247,MGI:2145952,MGI:97546,Pfk4,Pfk-4,PFK-A,PFK-M,Pfkx,phosphofructokinase 4,phosphofructokinase, polypeptide X","phosphofructokinase, muscle",NA,FALSE
+"541","Pgpep1","NM_023217.4","2810003H13Rik,Pcp,PGP-I,RIKEN cDNA 2810003H13 gene","pyroglutamyl-peptidase I",NA,FALSE
+"542","Pias4","NM_021501.4","PIASy","protein inhibitor of activated STAT 4",NA,FALSE
+"543","Pik3ca","NM_008839.2","6330412C24Rik,caPI3K,MGI:1917992,p110alpha,RIKEN cDNA 6330412C24 gene","phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",NA,FALSE
+"544","Pik3cd","XM_003945690.1","2410099E07Rik,2610208K16Rik,AW545373,expressed sequence AW545373,MGI:1917688,MGI:1925744,MGI:2140589,p110delta,RIKEN cDNA 2410099E07 gene,RIKEN cDNA 2610208K16 gene","phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta",NA,FALSE
+"545","Pik3cg","NM_001146200.1","5830428L06Rik,MGI:1923289,p110gamma,PI3Kgamma,PI(3)Kgamma,PI3K<gamma>,RIKEN cDNA 5830428L06 gene","phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit gamma",NA,FALSE
+"546","Pik3r1","NM_001077495.1","AA414921,expressed sequence AA414921,MGD-MRK-13305,MGI:2145159,p50alpha,p55alpha,p85alpha,PI3K","phosphoinositide-3-kinase regulatory subunit 1",NA,FALSE
+"547","Pik3r2","NM_008841.2","p85beta","phosphoinositide-3-kinase regulatory subunit 2",NA,FALSE
+"548","Pik3r5","NM_177320.2","AV230647,expressed sequence AV230647,F730038I15Rik,Foap2,MGI:2144465,p101,RIKEN cDNA F730038I15 gene","phosphoinositide-3-kinase regulatory subunit 5",NA,FALSE
+"549","Pirb","NM_011095.2","glycoprotein 91,Gp91,leukocyte immunoglobulin-like receptor, subfamily B (with TM and ITIM domains), member 3,Lilrb3,paired-Ig-like receptor B","paired Ig-like receptor B",NA,FALSE
+"550","Pkm","NM_001253883.1","AA414905,AL024370,AL024424,expressed sequence AA414905,expressed sequence AL024370,expressed sequence AL024424,MGD-MRK-13319,MGD-MRK-13320,MGD-MRK-13322,MGI:2143183,MGI:2143184,MGI:2144733,Pk-2,Pk3,Pk-3,Pkm2,pyruvate kinase,pyruvate kinase 3","pyruvate kinase, muscle",NA,FALSE
+"551","Pkp3","NM_019762.2","2310056L12Rik,MGI:1917432,RIKEN cDNA 2310056L12 gene","plakophilin 3",NA,FALSE
+"552","Pla1a","NM_134102.4","AA986889,expressed sequence AA986889,MGI:2146373,Ps-pla1","phospholipase A1 member A",NA,FALSE
+"553","Pla2g2a","NM_001082531.1","EF,Enhancing factor,MGD-MRK-12352,MGD-MRK-26080,MGI:97049,modifier of Min1,Mom1","phospholipase A2, group IIA (platelets, synovial fluid)",NA,FALSE
+"554","Plod2","NM_001142916.1","D530025C14Rik,LH2,lysyl hydroxylase 2,MGI:1925825,Plod-2,RIKEN cDNA D530025C14 gene","procollagen lysine, 2-oxoglutarate 5-dioxygenase 2",NA,FALSE
+"555","Pms2","NM_008886.2","AW555130,DNA mismatch repair,expressed sequence AW555130,MGD-MRK-25613,MGI:2141233,mismatch repair","PMS1 homolog2, mismatch repair system component",NA,FALSE
+"556","Pnoc","NM_001205075.1","MGD-MRK-32349,N23K,neuropeptide nociceptin 1,N/OFQ,Npnc1,OFQ/N,proorphanin","prepronociceptin",NA,FALSE
+"557","Pold1","NM_011131.3","125kDa,MGD-MRK-13579","polymerase (DNA directed), delta 1, catalytic subunit",NA,FALSE
+"558","Pparg","NM_011146.3","MGD-MRK-13589,Nr1c3,PPARgamma,PPAR-gamma,Ppar-gamma2,PPARgamma2","peroxisome proliferator activated receptor gamma",NA,FALSE
+"559","Ppargc1b","NM_133249.2","4631412G21Rik,PGC-1beta/ERRL1,RIKEN cDNA 4631412G21 gene","peroxisome proliferative activated receptor, gamma, coactivator 1 beta",NA,FALSE
+"560","Ppl","NM_008909.2","AW553870,expressed sequence AW553870,MGI:2146664","periplakin",NA,FALSE
+"561","Prdm1","NM_007548.3","b2b1765Clo,Blimp1,Blimp-1,B lymphocyte induced maturation protein,MGD-MRK-16440,MGI:5446148,Mutant line 1765,PRDI-BF1","PR domain containing 1, with ZNF domain",NA,FALSE
+"562","Prf1","NM_011073.2","MGD-MRK-13251,MGD-MRK-13605,perforin,perforin 1,Pfn,Pfp,pore forming protein,Prf-1","perforin 1 (pore forming protein)",NA,FALSE
+"563","Prkaa2","NM_178143.1","2310008I11Rik,AMPKalpha2,MGI:1913766,RIKEN cDNA 2310008I11 gene","protein kinase, AMP-activated, alpha 2 catalytic subunit",NA,FALSE
+"564","Prkacb","NM_011100.3","cAMP-dependent protein kinase C beta,MGD-MRK-13325,Pkacb","protein kinase, cAMP dependent, catalytic, beta",NA,FALSE
+"565","Prkca","NM_011101.3","AI875142,expressed sequence AI875142,MGD-MRK-13327,MGI:2144325,Pkca","protein kinase C, alpha",NA,FALSE
+"566","Prkx","NM_016979.1","Pkare","protein kinase, X-linked",NA,FALSE
+"567","Prlr","NM_011169.5","AI987712,expressed sequence AI987712,MGD-MRK-13598,MGD-MRK-13599,MGD-MRK-13614,MGD-MRK-13615,MGI:2146103,MGI:97764,Pr-1,Pr-3,Prlr-rs1,prolactin receptor 1,prolactin receptor 3,prolactin receptor related sequence 1","prolactin receptor",NA,FALSE
+"568","Prom1","NM_001163577.1","4932416E19Rik,AC133,CD133,MGI:2444952,Prom,Prom-1,RIKEN cDNA 4932416E19 gene","prominin 1",NA,FALSE
+"569","Prr5","NM_146061.4","Arhgap8,AU043908,C030017C09Rik,C78947,expressed sequence AU043908,expressed sequence C78947,MGI:2146155,MGI:2146287,Protor-1,Rho GTPase activating protein 8,RIKEN cDNA C030017C09 gene","proline rich 5 (renal)",NA,FALSE
+"570","Psmb10","NM_013640.3","Mecl1,Mecl-1","proteasome (prosome, macropain) subunit, beta type 10",NA,FALSE
+"571","Psmb5","NM_011186.1",NA,"proteasome (prosome, macropain) subunit, beta type 5",NA,FALSE
+"572","Psmb8","NM_010724.2","large multifunctional protease 7,Lmp7,Lmp-7,low molecular weight polypeptide 7,MGD-MRK-11822,MGD-MRK-11824,MGI:96798","proteasome (prosome, macropain) subunit, beta type 8 (large multifunctional peptidase 7)",NA,FALSE
+"573","Psmb9","NM_013585.2","large multifunctional protease 2,Lmp2,Lmp-2,low molecular weight polypeptide 2,MGD-MRK-11821,MGD-MRK-11823,MGI:96797","proteasome (prosome, macropain) subunit, beta type 9 (large multifunctional peptidase 2)",NA,FALSE
+"574","Ptcd2","NM_026873.2","1190005P08Rik,RIKEN cDNA 1190005P08 gene","pentatricopeptide repeat domain 2",NA,FALSE
+"575","Pten","NM_008960.2","2310035O07Rik,A130070J02Rik,AI463227,B430203M17Rik,expressed sequence AI463227,MGD-MRK-39582,MGI:1917411,MGI:2147557,MGI:2443558,MMAC1,RIKEN cDNA 2310035O07 gene,RIKEN cDNA A130070J02 gene,RIKEN cDNA B430203M17 gene,TEP1","phosphatase and tensin homolog",NA,FALSE
+"576","Ptger4","NM_001136079.1","EP4,MGD-MRK-25639,prostaglandin E receptor EP4 subtype,Ptgerep4","prostaglandin E receptor 4 (subtype EP4)",NA,FALSE
+"577","Ptgs2","NM_011198.4","Cox-2,COX2,cyclooxygenase 2,cyclooxygenase-2,MGD-MRK-13665,Pghs2,PGHS-2,PHS-2,prostaglandin G/H synthase,Tis10","prostaglandin-endoperoxide synthase 2",NA,FALSE
+"578","Ptpn11","NM_011202.3","2700084A17Rik,AW536184,expressed sequence AW536184,MGD-MRK-16288,MGI:1919896,MGI:2141206,PTP1D,PTP2C,RIKEN cDNA 2700084A17 gene,SH2 domain-containing protein tyrosine phosphatase-2,Shp2,SHP-2,SH-PTP2,Syp","protein tyrosine phosphatase, non-receptor type 11",NA,FALSE
+"579","Ptprc","NM_001111316.2","B220,Cd45,CD45,CD45 antigen,Ly-5,lymphocyte antigen 5,Lyt-4,MGD-MRK-11992,MGD-MRK-12076,MGD-MRK-13679,MGD-MRK-1864,MGI:3584395,T200,T-lymphocyte antigen 4","protein tyrosine phosphatase, receptor type, C",NA,FALSE
+"580","Pvr","NM_027514.2","3830421F03Rik,CD155,D7Ertd458e,DNA segment, Chr 7, ERATO Doi 458, expressed,mE4,MGD-MRK-36317,MGI:1196266,MGI:1917954,necl-5,RIKEN cDNA 3830421F03 gene,Taa1,Tage4,tumor-associated antigen 1","poliovirus receptor",NA,FALSE
+"581","Pvrig","XM_011240963.2","Gm36869,predicted gene, 36869","poliovirus receptor related immunoglobulin domain containing",NA,FALSE
+"582","Rad50","NM_009012.2","MGD-MRK-38337,MGI:894309,Mrell,Rad50l,RAD50-like","RAD50 double strand break repair protein",NA,FALSE
+"583","Rad51","NM_011234.4","AV304093,expressed sequence AV304093,MGD-MRK-13824,MGI:2139265,Rad51a,RAD51A homolog (S. cerevisiae),Reca,recombination and repair of radiation damage, RAD51 homolog","RAD51 recombinase",NA,FALSE
+"584","Rad51c","NM_053269.3","Rad51l2","RAD51 paralog C",NA,FALSE
+"585","Rasal1","NM_013832.4","MRASAL","RAS protein activator like 1 (GAP1 like)",NA,FALSE
+"586","Rasgrf1","NM_011245.2","AI844718,CDC25,CDC25Mm,expressed sequence AI844718,Grf1,Grfbeta,guanine nucleotide releasing factor 1,MGD-MRK-16479,MGI:1347052,MGI:2143138","RAS protein-specific guanine nucleotide-releasing factor 1",NA,FALSE
+"587","Rb1","NM_009029.2","MGD-MRK-13784,MGD-MRK-13785,pRb,Rb,Rb-1,retinoblastoma 1","RB transcriptional corepressor 1",NA,FALSE
+"588","Rbl2","NM_011250.4","MGD-MRK-32125,p130,Rb2,retinoblastoma-like 2","RB transcriptional corepressor like 2",NA,FALSE
+"589","Rela","NM_009045.4","MGD-MRK-24172,p65,p65 NF kappaB","v-rel reticuloendotheliosis viral oncogene homolog A (avian)",NA,FALSE
+"590","Relb","NM_009046.2","MGD-MRK-24171,MGI:4838325,shep,spontaneous hepatitis","avian reticuloendotheliosis viral (v-rel) oncogene related B",NA,FALSE
+"591","Reln","NM_011261.2","MGD-MRK-13895,MGD-MRK-23859,reeler,rl","reelin",NA,FALSE
+"592","Ren1","NM_031192.3","D19352,expressed sequence D19352,MGD-MRK-13833,MGD-MRK-13834,MGD-MRK-13836,MGD-MRK-13838,MGD-MRK-13917,MGD-MRK-13951,MGI:2138723,Ren,Ren-1,Ren1c,Ren1d,Ren-A,renin,renin 1,renin A,Rn-1,Rnr","renin 1 structural",NA,FALSE
+"593","Rictor","NM_030168.3","4921505C17Rik,6030405M08Rik,AW492497,D530039E11Rik,expressed sequence AW492497,MGI:1924409,MGI:1925833,MGI:2146218,RIKEN cDNA 4921505C17 gene,RIKEN cDNA 6030405M08 gene,RIKEN cDNA D530039E11 gene","RPTOR independent companion of MTOR, complex 2",NA,FALSE
+"594","Ripk1","NM_009068.3","MGD-MRK-37251,receptor interacting protein,Rinp,Rip1","receptor (TNFRSF)-interacting serine-threonine kinase 1",NA,FALSE
+"595","Ripk2","NM_138952.3","2210420D18Rik,CARD3,CARDIAK,CCK,D4Bwg0615e,DNA segment, Chr 4, Brigham & Women's Genetics 0615 expressed,MGD-MRK-34205,MGI:106511,MGI:1917420,RICK,RIKEN cDNA 2210420D18 gene,RIP2","receptor (TNFRSF)-interacting serine-threonine kinase 2",NA,FALSE
+"596","Ripk3","NM_019955.1","2610528K09Rik,AW107945,expressed sequence AW107945,MGI:1923812,MGI:2145796,RIKEN cDNA 2610528K09 gene,Rip3","receptor-interacting serine-threonine kinase 3",NA,FALSE
+"597","Rnls","NM_001146342.2","6530404N21Rik,RIKEN cDNA 6530404N21 gene","renalase, FAD-dependent amine oxidase",NA,FALSE
+"598","Robo4","NM_028783.2","1200012D01Rik,AI593217,expressed sequence AI593217,Magic roundabout,MGI:2143097,RIKEN cDNA 1200012D01 gene","roundabout guidance receptor 4",NA,FALSE
+"599","Rock1","NM_009071.2","1110055K06Rik,MGD-MRK-36507,MGI:1916035,RIKEN cDNA 1110055K06 gene,Rock-I","Rho-associated coiled-coil containing protein kinase 1",NA,FALSE
+"600","Ror2","NM_013846.3","neurotrophic tyrosine kinase, receptor related 2,Ntrkr2","receptor tyrosine kinase-like orphan receptor 2",NA,FALSE
+"601","Rorc","NM_011281.2","MGD-MRK-28153,RORgamma,Thor,thymus orphan receptor","RAR-related orphan receptor gamma",NA,FALSE
+"602","Rpl23","NM_022891.3","2810009A01Rik,MGI:1915154,RIKEN cDNA 2810009A01 gene","ribosomal protein L23",NA,FALSE
+"603","Rpl7a","NM_013721.3","Surf-3,surfeit 3","ribosomal protein L7A",NA,FALSE
+"604","Rps6kb1","NM_001114334.1","2610318I15Rik,AA959758,AI256796,AI314060,expressed sequence AA959758,expressed sequence AI256796,expressed sequence AI314060,MGI:1919758,MGI:2144050,MGI:2144103,MGI:2144107,p70/85s6k,p70s6k,p70S6K1,RIKEN cDNA 2610318I15 gene,S6K1","ribosomal protein S6 kinase, polypeptide 1",NA,FALSE
+"605","Rptor","NM_028898.2","4932417H02Rik,mKIAA1303,Rap,raptor,RIKEN cDNA 4932417H02 gene","regulatory associated protein of MTOR, complex 1",NA,FALSE
+"606","Rrm2","NM_009104.2","AA407299,expressed sequence AA407299,MGD-MRK-14210,MGI:2145142,R2","ribonucleotide reductase M2",NA,FALSE
+"607","Rsad2","NM_021384.2","2510004L01Rik,cig5,MGI:1919695,RIKEN cDNA 2510004L01 gene,Vig1,viperin","radical S-adenosyl methionine domain containing 2",NA,FALSE
+"608","Runx3","NM_019732.2","AML2,Cbfa3,core binding factor alpha 3,MGD-MRK-19575","runt related transcription factor 3",NA,FALSE
+"609","S100a8","NM_013650.2","60B8Ag,AI323541,B8Ag,Caga,calgranulin A,CFAg,CP-10,expressed sequence AI323541,MGD-MRK-1725,MGI:2139672,MRP8,p8","S100 calcium binding protein A8 (calgranulin A)",NA,FALSE
+"610","S100a9","NM_009114.2","60B8Ag,AW546964,BEE22,Cagb,calgranulin B,expressed sequence AW546964,GAGB,L1Ag,MGD-MRK-1726,MGI:2139998,MGI:88245,MRP14,p14","S100 calcium binding protein A9 (calgranulin B)",NA,FALSE
+"611","Samsn1","NM_023380.2","4930571B16Rik,Hacs1,RIKEN cDNA 4930571B16 gene","SAM domain, SH3 domain and nuclear localization signals, 1",NA,FALSE
+"612","Sbno2","NM_183426.1","BC019206,cDNA sequence BC019206,Stno,strawberry notch homolog (Drosophila)","strawberry notch 2",NA,FALSE
+"613","Sele","NM_011345.2","CD62E,Elam,endothelial adhesion molecule,E-selectin,MGD-MRK-14357,MGD-MRK-9356","selectin, endothelial cell",NA,FALSE
+"614","Sell","XM_006496716.1","AI528707,CD62L,expressed sequence AI528707,LECAM-1,Lnhr,L-selectin,Ly-22,Lyam1,Lyam-1,Ly-m22,lymph node homing receptor,lymphocyte adhesion molecule 1,lymphocyte antigen 22,lymphocyte antigen m22,MGD-MRK-11841,MGD-MRK-11961,MGD-MRK-12014,MGD-MRK-12052,MGD-MRK-12053,MGD-MRK-14358,MGI:2138287","selectin, lymphocyte",NA,FALSE
+"615","Selp","NM_011347.1","CD62P,granulocyte membrane protein,Grmp,MGD-MRK-10271,MGD-MRK-14360,P-selectin","selectin, platelet",NA,FALSE
+"616","Serpina1a","NM_009243.4","Aat2,Aat-2,alpha-1-antitrypsin 2,MGD-MRK-1012,MGD-MRK-1013,MGI:87857,PI1,serine protease inhibitor 1-1,Spi1-1","serine (or cysteine) peptidase inhibitor, clade A, member 1A",NA,FALSE
+"617","Serpinb5","NM_009257.3","1110036M19Rik,AI462524,AI646751,expressed sequence AI462524,expressed sequence AI646751,Maspin,MGD-MRK-39578,MGI:1915965,MGI:2138262,MGI:2138309,ovalbumin,RIKEN cDNA 1110036M19 gene,serine protease inhibitor 7,Spi7","serine (or cysteine) peptidase inhibitor, clade B, member 5",NA,FALSE
+"618","Serpinh1","NM_009825.2","Cbp1,Cbp2,collagen binding protein 1,collagen binding protein 2,colligin,gp46,heat shock protein 47 kDa,Hsp47,J6,MGD-MRK-10956,MGD-MRK-1786,MGD-MRK-39501,MGI:109502,serine (or cysteine) proteinase inhibitor, clade H, member 2,Serpinh2","serine (or cysteine) peptidase inhibitor, clade H, member 1",NA,FALSE
+"619","Sfrp1","NM_013834.2","2210415K03Rik,AW011917,AW107218,AW742929,expressed sequence AW011917,expressed sequence AW107218,expressed sequence AW742929,MGI:1919612,MGI:2142743,MGI:2142757,MGI:2142814,RIKEN cDNA 2210415K03 gene,sFRP-1","secreted frizzled-related protein 1",NA,FALSE
+"620","Sfrp4","NM_016687.3",NA,"secreted frizzled-related protein 4",NA,FALSE
+"621","Sfxn1","NM_027324.5","2810002O05Rik,A930015P12Rik,MGD-MRK-9693,MGI:1917369,MGI:2443662,RIKEN cDNA 2810002O05 gene,RIKEN cDNA A930015P12 gene","sideroflexin 1",NA,FALSE
+"622","Sgk1","NM_001161849.2","serum/glucocorticoid regulated kinase,Sgk","serum/glucocorticoid regulated kinase 1",NA,FALSE
+"623","Sh2d1a","NR_132588.1","Duncan disease homolog,SAP","SH2 domain containing 1A",NA,FALSE
+"624","Shc2","NM_001024539.1","MGD-MRK-33870,ShcB,Sli","SHC (Src homology 2 domain containing) transforming protein 2",NA,FALSE
+"625","Siglec1","NM_011426.3","CD169,MGD-MRK-16453,sialoadhesin,Siglec-1,Sn","sialic acid binding Ig-like lectin 1, sialoadhesin",NA,FALSE
+"626","Siglecf","NM_145581.1","mSiglec-F,sialic acid binding Ig-like lectin 5,Siglec5","sialic acid binding Ig-like lectin F",NA,FALSE
+"627","Sirpa","NM_007547.2","AI835480,Bit,brain immunological-like with tyrosine-based motifs,CD172a,expressed sequence AI835480,MGD-MRK-36527,MGD-MRK-37607,MGI:107947,MGI:2139057,P84,protein tyrosine phosphatase, non-receptor type substrate 1,Ptpns1,SHPS-1,SIRP","signal-regulatory protein alpha",NA,FALSE
+"628","Slamf7","NM_144539.5","19A,19A24,4930560D03Rik,CS1,novel Ly9,RIKEN cDNA 4930560D03 gene","SLAM family member 7",NA,FALSE
+"629","Slc11a1","NM_013612.2","Bcg,BCG resistance,host resistance locus Bcg/Ity/Lsh,immunity to S. typhimurium,ity,Ity,Ity1,Leishmaniasis resistance,Lsh,MGD-MRK-11510,MGD-MRK-11511,MGD-MRK-11891,MGD-MRK-1520,MGD-MRK-16714,MGD-MRK-24163,MGI:103283,natural resistance-associated macrophage protein,natural resistance-associated macrophage protein 1,Nramp,Nramp1","solute carrier family 11 (proton-coupled divalent metal ion transporters), member 1",NA,FALSE
+"630","Slc16a1","NM_009196.4","AL022710,expressed sequence AL022710,MCT1,MGD-MRK-33695,MGI:2139849","solute carrier family 16 (monocarboxylic acid transporters), member 1",NA,FALSE
+"631","Slc1a5","NM_009201.2","ASCT2,MGD-MRK-32346,Slc1a7,solute carrier family 1, member 7","solute carrier family 1 (neutral amino acid transporter), member 5",NA,FALSE
+"632","Slc2a1","NM_011400.3","glucose transporter 1, erythrocyte,Glut1,Glut-1,MGD-MRK-10155,MGD-MRK-10159","solute carrier family 2 (facilitated glucose transporter), member 1",NA,FALSE
+"633","Slc7a5","NM_011404.3","D0H16S474E,DNA segment, human S474E,LAT1,TA1","solute carrier family 7 (cationic amino acid transporter, y+ system), member 5",NA,FALSE
+"634","Smad5","NM_008541.2","1110051M15Rik,AI451355,expressed sequence AI451355,Madh5,MGI:1923577,MGI:2145246,MusMLP,RIKEN cDNA 1110051M15 gene,Smad 5","SMAD family member 5",NA,FALSE
+"635","Smap1","NM_028534.3","1700056O10Rik,4921514B13Rik,4921525H11Rik,AI462175,expressed sequence AI462175,MGI:1918153,MGI:1918155,MGI:1920661,RIKEN cDNA 1700056O10 gene,RIKEN cDNA 4921514B13 gene,RIKEN cDNA 4921525H11 gene","small ArfGAP 1",NA,FALSE
+"636","Snai1","NM_011427.2","AI194338,expressed sequence AI194338,MGD-MRK-14460,MGI:2138858,Sna,Sna1,Snail,Snail1,snail homolog, (Drosophila)","snail family zinc finger 1",NA,FALSE
+"637","Snca","NM_009221.2","alpha-Syn,alphaSYN,alpha-synuclein","synuclein, alpha",NA,FALSE
+"638","Socs1","NM_009896.2","Cish1,Cish7,cytokine inducible SH2-containing protein 1,JAB,JAK2-binding protein,JAK-binding protein,MGI:1276585,SOCS-1,SSI-1,STAT-induced STAT inhibitor 1","suppressor of cytokine signaling 1",NA,FALSE
+"639","Sox10","XM_128139.6","Dom,dominant megacolon,gray tremor,gt,MGD-MRK-10325,MGD-MRK-14497,MGD-MRK-38228,MGD-MRK-8879,MGI:109184,MGI:94914,MGI:95866,Sox21,SRY-box containing gene 21","SRY (sex determining region Y)-box 10",NA,FALSE
+"640","Sox11","NM_009234.6","1110038H03Rik,6230403H02Rik,AI836553,end1,expressed sequence AI836553,MGD-MRK-14498,MGI:1913439,MGI:1915029,MGI:2144888,RIKEN cDNA 1110038H03 gene,RIKEN cDNA 6230403H02 gene","SRY (sex determining region Y)-box 11",NA,FALSE
+"641","Sox2","NM_011443.3","lcc,light coat and circling,MGD-MRK-14493,MGD-MRK-14503,MGI:1891165,MGI:2181707,Sox-2,yellow submarine,ysb","SRY (sex determining region Y)-box 2",NA,FALSE
+"642","Spib","NM_019866.1","Spi-B","Spi-B transcription factor (Spi-1/PU.1 related)",NA,FALSE
+"643","Spp1","NM_009263.3","2ar,44kDa bone phosphoprotein,AA960535,activation protein lymphocyte 1,AI790405,Apl-1,BNSP,bone sialoprotein 1,early T lymphocyte activation,Eta,ETA-1,expressed sequence AA960535,expressed sequence AI790405,MGD-MRK-13036,MGD-MRK-13037,MGD-MRK-1359,MGD-MRK-13878,MGD-MRK-14544,MGD-MRK-14545,MGD-MRK-9656,MGI:2140792,MGI:2140963,minopontin,OP,Opn,Opnl,osteopontin,osteopontin-like protein,Ric,rickettsia tsutsugamushi resistance,Spp-1","secreted phosphoprotein 1",NA,FALSE
+"644","Spry4","NM_011898.2","A030006O18Rik,MGI:2444550,RIKEN cDNA A030006O18 gene,sprouty4","sprouty RTK signaling antagonist 4",NA,FALSE
+"645","Srebf1","NM_011480.4","ADD-1,bHLHd1,MGD-MRK-36180,SREBP1,SREBP-1,SREBP-1a,SREBP1c,SREBP-1c","sterol regulatory element binding transcription factor 1",NA,FALSE
+"646","Srp54a","NM_011899.4","54kDa,54K subunit of signal recognition particle,signal recognition particle 54,Srp54","signal recognition particle 54A",NA,FALSE
+"647","Stat1","NM_009283.4","2010005J02Rik,AA408197,expressed sequence AA408197,MGD-MRK-23925,MGI:1923977,MGI:2138078,RIKEN cDNA 2010005J02 gene","signal transducer and activator of transcription 1",NA,FALSE
+"648","Stat2","NM_019963.1","1600010G07Rik,AW496480,expressed sequence AW496480,MGD-MRK-23901,MGI:1919271,MGI:2143845,RIKEN cDNA 1600010G07 gene","signal transducer and activator of transcription 2",NA,FALSE
+"649","Stat3","NM_011486.4","1110034C02Rik,Aprf,AW109958,expressed sequence AW109958,MGD-MRK-23900,MGI:1915983,MGI:2144497,RIKEN cDNA 1110034C02 gene","signal transducer and activator of transcription 3",NA,FALSE
+"650","Stat4","NM_011487.5","MGD-MRK-23924","signal transducer and activator of transcription 4",NA,FALSE
+"651","Stc1","NM_009285.3","MGD-MRK-38175","stanniocalcin 1",NA,FALSE
+"652","Syk","NM_001198977.1","MGD-MRK-16292,Sykb","spleen tyrosine kinase",NA,FALSE
+"653","Taf3","NM_027748.3","4933439M23Rik,AW539625,expressed sequence AW539625,MGI:1918534,MGI:2139366,mTAFII140,RIKEN cDNA 4933439M23 gene","TATA-box binding protein associated factor 3",NA,FALSE
+"654","Tap1","NM_001161730.1","Abcb2,ATP-binding cassette, sub-family B (MDR/TAP), member 2,Ham1,Ham-1,histocompatibility antigen modifier 1,MGD-MRK-10612,MGD-MRK-10614,MGD-MRK-14712,MGD-MRK-14714,MTP1,PSF-1,RING4,TAP,Tap-1,transporter 1, ABC (ATP binding cassette)","transporter 1, ATP-binding cassette, sub-family B (MDR/TAP)",NA,FALSE
+"655","Tap2","NM_011530.3","Abcb3,AI462429,ATP-binding cassette, sub-family B (MDR/TAP), member 3,expressed sequence AI462429,Ham2,Ham-2,HAM2,histocompatibility antigen modifier 2,MGD-MRK-10613,MGD-MRK-10615,MGD-MRK-14713,MGD-MRK-14715,MGI:2146874,MGI:3584394,MTP2,PSF2,Tap-2,transporter 2, ABC (ATP binding cassette)","transporter 2, ATP-binding cassette, sub-family B (MDR/TAP)",NA,FALSE
+"656","Tapbp","NM_009318.2","D17Wsu91e,DNA segment, Chr 17, Wayne State University 91, expressed,MGD-MRK-33974,MGI:106282,tapasin,TPN","TAP binding protein",NA,FALSE
+"657","Tapbpl","NM_145391.2","BC017613,cDNA sequence BC017613,MGC:27679,TAPBPL-R","TAP binding protein-like",NA,FALSE
+"658","Tbx21","NM_019507.2","Tbet,T-bet,Tblym,TBT1","T-box 21",NA,FALSE
+"659","Tbxas1","NM_011539.3","CYP5,CYP5A1,MGD-MRK-14734,TXAS,TXS","thromboxane A synthase 1, platelet",NA,FALSE
+"660","Tcf3","NM_001164147.1","A1,AA408400,ALF2,AW209082,bHLHb21,E12,E2A,E47,expressed sequence AA408400,expressed sequence AW209082,MGD-MRK-14762,MGI:2143467,MGI:2143825,Pan1,Pan2,Tcfe2a,transcription factor E2a","transcription factor 3",NA,FALSE
+"661","Tcl1","NM_009337.3",NA,"T cell lymphoma breakpoint 1",NA,FALSE
+"662","Tdo2","NM_019911.2","AA407491,chick yellow,chky,expressed sequence AA407491,MGI:2139552,MGI:3617202,TDO,TO","tryptophan 2,3-dioxygenase",NA,FALSE
+"663","Tgfb1","NM_011577.1","MGD-MRK-15063,MGD-MRK-15064,MGD-MRK-15067,Tgfb,Tgfb-1,TGFbeta1,TGF-beta1,TGF-beta 1","transforming growth factor, beta 1",NA,FALSE
+"664","Tgfb2","NM_009367.4","BB105277,expressed sequence BB105277,MGD-MRK-15065,MGD-MRK-15068,MGI:2138633,Tgfb-2,Tgf-beta2","transforming growth factor, beta 2",NA,FALSE
+"665","Tgfb3","NM_009368.2","MGD-MRK-15066,MGD-MRK-15069,Tgfb-3","transforming growth factor, beta 3",NA,FALSE
+"666","Tgfbr1","NM_009370.2","Alk-5,ALK5,AU017191,expressed sequence AU017191,MGD-MRK-15070,MGI:2140434,TbetaRI,TbetaR-I","transforming growth factor, beta receptor I",NA,FALSE
+"667","Tgfbr2","NM_009371.3","1110020H15Rik,AU042018,expressed sequence AU042018,MGD-MRK-15071,MGI:1923554,MGI:2143233,RIKEN cDNA 1110020H15 gene,TbetaRII,TbetaR-II,TBR-II","transforming growth factor, beta receptor II",NA,FALSE
+"668","Thbd","NM_009378.3","AI385582,CD141,expressed sequence AI385582,MGD-MRK-15081,MGI:2138918,TM","thrombomodulin",NA,FALSE
+"669","Thbs1","NM_011580.4","MGD-MRK-15083,MGD-MRK-15086,tbsp1,Thbs-1,TSP1,TSP-1","thrombospondin 1",NA,FALSE
+"670","Thy1","NM_009382.3","CD90,MGD-MRK-15100,MGD-MRK-15102,T25,theta,Thy-1,Thy1.1,Thy 1.2,Thy-1.2,Thy1.2","thymus cell antigen 1, theta",NA,FALSE
+"671","Ticam1","NM_174989.4","AW046014,AW547018,expressed sequence AW046014,expressed sequence AW547018,MGI:2147076,TICAM-1,Trif","toll-like receptor adaptor molecule 1",NA,FALSE
+"672","Tie1","NM_011587.2","D430008P04Rik,MGD-MRK-16703,MGI:2443090,RIKEN cDNA D430008P04 gene,TIE,tie-1","tyrosine kinase with immunoglobulin-like and EGF-like domains 1",NA,FALSE
+"673","Tigit","NM_001146325.1","ENSMUSG00000071552,predicted gene, ENSMUSG00000071552,V-set and transmembrane domain containing 3,Vstm3","T cell immunoreceptor with Ig and ITIM domains",NA,FALSE
+"674","Tlr1","NM_030682.1",NA,"toll-like receptor 1",NA,FALSE
+"675","Tlr2","NM_011905.2","Ly105","toll-like receptor 2",NA,FALSE
+"676","Tlr3","NM_126166.2","AI957183,expressed sequence AI957183,MGI:2142652","toll-like receptor 3",NA,FALSE
+"677","Tlr4","NM_021297.2","lipopolysaccharide response,Lps,MGD-MRK-11879,MGD-MRK-26042,Rasl2-8,RAS-like, family 2, locus 8","toll-like receptor 4",NA,FALSE
+"678","Tlr5","NM_016928.2",NA,"toll-like receptor 5",NA,FALSE
+"679","Tlr7","NM_133211.4",NA,"toll-like receptor 7",NA,FALSE
+"680","Tlr8","NM_133212.2",NA,"toll-like receptor 8",NA,FALSE
+"681","Tlr9","NM_031178.2",NA,"toll-like receptor 9",NA,FALSE
+"682","Tmem140","NM_197986.2","1110007F12Rik,RIKEN cDNA 1110007F12 gene","transmembrane protein 140",NA,FALSE
+"683","Tmem173","NM_028261.1","2610307O08Rik,ERIS,MPYS,RIKEN cDNA 2610307O08 gene,Sting","transmembrane protein 173",NA,FALSE
+"684","Tnf","NM_013693.2","DIF,MGD-MRK-15151,MGD-MRK-28090,Tnfa,TNFalpha,TNF alpha,TNF-alpha,Tnfsf1a,tumor necrosis factor-alpha,tumor necrosis factor, alpha","tumor necrosis factor",NA,FALSE
+"685","Tnfaip3","NM_001166402.1","A20,Tnfip3,tumor necrosis factor induced protein 3,zinc finger protein A20","tumor necrosis factor, alpha-induced protein 3",NA,FALSE
+"686","Tnfaip6","NM_009398.2","Tnfip6,Tsg6,TSG-6,tumor necrosis factor induced protein 6","tumor necrosis factor alpha induced protein 6",NA,FALSE
+"687","Tnfrsf10b","NM_020275.3","DR5,KILLER,Killer/Dr5,Ly98,TRAILR2,TRAIL-R2,Trail Receptor,TRICK2A,TRICK2B,TRICKB","tumor necrosis factor receptor superfamily, member 10b",NA,FALSE
+"688","Tnfrsf11a","NM_009399.3","MGI:1194917,Rank,receptor activator of NF-kappaB,TRANCE-R","tumor necrosis factor receptor superfamily, member 11a, NFKB activator",NA,FALSE
+"689","Tnfrsf11b","NM_008764.3","MGD-MRK-39586,OCIF,Opg,OPG,osteoclastogenesis inhibitory factor,osteoprotegerin,TR1","tumor necrosis factor receptor superfamily, member 11b (osteoprotegerin)",NA,FALSE
+"690","Tnfrsf14","NM_178931.2","Atar,HveA,Hvem","tumor necrosis factor receptor superfamily, member 14 (herpesvirus entry mediator)",NA,FALSE
+"691","Tnfrsf17","NM_011608.1","BCM,BCMA,Tnfrsf13,Tnfrsf13a","tumor necrosis factor receptor superfamily, member 17",NA,FALSE
+"692","Tnfrsf18","NM_009400.2","Gitr,glucocorticoid-induced tumor necrosis factor related gene","tumor necrosis factor receptor superfamily, member 18",NA,FALSE
+"693","Tnfrsf1a","NM_011609.2","CD120a,MGD-MRK-15155,MGD-MRK-15156,MGI:98781,p55,p55-R,TNF-alphaR1,TNF-alpha-R1,TNFalpha-R1,TNFAR,Tnfr1,TNF-R1,Tnfr-2,TNF-R55,TNFR60,TNF receptor alpha chain,TNFRI,TNF-R-I,TNFRp55,tumor necrosis factor receptor 1,tumor necrosis factor receptor 2","tumor necrosis factor receptor superfamily, member 1a",NA,FALSE
+"694","Tnfrsf1b","NM_011610.3","CD120b,MGD-MRK-15154,MGD-MRK-15157,MGI:98782,p75,p75 TNFR,TNF-alphaR2,TNFalpha-R2,TNFBR,Tnfr-1,Tnfr2,TNF-R2,TNF-R75,TNFR80,TNFRII,TNF-R-II,tumor necrosis factor receptor 1,tumor necrosis factor receptor 2","tumor necrosis factor receptor superfamily, member 1b",NA,FALSE
+"695","Tnfrsf25","NM_033042.3","APO-3,DDR3,DR3,LARD,Tnfrsf12,TR3,TRAMP,tumor necrosis factor receptor superfamily, member 12,Wsl,WSL-1,WSL-LR","tumor necrosis factor receptor superfamily, member 25",NA,FALSE
+"696","Tnfrsf4","NM_011659.2","ACT35,CD134,MGD-MRK-13094,MGD-MRK-25943,Ox40,Ox-40 T-cell antigen,tax-transcriptionally activated glycoprotein 1,Txgp1","tumor necrosis factor receptor superfamily, member 4",NA,FALSE
+"697","Tnfrsf8","NM_009401.2","Cd30,CD30,CD30 antigen,MGD-MRK-16705","tumor necrosis factor receptor superfamily, member 8",NA,FALSE
+"698","Tnfrsf9","NM_001077508.1","4-1BB,A930040I11Rik,AA408498,AI325004,Cd137,CD antigen 137,CDw137,expressed sequence AA408498,expressed sequence AI325004,ILA,Ly63,lymphocyte antigen 63,MGI:1925690,MGI:2140130,MGI:2140239,RIKEN cDNA A930040I11 gene","tumor necrosis factor receptor superfamily, member 9",NA,FALSE
+"699","Tnfsf10","NM_009425.2","A330042I21Rik,AI448571,APO-2L,expressed sequence AI448571,MGD-MRK-35883,MGI:2139709,RIKEN cDNA A330042I21 gene,TNF-related apoptosis inducing ligand,Trail","tumor necrosis factor (ligand) superfamily, member 10",NA,FALSE
+"700","Tnfsf12","NM_011614.3","APO3L,DR3L,TNF-related weak inducer of apoptosis,Tweak","tumor necrosis factor (ligand) superfamily, member 12",NA,FALSE
+"701","Tnfsf13","NM_023517.2","2310026N09Rik,APRIL,RIKEN cDNA 2310026N09 gene,TALL2,TRDL1","tumor necrosis factor (ligand) superfamily, member 13",NA,FALSE
+"702","Tnfsf13b","NM_033622.1","BAFF,BLyS,D8Ertd387e,DNA segment, Chr 8, ERATO Doi 387, expressed,MGI:1196237,TALL-1,zTNF4","tumor necrosis factor (ligand) superfamily, member 13b",NA,FALSE
+"703","Tnfsf18","NM_183391.3","Gitrl,GITR ligand","tumor necrosis factor (ligand) superfamily, member 18",NA,FALSE
+"704","Tnfsf4","NM_009452.2","Ath1,Ath-1,atherosclerosis 1,CD134L,gp34,MGD-MRK-1447,MGD-MRK-1450,MGD-MRK-18700,MGD-MRK-25942,MGI:88098,Ox40l,OX40L,Ox40 ligand,tax-transcriptionally activated glycoprotein 1 ligand,TXGP1,Txgp1l","tumor necrosis factor (ligand) superfamily, member 4",NA,FALSE
+"705","Tnfsf8","NM_009403.3","CD153,CD30 antigen ligand,Cd30l,Cd30L,CD30LG,MGD-MRK-1847","tumor necrosis factor (ligand) superfamily, member 8",NA,FALSE
+"706","Tnfsf9","NM_009404.3","4-1BBL,4-1BB-L,4-1BB ligand,AI848817,Cd137l,CD antigen 137 ligand,expressed sequence AI848817,Ly63l,lymphocyte antigen 63 ligand,MGI:2146938","tumor necrosis factor (ligand) superfamily, member 9",NA,FALSE
+"707","Tnks","NM_175091.3","4930554K12Rik,AI662855,C86528,D130072O21Rik,expressed sequence AI662855,expressed sequence C86528,MGI:1922501,MGI:2142612,MGI:2142876,mTNKS1,RIKEN cDNA 4930554K12 gene,RIKEN cDNA D130072O21 gene,TANK1,tankyrase 1","tankyrase, TRF1-interacting ankyrin-related ADP-ribose polymerase",NA,FALSE
+"708","Tpi1","NM_009415.2","AI255506,expressed sequence AI255506,MGD-MRK-15179,MGD-MRK-15180,MGI:2141384,Tpi-1","triosephosphate isomerase 1",NA,FALSE
+"709","Tpm1","NM_024427.4","AA986836,AI854628,alpha-TM,alpha tropomyosin,expressed sequence AA986836,expressed sequence AI854628,MGD-MRK-15202,MGD-MRK-15205,MGI:2142971,MGI:2143162,TM2,Tm3,Tpm-1","tropomyosin 1, alpha",NA,FALSE
+"710","Tpsab1","NM_031187.4","mast cell protease 7,Mcp-7,Mcpt7,MGD-MRK-12149,MGD-MRK-12157,MMCP-7","tryptase alpha/beta 1",NA,FALSE
+"711","Traf1","NM_009421.4","4732496E14Rik,MGD-MRK-18657,MGI:2443877,RIKEN cDNA 4732496E14 gene","TNF receptor-associated factor 1",NA,FALSE
+"712","Trat1","NM_198297.3","C030046M14Rik,RIKEN cDNA C030046M14 gene,T-cell receptor interacting molecule,Tcrim,Trim","T cell receptor associated transmembrane adaptor 1",NA,FALSE
+"713","Trem1","NM_021406.5",NA,"triggering receptor expressed on myeloid cells 1",NA,FALSE
+"714","Trem2","NM_031254.2","MGI:1932924,MGI:1932925,Trem2a,Trem2b,Trem2c,triggering receptor expressed on myeloid cells 2a,triggering receptor expressed on myeloid cells 2b,triggering receptor expressed on myeloid cells 2c","triggering receptor expressed on myeloid cells 2",NA,FALSE
+"715","Trim21","NM_001082552.1","MGD-MRK-35115,Ro52,Sjogren syndrome antigen A1,Ssa1","tripartite motif-containing 21",NA,FALSE
+"716","Trp53","NM_011640.1","MGD-MRK-15247,MGI:3584375,MGI:3584378,MGI:3584379,p44,p53","transformation related protein 53",NA,FALSE
+"717","Tslp","NM_021367.1",NA,"thymic stromal lymphopoietin",NA,FALSE
+"718","Ttc30a1","NM_030188.3","4930506L13Rik,RIKEN cDNA 4930506L13 gene","tetratricopeptide repeat domain 30A1",NA,FALSE
+"719","Twf1","NM_008971.4","A6,actin monomer-binding protein,protein tyrosine kinase 9,Ptk9,twinfilin,Twinfilin-1","twinfilin actin binding protein 1",NA,FALSE
+"720","Twist1","NM_011658.2","AA960487,bHLHa38,charlie chaplin,expressed sequence AA960487,MGD-MRK-15305,MGI:1890569,MGI:2144752,MGI:3038444,M-Twist,Pde,pdt,Pluridigite,polydactyly EMS,Ska10,Ska<m10Jus>,skeletal/axial 10","twist basic helix-loop-helix transcription factor 1",NA,FALSE
+"721","Twist2","NM_007855.2","bHLHa39,dermis expressed 1,Dermo1,MGD-MRK-27048","twist basic helix-loop-helix transcription factor 2",NA,FALSE
+"722","Tymp","NM_138302.1","2900072D10Rik,Ecgf1,endothelial cell growth factor 1 (platelet-derived),gliostatin,MGD-MRK-13213,MGI:97529,PDECGF,PD-ECGF,Pdgfec,platelet derived growth factor, endothelial cell,RIKEN cDNA 2900072D10 gene","thymidine phosphorylase",NA,FALSE
+"723","Tyms","NM_021288.3","MGD-MRK-15313,TS","thymidylate synthase",NA,FALSE
+"724","Uba7","NM_023738.4","1300004C08Rik,MGI:1921403,RIKEN cDNA 1300004C08 gene,Ube1l,ubiquitin activating enzyme E1-like,ubiquitin-activating enzyme E1-like","ubiquitin-like modifier activating enzyme 7",NA,FALSE
+"725","Ube2c","NM_026785.2","1110015A16Rik,D2Ertd695e,DNA segment, Chr 2, ERATO Doi 695, expressed,MGI:1277160,RIKEN cDNA 1110015A16 gene","ubiquitin-conjugating enzyme E2C",NA,FALSE
+"726","Ube2t","NM_001278115.1","2700084L22Rik,C80607,expressed sequence C80607,MGI:2138694,RIKEN cDNA 2700084L22 gene","ubiquitin-conjugating enzyme E2T",NA,FALSE
+"727","Ulbp1","NM_029975.2","A430108B07Rik,MULT1,RIKEN cDNA A430108B07 gene","UL16 binding protein 1",NA,FALSE
+"728","Vcam1","NM_011693.3","CD106,MGD-MRK-15384,MGD-MRK-15385,Vcam-1","vascular cell adhesion molecule 1",NA,FALSE
+"729","Vcan","NM_001081249.1","5430420N07Rik,chondroitin sulfate proteoglycan 2,Cspg2,DPEAAE,hdf,heart defect,MGD-MRK-23722,MGI:1918683,MGI:894331,PG-M,RIKEN cDNA 5430420N07 gene","versican",NA,FALSE
+"730","Vegfa","NM_001025250.3","MGD-MRK-24046,vascular endothelial growth factor,Vegf,VEGF120,VEGF164,VEGF188,VEGF-A,VPF","vascular endothelial growth factor A",NA,FALSE
+"731","Vegfb","NM_011697.3","MGD-MRK-33890,vascular endothelial growth factor related protein,VEGF-B,Vrf","vascular endothelial growth factor B",NA,FALSE
+"732","Vegfc","NM_009506.2","AW228853,expressed sequence AW228853,MGD-MRK-38168,MGI:2142780,VEGF-C","vascular endothelial growth factor C",NA,FALSE
+"733","Vhl","NM_009507.3","MGD-MRK-24093,pVHL,Vhlh,von Hippel-Lindau syndrome homolog","von Hippel-Lindau tumor suppressor",NA,FALSE
+"734","Vsir","NM_001159572.1","4632428N05Rik,Dies1,PD-1H,RIKEN cDNA 4632428N05 gene,VISTA","V-set immunoregulatory receptor",NA,FALSE
+"735","Vtcn1","NM_178594.3","B7-H4,B7x,BC032925,cDNA sequence BC032925","V-set domain containing T cell activation inhibitor 1",NA,FALSE
+"736","Wdr76","NM_030234.2","5830411K18Rik,AA517836,expressed sequence AA517836,MGI:2138785,RIKEN cDNA 5830411K18 gene","WD repeat domain 76",NA,FALSE
+"737","Wnt10a","NM_009518.1","MGD-MRK-37108","wingless-type MMTV integration site family, member 10A",NA,FALSE
+"738","Wnt11","NM_001285792.1","MGD-MRK-18782","wingless-type MMTV integration site family, member 11",NA,FALSE
+"739","Wnt2","NM_023653.4","2610510E18Rik,Int1l1,Int-1-related protein,Irp,MGD-MRK-11475,MGD-MRK-15439,MGD-MRK-15449,MGI:1919406,m-irp,Mirp,RIKEN cDNA 2610510E18 gene,Wnt-2,Wnt2a","wingless-type MMTV integration site family, member 2",NA,FALSE
+"740","Wnt2b","NM_009520.3","wingless related MMTV integration site 13,Wnt13","wingless-type MMTV integration site family, member 2B",NA,FALSE
+"741","Wnt3a","NM_009522.2","MGD-MRK-15417,MGD-MRK-15441,MGD-MRK-15451,vestigial tail,vt,Wnt-3a","wingless-type MMTV integration site family, member 3A",NA,FALSE
+"742","Wnt4","NM_009523.2","MGD-MRK-15442,MGD-MRK-15452,Wnt-4","wingless-type MMTV integration site family, member 4",NA,FALSE
+"743","Wnt5a","NM_009524.2","8030457G12Rik,MGD-MRK-15443,MGD-MRK-15453,MGI:1924815,RIKEN cDNA 8030457G12 gene,Wnt-5a","wingless-type MMTV integration site family, member 5A",NA,FALSE
+"744","Wnt5b","NM_009525.3","AW545702,expressed sequence AW545702,MGD-MRK-15444,MGD-MRK-15454,MGI:2141692,Wnt-5b","wingless-type MMTV integration site family, member 5B",NA,FALSE
+"745","Wnt7b","NM_009528.2","MGD-MRK-15447,MGD-MRK-15457,Wnt-7b","wingless-type MMTV integration site family, member 7B",NA,FALSE
+"746","Xcl1","NM_008510.1","AI661682,ATAC,expressed sequence AI661682,Lptn,LTN,lymphotactin,MGD-MRK-26027,MGI:2138317,SCM-1,SCM-1a,Scyc1,small inducible cytokine subfamily C, member 1 (lymphotactin)","chemokine (C motif) ligand 1",NA,FALSE
+"747","Zap70","NM_009539.3","AI327364,expressed sequence AI327364,MGD-MRK-16398,MGI:2138217,MGI:3584397,MGI:3584398,mrtle,mr t-less,mur,murdoch,Srk,syk related kinase,TZK,ZAP-70","zeta-chain (TCR) associated protein kinase",NA,FALSE
+"748","Zc3h12a","NM_153159.2","BC036563,cDNA sequence BC036563,Mcpip1,MGC:41320","zinc finger CCCH type containing 12A",NA,FALSE
+"749","Zeb1","NM_011546.3","3110032K11Rik,AREB6,[delta]EF1,MEB1,MGD-MRK-14760,MGD-MRK-15303,MGD-MRK-19431,MGD-MRK-24149,MGI:1920415,MGI:98508,MGI:98871,Nil2,RIKEN cDNA 3110032K11 gene,Tcf18,Tcf8,transcription factor 18,transcription factor 8,Tw,twirler,ZEB,Zfhep,Zfhx1a,Zfx1a,zinc finger homeobox 1a","zinc finger E-box binding homeobox 1",NA,FALSE
+"750","Zeb2","NM_015753.4","9130203F04Rik,D130016B08Rik,MGI:2442196,MGI:2442919,mKIAA0569,RIKEN cDNA 9130203F04 gene,RIKEN cDNA D130016B08 gene,SIP1,Zfhx1b,Zfx1b,zinc finger homeobox 1b","zinc finger E-box binding homeobox 2",NA,FALSE
+"751","Abcf1","NM_013854.1","Abc50,AU041969,D17Wsu166e,DNA segment, Chr 17, Wayne State University 166, expressed,expressed sequence AU041969,GCN20,MGD-MRK-36426,MGI:107849,MGI:2147001","ATP-binding cassette, sub-family F (GCN20), member 1",NA,TRUE
+"752","Dnajc14","NM_028873.3","5730551F12Rik,DRIP78,HDJ3,LIP6,RIKEN cDNA 5730551F12 gene","DnaJ heat shock protein family (Hsp40) member C14",NA,TRUE
+"753","Ercc3","NM_133658.1","Ercc-3,excision repair 3,MGD-MRK-9577,MGD-MRK-9580,XPB","excision repair cross-complementing rodent repair deficiency, complementation group 3",NA,TRUE
+"754","G6pdx","NM_008062.2","G28A,G6pd,glucose-6-phosphate dehydrogenase 1  X-linked,Gpdx,MGD-MRK-10225,MGD-MRK-33659,MGD-MRK-9915","glucose-6-phosphate dehydrogenase X-linked",NA,TRUE
+"755","Gusb","NM_010368.1","adipose storage deficiency,AI747421,asd,beta-glucuronidase regulator,beta-glucuronidase structural,beta-glucuronidase systemic regulator,beta-glucuronidase temporal,expressed sequence AI747421,g,Gur,Gus,Gus-r,Gus-s,Gus-t,Gus-u,Gut,MGD-MRK-10333,MGD-MRK-10334,MGD-MRK-10335,MGD-MRK-10336,MGD-MRK-10337,MGD-MRK-1413,MGD-MRK-19421,MGD-MRK-19422,MGD-MRK-9912,MGI:2140959,MGI:95873,MGI:95874,MGI:95875,MGI:95876","glucuronidase, beta",NA,TRUE
+"756","Mrpl19","NM_026490.2","9030416F12Rik,D6Ertd157e,DNA segment, Chr 6, ERATO Doi 157, expressed,MGI:1098795,MGI:1915232,MRP-L15,ribosomal protein, mitochondrial, L15,RIKEN cDNA 9030416F12 gene,RLX1,Rpml15","mitochondrial ribosomal protein L19",NA,TRUE
+"757","Nrde2","NM_183155.3","6720454P05Rik,BC002230,cDNA sequence BC002230,MGI:2443747,RIKEN cDNA 6720454P05 gene","nrde-2 necessary for RNA interference, domain containing",NA,TRUE
+"758","Oaz1","NM_008753.4","Antizyme,antizyme 1,AZ1,AZ-1,MGD-MRK-38478","ornithine decarboxylase antizyme 1",NA,TRUE
+"759","Polr2a","NM_009089.2","220kDa,MGD-MRK-14111,RNA polymerase II 1,Rpo2-1","polymerase (RNA) II (DNA directed) polypeptide A",NA,TRUE
+"760","Psmc4","NM_011874.2","CAR interacting protein 21,CIP21,MIP224","proteasome (prosome, macropain) 26S subunit, ATPase, 4",NA,TRUE
+"761","Pum1","NM_001159605.1","AA517475,expressed sequence AA517475,MGI:2140159,mKIAA0099,Pumm","pumilio RNA-binding family member 1",NA,TRUE
+"762","Sdha","NM_023281.1","2310034D06Rik,C81073,expressed sequence C81073,FP,MGI:2145519,RIKEN cDNA 2310034D06 gene,SDH2,SDHF","succinate dehydrogenase complex, subunit A, flavoprotein (Fp)",NA,TRUE
+"763","Sf3a1","NM_026175.5","1200014H24Rik,5930416L09Rik,AI159724,expressed sequence AI159724,MGI:1924358,MGI:2144075,RIKEN cDNA 1200014H24 gene,RIKEN cDNA 5930416L09 gene","splicing factor 3a, subunit 1",NA,TRUE
+"764","Stk11ip","NM_027886.3","1200014D22Rik,BB131189,expressed sequence BB131189,LIP1,LKB1IP,MGI:2138637,RIKEN cDNA 1200014D22 gene","serine/threonine kinase 11 interacting protein",NA,TRUE
+"765","Tbc1d10b","NM_144522.5","1110003P22Rik,C87963,expressed sequence C87963,MGI:2142375,RIKEN cDNA 1110003P22 gene","TBC1 domain family, member 10b",NA,TRUE
+"766","Tbp","NM_013684.3","general transcription factor IID,Gtf2d,MGD-MRK-18659,MGD-MRK-24009","TATA box binding protein",NA,TRUE
+"767","Tfrc","NM_011638.4","2610028K12Rik,AI195355,AI426448,AU015758,CD71,E430033M20Rik,expressed sequence AI195355,expressed sequence AI426448,expressed sequence AU015758,mammary tumor virus receptor 1,MGD-MRK-12700,MGD-MRK-12701,MGD-MRK-15225,MGI:1923611,MGI:2146387,MGI:2146425,MGI:2146541,MGI:2442494,MGI:97229,Mtvr1,Mtvr-1,p90,RIKEN cDNA 2610028K12 gene,RIKEN cDNA E430033M20 gene,TfR1,Trfr","transferrin receptor",NA,TRUE
+"768","Tlk2","NM_011903.3","4933403M19Rik,MGI:1918299,PKUalpha,protein kinase U-alpha,RIKEN cDNA 4933403M19 gene","tousled-like kinase 2 (Arabidopsis)",NA,TRUE
+"769","Tmub2","NM_028076.2","2010008E23Rik,RIKEN cDNA 2010008E23 gene","transmembrane and ubiquitin-like domain containing 2",NA,TRUE
+"770","Ubb","NM_011664.4","AL033289,expressed sequence AL033289,MGD-MRK-15326,MGD-MRK-33606,MGI:2141542,Ubb2,ubiquitin 2","ubiquitin B",NA,TRUE

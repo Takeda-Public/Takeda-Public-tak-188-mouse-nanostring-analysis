@@ -1,0 +1,10 @@
+list(b_cells = c("Blk", "Cd19", "Fcrlb", "Ms4a1", "Pnoc", "Spib", 
+"Tcl1", "Tnfrsf17"), cd45 = "Ptprc", cd8_t_cells = c("Cd8a", 
+"Cd8b1"), cytotoxic_cells = c("Ctsw", "Gzma", "Gzmb", "Klrb1", 
+"Klrd1", "Klrk1", "Nkg7", "Prf1"), dc = c("Ccl2", "Cd209e", "Hsd11b1"
+), exhausted_cd8 = c("Cd244", "Eomes", "Lag3", "Ptger4"), macrophages = c("Cd163", 
+"Cd68", "Cd84", "Ms4a4a"), mast_cells = c("Cpa3", "Hdc", "Ms4a2"
+), neutrophils = c("Ceacam3", "Csf3r", "Fcgr4", "Fpr1"), nk_cd56dim_cells = c("Il21r", 
+"Kir3dl1", "Kir3dl2"), nk_cells = c("Ncr1", "Xcl1"), t_cells = c("Cd3d", 
+"Cd3e", "Cd3g", "Cd6", "Sh2d1a", "Trat1"), th1_cells = "Tbx21", 
+    treg = "Foxp3")
